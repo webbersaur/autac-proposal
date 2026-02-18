@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Redesign Proposal — Autac USA | Webbersaurus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #FF6B35;
+      --color-primary-dark: #E55A2B;
+      --color-primary-light: #FF8A5C;
+      --color-dark: #1a1a2e;
+      --color-text: #333340;
+      --color-text-light: #6b6b80;
+      --color-white: #ffffff;
+      --color-gray-50: #f9fafb;
+      --color-gray-100: #f3f4f6;
+      --color-gray-200: #e5e7eb;
+      --color-gray-300: #d1d5db;
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--color-text);
+      line-height: 1.7;
+      font-size: 16px;
+      background: var(--color-gray-50);
+    }
+
+    /* --- Cover Page --- */
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--color-dark) 0%, #16213e 100%);
+      color: var(--color-white);
+      padding: 3rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .cover-logo {
+      width: 80px;
+      height: 80px;
+      background: var(--color-primary);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .cover-label {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.8rem;
+      color: var(--color-primary-light);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .cover h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      max-width: 700px;
+    }
+
+    .cover h1 span {
+      color: var(--color-primary);
+    }
+
+    .cover-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+
+    .cover-meta {
+      display: flex;
+      gap: 3rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .cover-meta strong {
+      color: rgba(255, 255, 255, 0.8);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* --- Document Body --- */
+    .document {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--color-white);
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+    }
+
+    .section {
+      padding: 3rem 4rem;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .section:last-child { border-bottom: none; }
+
+    .section-number {
+      display: inline-block;
+      background: var(--color-primary);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      color: var(--color-dark);
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: var(--color-dark);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    /* --- Stats Grid --- */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .stat {
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* --- Findings List --- */
+    .findings {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+
+    .findings li {
+      padding: 1rem 1rem 1rem 3rem;
+      position: relative;
+      border-left: 3px solid #93c5fd;
+      margin-bottom: 0.75rem;
+      background: var(--color-gray-50);
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .findings li::before {
+      content: '→';
+      position: absolute;
+      left: 0.75rem;
+      top: 1rem;
+      width: 22px;
+      height: 22px;
+      background: #dbeafe;
+      color: #2563eb;
+      border-radius: 50%;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 22px;
+    }
+
+    .findings li strong { color: var(--color-dark); }
+
+    /* --- Pricing Tiers --- */
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .tier {
+      border: 2px solid var(--color-gray-200);
+      border-radius: 1rem;
+      padding: 2rem 1.5rem;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+
+    .tier:hover { border-color: var(--color-primary-light); }
+
+    .tier.recommended {
+      border-color: var(--color-primary);
+      box-shadow: 0 8px 30px rgba(255, 107, 53, 0.15);
+    }
+
+    .tier-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-primary);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.25rem 1rem;
+      border-radius: 9999px;
+    }
+
+    .tier-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .tier-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .tier-price span {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      font-weight: 400;
+    }
+
+    .tier ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .tier ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem;
+      position: relative;
+      color: var(--color-text);
+    }
+
+    .tier ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    /* --- Page Inventory Table --- */
+    .inventory-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .inventory-table th {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .inventory-table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .inventory-table tr:nth-child(even) td {
+      background: var(--color-gray-50);
+    }
+
+    .inventory-table .check {
+      color: var(--color-primary);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .inventory-table .dash {
+      color: var(--color-gray-300);
+      text-align: center;
+    }
+
+    /* --- Benefits --- */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .benefit {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .benefit-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 0.75rem;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .benefit h4 {
+      font-size: 0.95rem;
+      color: var(--color-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .benefit p {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* --- Timeline --- */
+    .timeline {
+      margin: 2rem 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .timeline-marker {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-gray-100);
+      border: 2px solid var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--color-primary);
+      font-size: 0.85rem;
+    }
+
+    .timeline-content h4 {
+      font-size: 1rem;
+      color: var(--color-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      margin-bottom: 0;
+    }
+
+    /* --- Comparison table --- */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .compare-table th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--color-gray-200);
+      color: var(--color-dark);
+    }
+
+    .compare-table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--color-gray-100);
+    }
+
+    .compare-table .label-col {
+      font-weight: 500;
+      color: var(--color-dark);
+    }
+
+    .compare-table .current { color: var(--color-text-light); }
+    .compare-table .proposed { color: var(--color-primary); font-weight: 500; }
+
+    /* --- CTA --- */
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-dark) 0%, #16213e 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem;
+      border-radius: 0;
+    }
+
+    .cta-section h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .btn-outline {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    /* --- Footer --- */
+    .proposal-footer {
+      text-align: center;
+      padding: 2rem 4rem;
+      background: var(--color-gray-50);
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+    }
+
+    .proposal-footer strong {
+      color: var(--color-dark);
+    }
+
+
+    /* --- Print Styles --- */
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .cover { min-height: auto; padding: 3rem 2rem; page-break-after: always; }
+      .document { box-shadow: none; max-width: 100%; }
+      .section { padding: 2rem 2.5rem; page-break-inside: avoid; }
+      .tiers { grid-template-columns: repeat(2, 1fr); font-size: 9pt; }
+      .tier { padding: 1rem; }
+      .benefits-grid { grid-template-columns: 1fr 1fr; }
+      .cta-section { page-break-before: always; }
+      .btn { border: 1px solid var(--color-text); }
+    }
+
+    @media (max-width: 768px) {
+      .cover h1 { font-size: 2rem; }
+      .cover-meta { flex-direction: column; gap: 1rem; }
+      .section { padding: 2rem 1.5rem; }
+      .tiers { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== COVER PAGE ==================== -->
+  <div class="cover">
+    <div class="cover-logo">W</div>
+    <div class="cover-label">Website Redesign Proposal</div>
+    <h1>A Faster, Smarter Website for <span>Autac USA</span></h1>
+    <p class="cover-subtitle">Modern web technology for a 75-year legacy — faster, leaner, and built to convert.</p>
+    <div class="cover-meta">
+      <div>
+        <strong>Prepared for</strong>
+        Autac USA Inc.<br>Branford, CT
+      </div>
+      <div>
+        <strong>Prepared by</strong>
+        Webbersaurus<br>webbersaur.us
+      </div>
+      <div>
+        <strong>Date</strong>
+        February 17, 2026
+      </div>
+    </div>
+  </div>
+
+  <div class="document">
+
+    <!-- ==================== 1. EXECUTIVE SUMMARY ==================== -->
+    <div class="section">
+      <div class="section-number">1</div>
+      <h2>Executive Summary</h2>
+      <p>Autac USA has been a trusted name in retractile power cords and coil cords for over 75 years. The current website has served the business well, but web technology and Google's ranking algorithms have changed significantly in recent years. What worked in 2023 — a content-rich WordPress site with broad keyword coverage — is no longer the most effective approach. Google now rewards lean, fast-loading sites with focused, authoritative content over sheer page volume.</p>
+      <p>We propose building a modern static HTML/CSS/JS website that puts Autac's core strengths front and center: your products, your expertise, and a clear path for visitors to request a quote. By streamlining the site architecture and taking advantage of today's lightweight web standards, we can deliver a dramatically faster experience that ranks better and converts more visitors into customers.</p>
+      <p>This proposal outlines a comprehensive redesign package — including content strategy, SEO migration, custom development, and professional copywriting — at a special partner rate of $5,000 (regularly $10,000).</p>
+    </div>
+
+    <!-- ==================== 2. CURRENT SITE AUDIT ==================== -->
+    <div class="section">
+      <div class="section-number">2</div>
+      <h2>Where Things Stand Today</h2>
+      <p>We reviewed <strong>autacusa.com</strong> to understand the current site landscape and identify the best opportunities for improvement. Here is a snapshot of the site as it exists today:</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">~370</div>
+          <div class="stat-label">Indexed URLs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">294</div>
+          <div class="stat-label">Blog Posts</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">24</div>
+          <div class="stat-label">Category Archives</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">~15</div>
+          <div class="stat-label">Core Business Pages</div>
+        </div>
+      </div>
+
+      <h3>Opportunities</h3>
+      <ul class="findings">
+        <li>
+          <strong>Content consolidation:</strong> The site has grown to 294 blog posts over several years. Google's algorithms have evolved — they now favor fewer, more comprehensive articles over many posts targeting similar keywords. Consolidating overlapping content (e.g., multiple "coiled extension cord" and "retractile cord" variations) into definitive guides will strengthen rankings.
+        </li>
+        <li>
+          <strong>Tighter topical focus:</strong> Some blog content covers adjacent topics (badge reels, general cabling) that made sense as part of a broader SEO strategy but no longer align with how Google evaluates topical authority. Narrowing the focus to Autac's core expertise will help Google clearly understand what the business does best.
+        </li>
+        <li>
+          <strong>Platform modernization:</strong> WordPress and Divi were the right tools when the site was built, but they carry overhead — 200KB+ of framework CSS, JavaScript for page building, and database-driven rendering. Modern static sites achieve the same visual results with a fraction of the code, loading significantly faster.
+        </li>
+        <li>
+          <strong>Fresh core pages:</strong> The About, Contact, FAQ, and product pages haven't been refreshed since 2023. Updating these pages with current information and modern design patterns is an opportunity to make a strong first impression.
+        </li>
+        <li>
+          <strong>Streamlined user experience:</strong> Simplifying the site structure will make it easier for visitors to find what they need and take action.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ==================== 3. PROPOSED REDESIGN ==================== -->
+    <div class="section">
+      <div class="section-number">3</div>
+      <h2>Proposed Redesign</h2>
+      <p>We recommend rebuilding the site as a clean static HTML/CSS/JS site, taking advantage of how far web standards have come. This is a comprehensive, all-inclusive package — no add-ons, no surprise costs.</p>
+
+      <div class="single-tier">
+        <div class="tier recommended" style="max-width:560px;margin:0 auto;">
+          <div class="tier-badge">Complete Redesign</div>
+          <div class="tier-name">What's Included</div>
+          <div class="tier-price"><s style="color:var(--color-text-light);font-size:1rem;font-weight:400">$10,000</s> $5,000 <span style="font-size:0.8rem;color:var(--color-text-light);font-weight:400">Autac partner rate</span></div>
+          <ul>
+            <li>25+ page static HTML/CSS/JS site</li>
+            <li>Mobile-first responsive design</li>
+            <li>On-page SEO &amp; Google Analytics</li>
+            <li>Contact &amp; quote request forms</li>
+            <li>Content consolidation: 294 posts → ~25–30 quality articles</li>
+            <li>301 redirect strategy for consolidated URLs</li>
+            <li>Full SEO migration audit</li>
+            <li>Enhanced product catalog pages</li>
+            <li>Interactive "Build Your Cord" tool</li>
+            <li>Color chart integration</li>
+            <li>Structured data &amp; schema markup</li>
+
+            <li>Professional copywriting &amp; content rewrite</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:1.5rem"><strong>A note on pricing:</strong> This rate reflects professional agency work — custom design, hand-coded development, content strategy, and SEO expertise. Unlike template-based or DIY solutions, every page is purpose-built for Autac's business goals.</p>
+      <p style="font-size:0.85rem;color:var(--color-primary);margin-top:0.5rem"><strong>Early commitment discount:</strong> Take an additional 5% off ($4,750) when the deposit is received within 15 days of this proposal.</p>
+    </div>
+
+    <!-- ==================== 4. PAGE INVENTORY ==================== -->
+    <div class="section">
+      <div class="section-number">4</div>
+      <h2>Page Inventory</h2>
+      <p>Here is a complete breakdown of every page and feature included in the redesign.</p>
+
+      <table class="inventory-table">
+        <thead>
+          <tr>
+            <th>Page / Feature</th>
+            <th style="text-align:center;width:100px">Included</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Core Pages</td></tr>
+          <tr><td>Homepage</td><td class="check">✓</td></tr>
+          <tr><td>About Us / Our Story (75+ Years)</td><td class="check">✓</td></tr>
+          <tr><td>Contact / Request a Quote</td><td class="check">✓</td></tr>
+          <tr><td>FAQ</td><td class="check">✓</td></tr>
+          <tr><td>News &amp; Press</td><td class="check">✓</td></tr>
+          <tr><td>Terms &amp; Privacy</td><td class="check">✓</td></tr>
+
+          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Product Pages</td></tr>
+          <tr><td>Retractile Cords</td><td class="check">✓</td></tr>
+          <tr><td>Coiled Cords</td><td class="check">✓</td></tr>
+          <tr><td>Curly Cords</td><td class="check">✓</td></tr>
+          <tr><td>Cord Sets</td><td class="check">✓</td></tr>
+          <tr><td>Color Charts</td><td class="check">✓</td></tr>
+
+          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Solution / Industry Pages</td></tr>
+          <tr><td>Electrical &amp; Electronic Solutions</td><td class="check">✓</td></tr>
+          <tr><td>Communications &amp; Security Solutions</td><td class="check">✓</td></tr>
+          <tr><td>Utility &amp; Broadband Solutions</td><td class="check">✓</td></tr>
+
+          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Content &amp; Tools</td></tr>
+          <tr><td>Build Your Cord (Interactive Tool)</td><td class="check">✓</td></tr>
+          <tr><td>Product Catalog (Searchable/Filterable)</td><td class="check">✓</td></tr>
+          <tr><td>Promotions / Specials</td><td class="check">✓</td></tr>
+          <tr><td>Blog Hub (25–30 Consolidated Articles)</td><td class="check">✓</td></tr>
+          <tr><td>Shop Online (link to existing e-commerce)</td><td class="check">✓</td></tr>
+
+          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">SEO &amp; Infrastructure</td></tr>
+          <tr><td>301 Redirect Map (294+ URLs)</td><td class="check">✓</td></tr>
+          <tr><td>Full SEO Migration Audit</td><td class="check">✓</td></tr>
+          <tr><td>Schema / Structured Data Markup</td><td class="check">✓</td></tr>
+          <tr><td>Professional Copywriting</td><td class="check">✓</td></tr>
+        </tbody>
+      </table>
+
+      <p style="font-size:0.85rem;color:var(--color-text-light)">25+ pages + blog hub — everything included at one price.</p>
+    </div>
+
+    <!-- ==================== 5. BENEFITS ==================== -->
+    <div class="section">
+      <div class="section-number">5</div>
+      <h2>Benefits of the Redesign</h2>
+
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-icon">⚡</div>
+          <div>
+            <h4>Dramatically Faster Load Times</h4>
+            <p>Static HTML loads in under 1 second. Google has made page speed a direct ranking factor — faster sites rank higher and convert better.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">📈</div>
+          <div>
+            <h4>Better Search Rankings</h4>
+            <p>A focused site with consolidated, authoritative content sends clear signals to Google about what Autac does — and who should find you.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🔒</div>
+          <div>
+            <h4>Airtight Security</h4>
+            <p>Static sites have virtually no attack surface — no database, no plugins to patch, no server-side code to exploit.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🎯</div>
+          <div>
+            <h4>Higher Conversion Rates</h4>
+            <p>A focused site with clear calls to action turns more visitors into quote requests. Every page will have a purpose.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 6. TIMELINE ==================== -->
+    <div class="section">
+      <div class="section-number">6</div>
+      <h2>Estimated Timeline</h2>
+      <p>Timeline begins from project kickoff (signed agreement + initial deposit). Estimated days are shown below. Includes two rounds of revisions.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker">1–7</div>
+          <div class="timeline-content">
+            <h4>Discovery &amp; Strategy</h4>
+            <p>SEO audit, content consolidation plan, copywriting, wireframes &amp; design mockups.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">8–28</div>
+          <div class="timeline-content">
+            <h4>Design &amp; Development</h4>
+            <p>Build all pages, product catalog, Build Your Cord tool &amp; blog hub.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">29–45</div>
+          <div class="timeline-content">
+            <h4>Migration &amp; Launch</h4>
+            <p>Redirect mapping, SEO migration, testing, revisions &amp; go-live. Monthly support begins.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:0.85rem;color:var(--color-text-light)">Estimated 30–45 days from kickoff to launch.</p>
+    </div>
+
+    <!-- ==================== 7. WHY STATIC HTML ==================== -->
+    <div class="section">
+      <div class="section-number">7</div>
+      <h2>Why Move to Static HTML</h2>
+      <p>WordPress and Divi have served millions of businesses well — they made professional web design accessible to everyone. But for a site like Autac USA's, where content updates are infrequent and performance directly impacts search rankings, modern static HTML offers meaningful advantages.</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="label-col">Factor</th>
+            <th>WordPress + Divi</th>
+            <th>Static HTML/CSS/JS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="label-col">Page Load Speed</td>
+            <td class="current">3–5 seconds typical (database queries, PHP rendering, framework CSS/JS)</td>
+            <td class="proposed">Under 1 second (pre-built HTML, no server processing)</td>
+          </tr>
+          <tr>
+            <td class="label-col">Security</td>
+            <td class="current">Requires regular plugin, theme, and core updates to stay secure</td>
+            <td class="proposed">No database or server-side code — minimal attack surface</td>
+          </tr>
+          <tr>
+            <td class="label-col">Maintenance</td>
+            <td class="current">Ongoing updates for WordPress, plugins, Divi, and PHP</td>
+            <td class="proposed">Minimal — files don't change unless you change them</td>
+          </tr>
+          <tr>
+            <td class="label-col">SEO Performance</td>
+            <td class="current">Core Web Vitals can be impacted by framework overhead</td>
+            <td class="proposed">Excellent Core Web Vitals; clean, semantic HTML for Google to parse</td>
+          </tr>
+          <tr>
+            <td class="label-col">Uptime</td>
+            <td class="current">Depends on database, PHP, and plugin stability</td>
+            <td class="proposed">99.99% — static files served from CDN edge nodes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ==================== 8. NEXT STEPS ==================== -->
+    <div class="section cta-section">
+      <div class="section-number" style="background:rgba(255,255,255,0.2)">8</div>
+      <h2>Ready to Get Started?</h2>
+      <p>Let's schedule a 30-minute call to walk through these options, answer your questions, and find the right fit for Autac USA.</p>
+      <div class="cta-buttons">
+        <a href="mailto:chris@webbersaur.us?subject=Autac%20USA%20Website%20Redesign" class="btn btn-primary">Email Us to Schedule</a>
+        <a href="tel:2035307396" class="btn btn-outline">Call 203.530.7396</a>
+      </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <div class="proposal-footer">
+      <strong>Webbersaurus</strong> · Branford, Connecticut · <a href="https://www.webbersaur.us" style="color:var(--color-primary);text-decoration:none">webbersaur.us</a><br>
+      This proposal is valid for 30 days from the date above. Pricing may be adjusted based on scope changes discussed during kickoff.
+    </div>
+
+  </div>
+
+</body>
+</html>
