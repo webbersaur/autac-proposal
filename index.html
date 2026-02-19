@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Redesign Proposal — Autac USA | Webbersaurus</title>
+  <title>Website Redesign Proposal — Autac Inc. | Webbersaurus</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -509,6 +509,195 @@
     }
 
 
+    /* --- Pricing Flow Diagram --- */
+    .pricing-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .pricing-flow-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 0 0 auto;
+      max-width: 130px;
+    }
+
+    .pricing-flow-step .step-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25);
+    }
+
+    .pricing-flow-step .step-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      line-height: 1.3;
+    }
+
+    .pricing-flow-step .step-sub {
+      font-size: 0.7rem;
+      color: var(--color-text-light);
+      margin-top: 0.15rem;
+    }
+
+    .pricing-flow-arrow {
+      font-size: 1.25rem;
+      color: var(--color-gray-300);
+      padding: 0 0.4rem;
+      margin-top: -1.5rem;
+    }
+
+    /* --- Lead Intelligence Grid --- */
+    .lead-intel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .lead-intel-item {
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .lead-intel-item .intel-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .lead-intel-item strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--color-dark);
+      margin-bottom: 0.15rem;
+    }
+
+    .lead-intel-item span {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      line-height: 1.4;
+    }
+
+    /* --- Tech Glance Box --- */
+    .tech-glance {
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .tech-glance .glance-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    /* --- Value List --- */
+    .value-list {
+      list-style: none;
+      margin: 1.25rem 0;
+    }
+
+    .value-list li {
+      padding: 0.5rem 0 0.5rem 2rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .value-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .value-list li strong {
+      color: var(--color-dark);
+    }
+
+    /* --- Cost Comparison Box --- */
+    .cost-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .cost-compare-card {
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .cost-compare-card.saas {
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+    }
+
+    .cost-compare-card.custom {
+      background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,107,53,0.03));
+      border: 2px solid var(--color-primary);
+    }
+
+    .cost-compare-card .compare-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .cost-compare-card.saas .compare-label { color: var(--color-text-light); }
+    .cost-compare-card.custom .compare-label { color: var(--color-primary); }
+
+    .cost-compare-card .compare-price {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+
+    .cost-compare-card.saas .compare-price { color: var(--color-text-light); }
+    .cost-compare-card.custom .compare-price { color: var(--color-primary); }
+
+    .cost-compare-card .compare-detail {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .cost-compare { grid-template-columns: 1fr; }
+    }
+
     /* --- Print Styles --- */
     @media print {
       body { background: white; font-size: 11pt; }
@@ -520,6 +709,9 @@
       .benefits-grid { grid-template-columns: 1fr 1fr; }
       .cta-section { page-break-before: always; }
       .btn { border: 1px solid var(--color-text); }
+      .pricing-flow { gap: 0.5rem; }
+      .pricing-flow-step .step-icon { box-shadow: none; border: 2px solid var(--color-primary); }
+      .lead-intel-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -529,6 +721,11 @@
       .tiers { grid-template-columns: 1fr; }
       .benefits-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr 1fr; }
+      .pricing-flow { gap: 0.25rem; }
+      .pricing-flow-step { max-width: 100px; }
+      .pricing-flow-step .step-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+      .pricing-flow-arrow { font-size: 1rem; padding: 0 0.2rem; }
+      .lead-intel-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -538,12 +735,12 @@
   <div class="cover">
     <div class="cover-logo">W</div>
     <div class="cover-label">Website Redesign Proposal</div>
-    <h1>A Faster, Smarter Website for <span>Autac USA</span></h1>
-    <p class="cover-subtitle">Modern web technology for a 75-year legacy — faster, leaner, and built to convert.</p>
+    <h1>A Faster, Smarter Website for <span>Autac Inc.</span></h1>
+    <p class="cover-subtitle">Modern web technology for a nearly 80-year legacy — faster, leaner, and built to convert.</p>
     <div class="cover-meta">
       <div>
         <strong>Prepared for</strong>
-        Autac USA Inc.<br>Branford, CT
+        Autac Inc.<br>Branford, CT
       </div>
       <div>
         <strong>Prepared by</strong>
@@ -562,10 +759,10 @@
     <div class="section">
       <div class="section-number">1</div>
       <h2>Executive Summary</h2>
-      <p>Autac USA has been a trusted name in retractile power cords and coil cords for over 75 years. The current website has served the business well, but web technology and Google's ranking algorithms have changed significantly in recent years. What worked in 2021 — a content-rich WordPress site with broad keyword coverage — may no longer be the most effective approach. Google now rewards lean, fast-loading sites with focused, authoritative content over sheer page volume.</p>
+      <p>Autac Inc. has been a trusted name in retractile power cords and coil cords for nearly 80 years. The current website has served the business well, but web technology and Google's ranking algorithms have changed significantly in recent years. What worked in 2021 — a content-rich WordPress site with broad keyword coverage — may no longer be the most effective approach. Google now rewards lean, fast-loading sites with focused, authoritative content over sheer page volume.</p>
       <p>We propose building a modern static HTML/CSS/JS website that puts Autac's core strengths front and center: your products, your expertise, and a clear path for visitors to request a quote. By streamlining the site architecture and taking advantage of today's lightweight web standards, we can deliver a dramatically faster experience that ranks better and converts more visitors into customers.</p>
-      <p>One key upgrade: your product catalog will be rebuilt from a static PDF into a fully searchable, filterable HTML experience. Instead of downloading a PDF and scrolling through pages, customers will be able to search by product type, cord length, gauge, or connector — and find exactly what they need in seconds. HTML catalog pages are also indexed by Google, meaning your individual products can show up directly in search results, something a PDF simply cannot do.</p>
-      <p>This proposal outlines a comprehensive redesign package — including content strategy, SEO migration, custom development, and professional copywriting — at $5,000.</p>
+      <p>One key upgrade: your product catalog will be rebuilt from a static PDF into a fully searchable, filterable HTML experience. Instead of downloading a PDF and scrolling through pages, customers will be able to search by product type, cord length, gauge, or connector — and find exactly what they need in seconds. HTML catalog pages are also indexed by Google, meaning your individual products can show up directly in search results, something a PDF simply cannot do. And because pricing is a competitive concern, we'll build in an email-verification gate — your products and specs stay fully public for SEO, but pricing is only revealed after a visitor confirms their email address, keeping competitors out while building you a list of verified leads.</p>
+      <p>This proposal outlines a comprehensive redesign package — including content strategy, SEO migration, custom development, professional copywriting, and a built-in lead generation gateway — at $6,500.</p>
     </div>
 
     <!-- ==================== 2. CURRENT SITE AUDIT ==================== -->
@@ -623,8 +820,8 @@
         <div class="tier recommended" style="max-width:560px;margin:0 auto;">
           <div class="tier-badge">Webbersaurus Partner Rate</div>
           <div class="tier-name">What's Included</div>
-          <div class="tier-price">$5,000</div>
-          <p style="font-size:0.85rem;color:var(--color-text-light);margin-bottom:1.25rem;margin-top:-0.75rem">This is an Autac-only price. The redesign, recoding, and searchable catalog require serious time and effort — but the result will blow every competitor's site out of the water while preserving the boutique customer experience Autac is known for.</p>
+          <div class="tier-price">$6,500</div>
+          <p style="font-size:0.85rem;color:var(--color-text-light);margin-bottom:1.25rem;margin-top:-0.75rem">This is an Autac-only price. The redesign, recoding, searchable catalog, and custom lead generation gateway require serious time and effort — but the result will blow every competitor's site out of the water while preserving the boutique customer experience Autac is known for.</p>
           <ul>
             <li>25+ page static HTML/CSS/JS site</li>
             <li>Mobile-first responsive design</li>
@@ -634,6 +831,7 @@
             <li>301 redirect strategy for consolidated URLs</li>
             <li>Full SEO migration audit</li>
             <li>Searchable &amp; filterable HTML catalog (replaces PDF)</li>
+            <li>Email-verified pricing gateway + lead capture (+$1,500)</li>
             <li>Interactive "Build Your Cord" tool</li>
             <li>Color chart integration</li>
             <li>Structured data &amp; schema markup</li>
@@ -644,7 +842,7 @@
       </div>
 
 
-      <p style="font-size:0.85rem;color:var(--color-primary);margin-top:0.5rem"><strong>Early commitment discount: 😊</strong> Take an additional 5% off ($4,750) when the deposit is received within 15 days of this proposal.</p>
+      <p style="font-size:0.85rem;color:var(--color-primary);margin-top:0.5rem"><strong>Early commitment discount: 😊</strong> Take an additional 5% off ($6,175) when the deposit ($3,000) is received within 15 days of this proposal.</p>
       <p style="font-size:0.85rem;color:var(--color-text);margin-top:0.75rem"><strong>Monthly growth plan:</strong> After launch, we'll add one new state-targeted landing page per month — expanding Autac's local search visibility across the country, one state at a time.</p>
     </div>
 
@@ -664,7 +862,7 @@
         <tbody>
           <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Core Pages</td></tr>
           <tr><td>Homepage</td><td class="check">✓</td></tr>
-          <tr><td>About Us / Our Story (75+ Years)</td><td class="check">✓</td></tr>
+          <tr><td>About Us / Our Story (Nearly 80 Years)</td><td class="check">✓</td></tr>
           <tr><td>Contact / Request a Quote</td><td class="check">✓</td></tr>
           <tr><td>FAQ</td><td class="check">✓</td></tr>
           <tr><td>News &amp; Press</td><td class="check">✓</td></tr>
@@ -687,7 +885,7 @@
 
           <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Content &amp; Tools</td></tr>
           <tr><td>Build Your Cord (Interactive Tool)</td><td class="check">✓</td></tr>
-          <tr style="background:linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,107,53,0.03));border-left:3px solid var(--color-primary)"><td style="font-weight:600;color:var(--color-dark);padding:1rem"><strong style="color:var(--color-primary)">★ Product Catalog (Searchable/Filterable)</strong><br><span style="font-weight:400;font-size:0.85rem;color:var(--color-text-light)">Rebuilt in HTML to replace the current PDF — making it searchable, browsable, mobile-friendly, and indexable by Google for better SEO</span></td><td class="check" style="vertical-align:middle">✓</td></tr>
+          <tr style="background:linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,107,53,0.03));border-left:3px solid var(--color-primary)"><td style="font-weight:600;color:var(--color-dark);padding:1rem"><strong style="color:var(--color-primary)">★ Product Catalog (Searchable/Filterable + Pricing Protection)</strong><br><span style="font-weight:400;font-size:0.85rem;color:var(--color-text-light)">Rebuilt in HTML to replace the current PDF — searchable, browsable, mobile-friendly, and Google-indexable. Pricing is gated behind email verification so competitors can't casually access it, and every viewer becomes a known lead.</span></td><td class="check" style="vertical-align:middle">✓</td></tr>
           <tr><td>Promotions / Specials</td><td class="check">✓</td></tr>
           <tr><td>Blog Hub (25–30 Consolidated Articles)</td><td class="check">✓</td></tr>
           <tr><td>Shop Online (link to existing e-commerce)</td><td class="check">✓</td></tr>
@@ -703,12 +901,130 @@
       <p style="font-size:0.85rem;color:var(--color-text-light)">25+ pages + blog hub — everything included at one price.</p>
     </div>
 
-    <!-- ==================== 5. BENEFITS ==================== -->
+    <!-- ==================== 5. SEARCHABLE CATALOG WITH PRICING PROTECTION ==================== -->
     <div class="section">
       <div class="section-number">5</div>
+      <h2>Searchable Catalog with Pricing Protection</h2>
+
+      <h3>The Problem with a PDF Catalog</h3>
+      <p>Right now, Autac's product catalog lives inside a PDF. That means it's invisible to Google — no individual product page will ever show up in search results. Customers have to download the file and scroll through it manually. And when it comes to pricing, it's all or nothing: the PDF is either public (and competitors can grab it) or hidden behind a login that most real customers won't bother with.</p>
+
+      <h3>The Solution: Public Products, Protected Pricing</h3>
+      <p>We'll rebuild the catalog as a fully searchable HTML experience. Every product — specs, categories, images, descriptions — lives on its own indexable page. Google can see it, rank it, and drive traffic to it. But pricing stays hidden until a visitor verifies their email address with a simple one-time step.</p>
+
+      <h3>How It Works</h3>
+      <div class="pricing-flow">
+        <div class="pricing-flow-step">
+          <div class="step-icon">🔍</div>
+          <div class="step-label">Browse Catalog</div>
+          <div class="step-sub">Search &amp; filter freely</div>
+        </div>
+        <div class="pricing-flow-arrow">→</div>
+        <div class="pricing-flow-step">
+          <div class="step-icon">🔓</div>
+          <div class="step-label">Unlock Pricing</div>
+          <div class="step-sub">Click to reveal prices</div>
+        </div>
+        <div class="pricing-flow-arrow">→</div>
+        <div class="pricing-flow-step">
+          <div class="step-icon">✉️</div>
+          <div class="step-label">Enter Email</div>
+          <div class="step-sub">Quick inline form</div>
+        </div>
+        <div class="pricing-flow-arrow">→</div>
+        <div class="pricing-flow-step">
+          <div class="step-icon">🔢</div>
+          <div class="step-label">Get Code</div>
+          <div class="step-sub">6-digit code via email</div>
+        </div>
+        <div class="pricing-flow-arrow">→</div>
+        <div class="pricing-flow-step">
+          <div class="step-icon">💲</div>
+          <div class="step-label">See Prices</div>
+          <div class="step-sub">Unlocked for 60 days</div>
+        </div>
+      </div>
+      <p style="font-size:0.85rem;color:var(--color-text-light);text-align:center;margin-top:-0.5rem">The entire flow takes about 30 seconds. No accounts, no passwords — just a verified email.</p>
+
+      <h3>What You Get from This</h3>
+      <ul class="value-list">
+        <li><strong>Pricing protected from casual browsing</strong> — competitors can't just pull up your price list without leaving a trail</li>
+        <li><strong>Every pricing viewer is a known, verified lead</strong> — you'll have their real email address, confirmed and deliverable</li>
+        <li><strong>Zero ongoing cost</strong> — the verification system runs on the same servers you're already subscribed to, so there's nothing extra to pay for</li>
+      </ul>
+
+      <h3>Built-In Lead Intelligence</h3>
+      <p>Your catalog doesn't just show products — it quietly collects data that helps you sell smarter. Here's what you'll see:</p>
+      <div class="lead-intel-grid">
+        <div class="lead-intel-item">
+          <div class="intel-icon">📊</div>
+          <div>
+            <strong>Demand Signals</strong>
+            <span>Which products get the most pricing views — so you know what's generating interest</span>
+          </div>
+        </div>
+        <div class="lead-intel-item">
+          <div class="intel-icon">🏢</div>
+          <div>
+            <strong>Competitor Awareness</strong>
+            <span>Spot email domains like @competitor.com — know who's looking at your prices</span>
+          </div>
+        </div>
+        <div class="lead-intel-item">
+          <div class="intel-icon">🔎</div>
+          <div>
+            <strong>Product Gap Insights</strong>
+            <span>See what visitors search for that you don't carry — uncover new product opportunities</span>
+          </div>
+        </div>
+        <div class="lead-intel-item">
+          <div class="intel-icon">🔥</div>
+          <div>
+            <strong>Hot Lead Detection</strong>
+            <span>Identify who's looking most frequently — these are the people ready for follow-up</span>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.95rem;color:var(--color-dark);font-weight:500;text-align:center;margin-top:0.5rem">Your catalog becomes a lead generation tool, not just a product list.</p>
+
+      <h3>Why Custom-Built Beats a Monthly Subscription</h3>
+      <p>Off-the-shelf lead capture and gated-content platforms charge monthly fees — typically $100–$300/mo for the features described above. Over two years, that's $2,400–$7,200 spent on a tool you don't own and can't customize. If you cancel, your lead data and pricing gate disappear with it.</p>
+      <p>Because we're building this custom for Autac, you pay once and own it forever. The email verification runs on our servers — the same hosting you're already subscribed to — so there's no new service to sign up for, no per-lead fees, and no third-party platform to manage. It's yours.</p>
+
+      <div class="cost-compare">
+        <div class="cost-compare-card saas">
+          <div class="compare-label">Typical SaaS Platform</div>
+          <div class="compare-price">$150–$300/mo</div>
+          <div class="compare-detail">$3,600–$7,200 over 2 years<br>Cancel and it's gone</div>
+        </div>
+        <div class="cost-compare-card custom">
+          <div class="compare-label">Custom-Built (This Proposal)</div>
+          <div class="compare-price">$1,500 once</div>
+          <div class="compare-detail">$0/mo forever after<br>Runs on your existing hosting</div>
+        </div>
+      </div>
+
+      <div class="tech-glance">
+        <div class="glance-icon">⚙️</div>
+        <div>
+          <strong style="color:var(--color-dark)">Tech at a Glance:</strong> The catalog and email verification system run on our servers — the same hosting you're already subscribed to. No extra servers, no new subscriptions, no ongoing maintenance. It just works — and it's yours.
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 6. BENEFITS ==================== -->
+    <div class="section">
+      <div class="section-number">6</div>
       <h2>Benefits of the Redesign</h2>
 
       <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-icon">✨</div>
+          <div>
+            <h4>A Fresh, Modern Look &amp; Feel</h4>
+            <p>A clean, professional design that reflects nearly 80 years of expertise. First impressions happen in seconds — a modern site tells visitors Autac is the real deal before they read a word.</p>
+          </div>
+        </div>
         <div class="benefit">
           <div class="benefit-icon">⚡</div>
           <div>
@@ -737,12 +1053,28 @@
             <p>A focused site with clear calls to action turns more visitors into quote requests. Every page will have a purpose.</p>
           </div>
         </div>
+        <div class="benefit">
+          <div class="benefit-icon">🛡️</div>
+          <div>
+            <h4>Lead-Generating Catalog</h4>
+            <p>Your product catalog becomes a lead machine — pricing is protected from competitors while every verified viewer is captured as a known lead.</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🔍</div>
+          <div>
+            <h4>Google-Visible Products</h4>
+            <p>Every product gets its own searchable page — no more hiding inside a PDF that Google can't read or rank.</p>
+          </div>
+        </div>
       </div>
+
+      <p style="margin-top:1.5rem">The current site has served Autac well, but design trends and user expectations have moved on. Visitors today expect clean layouts, crisp typography, generous whitespace, and a site that feels as polished on their phone as it does on a desktop. The redesign delivers all of that — a look and feel that matches the quality of your products and the reputation you've built over nearly 80 years. When a potential customer lands on the new site, they'll immediately see a company that's modern, established, and easy to do business with.</p>
     </div>
 
-    <!-- ==================== 6. TIMELINE ==================== -->
+    <!-- ==================== 7. TIMELINE ==================== -->
     <div class="section">
-      <div class="section-number">6</div>
+      <div class="section-number">7</div>
       <h2>Estimated Timeline</h2>
       <p>Timeline begins from project kickoff (signed agreement + initial deposit). Estimated days are shown below. Includes two rounds of revisions.</p>
 
@@ -773,11 +1105,11 @@
       <p style="font-size:0.85rem;color:var(--color-text-light)">Estimated 30–45 days from kickoff to launch.</p>
     </div>
 
-    <!-- ==================== 7. WHY STATIC HTML ==================== -->
+    <!-- ==================== 8. WHY STATIC HTML ==================== -->
     <div class="section">
-      <div class="section-number">7</div>
+      <div class="section-number">8</div>
       <h2>Why Move to Static HTML</h2>
-      <p>WordPress and Divi have served millions of businesses well — they made professional web design accessible to everyone. But for a site like Autac USA's, where content updates are infrequent and performance directly impacts search rankings, modern static HTML offers meaningful advantages.</p>
+      <p>WordPress and Divi have served millions of businesses well — they made professional web design accessible to everyone. But for a site like Autac Inc.'s, where content updates are infrequent and performance directly impacts search rankings, modern static HTML offers meaningful advantages.</p>
 
       <table class="compare-table">
         <thead>
