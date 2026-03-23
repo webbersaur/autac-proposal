@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /proposal-v1.html
+Disallow: /invoice-deposit.html
+Disallow: /mockup.html
+
+Sitemap: https://www.autacusa.com/sitemap.xml
