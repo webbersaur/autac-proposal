@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Autac USA | Retractile Cord Manufacturer</title>
+  <meta name="description" content="Contact Autac USA for retractile cord quotes, product questions, or custom orders. Call 800.243.3161 or visit us in North Branford, CT. Most quotes returned same day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #1a1a1a;
+      --black-light: #2a2a2a;
+      --red: #cc0a2b;
+      --red-light: #e01235;
+      --accent: #f5c518;
+      --accent-dark: #d4a80e;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #d8dde6;
+      --gray-300: #b0b8c7;
+      --text: #2c3345;
+      --text-light: #5a6478;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* === TOP BAR === */
+    .topbar {
+      background: var(--black);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8rem;
+      padding: 0.5rem 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* === HEADER === */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--red); }
+    nav a.active { color: var(--red); font-weight: 700; }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--black) !important;
+      padding: 0.6rem 1.25rem;
+      border-radius: 0.4rem;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-dark); }
+
+    /* === PAGE HERO === */
+    .page-hero {
+      background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
+      color: var(--white);
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(245, 197, 24, 0.04);
+    }
+
+    .page-hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .page-hero h1 span { color: var(--accent); }
+
+    .page-hero p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* === CONTACT SECTION === */
+    .contact {
+      padding: 5rem 0;
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    /* === CONTACT FORM === */
+    .contact-form h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form > p {
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-200);
+      border-radius: 0.5rem;
+      font-family: var(--font);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(204, 10, 43, 0.08);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .btn-red:hover { background: var(--red-light); }
+
+    .btn-full {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .form-success {
+      display: none;
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      color: #2e7d32;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* === CONTACT INFO SIDEBAR === */
+    .contact-info h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info > p {
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .info-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: all 0.2s;
+    }
+
+    .info-card:hover {
+      border-color: var(--red-light);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .info-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 0.6rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .info-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.25rem;
+    }
+
+    .info-card p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .info-card a {
+      color: var(--red);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .info-card a:hover { text-decoration: underline; }
+
+    /* === MAP === */
+    .map-section {
+      padding: 0;
+      background: var(--gray-50);
+    }
+
+    .map-section iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      display: block;
+    }
+
+    /* === QUICK CONTACT BAR === */
+    .quick-contact {
+      padding: 3.5rem 0;
+      background: linear-gradient(135deg, var(--red), var(--red-light));
+      color: var(--white);
+    }
+
+    .quick-contact .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .quick-contact h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .quick-contact p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+    }
+
+    .quick-contact-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--red);
+    }
+
+    .btn-white:hover { background: var(--gray-100); }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.6); }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.6);
+      padding: 3.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-img {
+      height: 44px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+
+    .footer-about {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+
+    footer h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    footer ul a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    footer ul a:hover { color: var(--accent); }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-contact-item strong {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover { color: var(--accent); }
+
+    /* === MOBILE MENU === */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--text);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar .container {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+      }
+
+      .menu-toggle { display: block; }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 2rem 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      }
+
+      nav.open { display: flex; }
+
+      .page-hero { padding: 3rem 0; }
+      .page-hero h1 { font-size: 2rem; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .quick-contact .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .quick-contact-links {
+        flex-direction: column;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span>P.O. Box 306, North Branford, CT 06471 &nbsp;|&nbsp; Mon&ndash;Fri 8am&ndash;5pm</span>
+      <span><a href="tel:8002433161">800.243.3161</a> &nbsp;|&nbsp; 100% Woman-Owned Since 1947</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="logo.png" alt="Autac USA — Re-Trak-Tul Kords">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="#">Build Your Cord</a>
+        <a href="#">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="#" class="nav-cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">Get in Touch</div>
+      <h1>Let's <span>Talk Cords</span></h1>
+      <p>Have a question, need a quote, or want to spec a custom build? Our team typically responds within one business day.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form and we'll get back to you promptly.</p>
+
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone <span style="font-weight:400;color:var(--text-light)">(optional)</span></label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic...</option>
+                <option value="quote">Request a Quote</option>
+                <option value="custom">Custom Cord Inquiry</option>
+                <option value="product">Product Question</option>
+                <option value="order">Order Status</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project or question..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-red btn-full">Send Message &rarr;</button>
+
+            <div class="form-success" id="formSuccess">
+              Thank you! We've received your message and will respond within one business day.
+            </div>
+          </form>
+        </div>
+
+        <!-- INFO SIDEBAR -->
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          <p>Reach us directly by phone, email, or visit our facility.</p>
+
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-card-icon">&#128222;</div>
+              <div>
+                <h3>Phone</h3>
+                <p>Toll-Free: <a href="tel:8002433161">800.243.3161</a><br>
+                Local: <a href="tel:2034813444">(203) 481-3444</a><br>
+                Fax: (203) 488-0496</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">&#9993;</div>
+              <div>
+                <h3>Email</h3>
+                <p>Reception: <a href="mailto:reception@autacusa.com">reception@autacusa.com</a><br>
+                Sales: <a href="mailto:sales@autacusa.com">sales@autacusa.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">&#128205;</div>
+              <div>
+                <h3>Address</h3>
+                <p>Autac USA Inc.<br>
+                P.O. Box 306<br>
+                North Branford, CT 06471</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">&#128336;</div>
+              <div>
+                <h3>Business Hours</h3>
+                <p>Monday &ndash; Friday: 8:00am &ndash; 5:00pm<br>
+                Saturday &ndash; Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.8!2d-72.7717!3d41.3978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d8a8b6ef75e7%3A0x4c0e1f9f2a8b5e0a!2sNorth%20Branford%2C%20CT%2006471!5e0!3m2!1sen!2sus!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Autac USA location — North Branford, CT">
+    </iframe>
+  </section>
+
+  <!-- QUICK CONTACT BAR -->
+  <section class="quick-contact">
+    <div class="container">
+      <div>
+        <h3>Need a Quote Fast?</h3>
+        <p>Call us directly and we'll get you pricing the same day.</p>
+      </div>
+      <div class="quick-contact-links">
+        <a href="tel:8002433161" class="btn btn-white">Call 800.243.3161</a>
+        <a href="mailto:sales@autacusa.com" class="btn btn-outline-white">Email Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="logo-img" src="logo.png" alt="Autac USA">
+          <p class="footer-about">The source for coil cords since 1947. The only 100% woman-owned retractile cord manufacturer in the industry. Proudly made in North Branford, Connecticut.</p>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Retractile Cords</a></li>
+            <li><a href="#">Coiled Cords</a></li>
+            <li><a href="#">Curly Cords</a></li>
+            <li><a href="#">Cord Sets</a></li>
+            <li><a href="#">Product Catalog</a></li>
+            <li><a href="#">Shop Online</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">News &amp; Press</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <strong>Toll-Free:</strong> 800.243.3161
+          </div>
+          <div class="footer-contact-item">
+            <strong>Local:</strong> (203) 481-3444
+          </div>
+          <div class="footer-contact-item">
+            <strong>Address:</strong> P.O. Box 306<br>North Branford, CT 06471
+          </div>
+          <div class="footer-contact-item">
+            <strong>Hours:</strong> Mon&ndash;Fri 8am&ndash;5pm
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Autac USA Inc. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      // In production, this would POST to a backend or service like Formspree/Netlify Forms
+      document.getElementById('formSuccess').style.display = 'block';
+      e.target.reset();
+      setTimeout(function() {
+        document.getElementById('formSuccess').style.display = 'none';
+      }, 5000);
+    }
+  </script>
+
+</body>
+</html>

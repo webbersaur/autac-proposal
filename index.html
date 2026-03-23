@@ -3,1190 +3,1162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Redesign Proposal — Autac Inc. | Webbersaurus</title>
+  <title>Autac USA — The Source for Coil Cords Since 1947</title>
+  <meta name="description" content="World's largest inventory of retractile power cords. Over 400 UL-listed part numbers in stock. Custom coil cords built to spec. Most orders ship within one day. 100% woman-owned, made in USA.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --color-primary: #FF6B35;
-      --color-primary-dark: #E55A2B;
-      --color-primary-light: #FF8A5C;
-      --color-dark: #1a1a2e;
-      --color-text: #333340;
-      --color-text-light: #6b6b80;
-      --color-white: #ffffff;
-      --color-gray-50: #f9fafb;
-      --color-gray-100: #f3f4f6;
-      --color-gray-200: #e5e7eb;
-      --color-gray-300: #d1d5db;
-      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --black: #1a1a1a;
+      --black-light: #2a2a2a;
+      --red: #cc0a2b;
+      --red-light: #e01235;
+      --accent: #f5c518;
+      --accent-dark: #d4a80e;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #d8dde6;
+      --gray-300: #b0b8c7;
+      --text: #2c3345;
+      --text-light: #5a6478;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: var(--font-family);
-      color: var(--color-text);
-      line-height: 1.7;
-      font-size: 16px;
-      background: var(--color-gray-50);
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
     }
 
-    /* --- Cover Page --- */
-    .cover {
-      min-height: 100vh;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* === TOP BAR === */
+    .topbar {
+      background: var(--black);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8rem;
+      padding: 0.5rem 0;
+    }
+
+    .topbar .container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      text-align: center;
-      background: linear-gradient(135deg, var(--color-dark) 0%, #16213e 100%);
-      color: var(--color-white);
-      padding: 3rem 2rem;
+    }
+
+    .topbar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* === HEADER === */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--red); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--black) !important;
+      padding: 0.6rem 1.25rem;
+      border-radius: 0.4rem;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-dark); }
+
+    /* === HERO === */
+    .hero {
+      background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
+      color: var(--white);
+      padding: 5rem 0;
       position: relative;
       overflow: hidden;
     }
 
-    .cover::before {
+    .hero::after {
       content: '';
       position: absolute;
-      top: -50%;
-      right: -30%;
-      width: 600px;
-      height: 600px;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
       border-radius: 50%;
-      background: rgba(255, 107, 53, 0.08);
+      background: rgba(245, 197, 24, 0.04);
     }
 
-    .cover-logo {
-      width: 80px;
-      height: 80px;
-      background: var(--color-primary);
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .btn-red:hover { background: var(--red-light); }
+
+    .btn-accent {
+      background: var(--accent);
+      color: var(--black);
+    }
+
+    .btn-accent:hover { background: var(--accent-dark); }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.25);
+    }
+
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.5); }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--red);
+    }
+
+    .btn-white:hover { background: var(--gray-100); }
+
+    .hero-image {
       border-radius: 1rem;
+      overflow: hidden;
+      height: 380px;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .hero-image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      padding: 1.5rem 1.25rem 1rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+      font-style: italic;
+    }
+
+    /* === TRUST BAR === */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 2rem 0;
+    }
+
+    .trust-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: left;
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 0.6rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .trust-label {
+      font-size: 0.95rem;
       font-weight: 700;
-      color: white;
-      margin-bottom: 2rem;
-    }
-
-    .cover-label {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 0.8rem;
-      color: var(--color-primary-light);
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-    }
-
-    .cover h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      max-width: 700px;
-    }
-
-    .cover h1 span {
-      color: var(--color-primary);
-    }
-
-    .cover-subtitle {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 3rem;
-      max-width: 500px;
-    }
-
-    .cover-meta {
-      display: flex;
-      gap: 3rem;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .cover-meta strong {
-      color: rgba(255, 255, 255, 0.8);
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    /* --- Document Body --- */
-    .document {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--color-white);
-      box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
-    }
-
-    .section {
-      padding: 3rem 4rem;
-      border-bottom: 1px solid var(--color-gray-200);
-    }
-
-    .section:last-child { border-bottom: none; }
-
-    .section-number {
-      display: inline-block;
-      background: var(--color-primary);
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 32px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    h2 {
-      font-size: 1.75rem;
-      color: var(--color-dark);
-      margin-bottom: 1.25rem;
-      font-weight: 700;
+      color: var(--black);
       line-height: 1.3;
     }
 
-    h3 {
-      font-size: 1.2rem;
-      color: var(--color-dark);
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
+    .trust-sub {
+      font-size: 0.78rem;
+      color: var(--text-light);
     }
 
-    p { margin-bottom: 1rem; }
-
-    /* --- Stats Grid --- */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.25rem;
-      margin: 2rem 0;
+    /* === SOLUTIONS === */
+    .solutions {
+      padding: 5rem 0;
+      background: var(--gray-50);
     }
 
-    .stat {
-      background: var(--color-gray-50);
-      border: 1px solid var(--color-gray-200);
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--color-primary);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--color-text-light);
-      margin-top: 0.5rem;
+    .section-label {
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* --- Findings List --- */
-    .findings {
-      list-style: none;
-      margin: 1.5rem 0;
-    }
-
-    .findings li {
-      padding: 1rem 1rem 1rem 3rem;
-      position: relative;
-      border-left: 3px solid #93c5fd;
-      margin-bottom: 0.75rem;
-      background: var(--color-gray-50);
-      border-radius: 0 0.5rem 0.5rem 0;
-    }
-
-    .findings li::before {
-      content: '→';
-      position: absolute;
-      left: 0.75rem;
-      top: 1rem;
-      width: 22px;
-      height: 22px;
-      background: #dbeafe;
-      color: #2563eb;
-      border-radius: 50%;
-      font-size: 0.85rem;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
       font-weight: 700;
-      text-align: center;
-      line-height: 22px;
+      color: var(--red);
+      margin-bottom: 0.75rem;
     }
 
-    .findings li strong { color: var(--color-dark); }
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
 
-    /* --- Pricing Tiers --- */
-    .tiers {
+    .section-desc {
+      color: var(--text-light);
+      max-width: 550px;
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+    }
+
+    .solutions-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      margin: 2rem 0;
     }
 
-    .tier {
-      border: 2px solid var(--color-gray-200);
-      border-radius: 1rem;
-      padding: 2rem 1.5rem;
-      position: relative;
-      transition: border-color 0.3s;
-    }
-
-    .tier:hover { border-color: var(--color-primary-light); }
-
-    .tier.recommended {
-      border-color: var(--color-primary);
-      box-shadow: 0 8px 30px rgba(255, 107, 53, 0.15);
-    }
-
-    .tier-badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--color-primary);
-      color: white;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 0.25rem 1rem;
-      border-radius: 9999px;
-    }
-
-    .tier-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--color-dark);
-      margin-bottom: 0.25rem;
-    }
-
-    .tier-price {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--color-primary);
-      margin-bottom: 1.25rem;
-    }
-
-    .tier-price span {
-      font-size: 0.85rem;
-      color: var(--color-text-light);
-      font-weight: 400;
-    }
-
-    .tier ul {
-      list-style: none;
-      font-size: 0.9rem;
-    }
-
-    .tier ul li {
-      padding: 0.4rem 0 0.4rem 1.5rem;
-      position: relative;
-      color: var(--color-text);
-    }
-
-    .tier ul li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--color-primary);
-      font-weight: 700;
-    }
-
-    /* --- Page Inventory Table --- */
-    .inventory-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 0.9rem;
-    }
-
-    .inventory-table th {
-      background: var(--color-dark);
-      color: var(--color-white);
-      padding: 0.75rem 1rem;
-      text-align: left;
-      font-weight: 600;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .inventory-table td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid var(--color-gray-200);
-    }
-
-    .inventory-table tr:nth-child(even) td {
-      background: var(--color-gray-50);
-    }
-
-    .inventory-table .check {
-      color: var(--color-primary);
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .inventory-table .dash {
-      color: var(--color-gray-300);
-      text-align: center;
-    }
-
-    /* --- Benefits --- */
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin: 1.5rem 0;
-    }
-
-    .benefit {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .benefit-icon {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
+    .solution-card {
+      background: var(--white);
       border-radius: 0.75rem;
-      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-      color: white;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .solution-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+      border-color: var(--red-light);
+    }
+
+    .solution-thumb {
+      height: 200px;
+      background: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      padding: 1.5rem;
+      position: relative;
     }
 
-    .benefit h4 {
-      font-size: 0.95rem;
-      color: var(--color-dark);
-      margin-bottom: 0.25rem;
+    .solution-thumb img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
 
-    .benefit p {
-      font-size: 0.85rem;
-      color: var(--color-text-light);
-      margin-bottom: 0;
+    .solution-thumb::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--red);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .solution-card:hover .solution-thumb::after {
+      transform: scaleX(1);
+    }
+
+    .solution-info {
+      padding: 1.25rem;
+    }
+
+    .solution-info h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+    }
+
+    .solution-info p {
+      font-size: 0.82rem;
+      color: var(--text-light);
       line-height: 1.5;
     }
 
-    /* --- Timeline --- */
-    .timeline {
-      margin: 2rem 0;
+    .solution-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.82rem;
+      color: var(--red);
+      font-weight: 600;
+      margin-top: 0.75rem;
     }
 
-    .timeline-item {
+    /* === BUILD YOUR CORD BANNER === */
+    .build-cord {
+      padding: 3.5rem 0;
+      background: linear-gradient(135deg, var(--red), var(--red-light));
+      color: var(--white);
+    }
+
+    .build-cord .container {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .build-cord h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .build-cord p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+    }
+
+    /* === WHY AUTAC === */
+    .why {
+      padding: 5rem 0;
+      background: var(--white);
+    }
+
+    .why .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .why-image {
+      border-radius: 1rem;
+      overflow: hidden;
+      height: 420px;
+      position: relative;
+    }
+
+    .why-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    .why-image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.6));
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .why-image-overlay .name {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .why-image-overlay .title {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.82rem;
+    }
+
+    .why-image-overlay .badge {
+      height: 48px;
+      width: auto;
+    }
+
+    .why-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .why-feature {
+      display: flex;
+      gap: 0.75rem;
       align-items: flex-start;
     }
 
-    .timeline-marker {
+    .why-feature-icon {
       flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--color-gray-100);
-      border: 2px solid var(--color-primary);
+      width: 36px;
+      height: 36px;
+      border-radius: 0.5rem;
+      background: rgba(204, 10, 43, 0.08);
+      color: var(--red);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      color: var(--color-primary);
-      font-size: 0.85rem;
-    }
-
-    .timeline-content h4 {
       font-size: 1rem;
-      color: var(--color-dark);
-      margin-bottom: 0.25rem;
     }
 
-    .timeline-content p {
+    .why-feature h4 {
       font-size: 0.9rem;
-      color: var(--color-text-light);
-      margin-bottom: 0;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.2rem;
     }
 
-    /* --- Comparison table --- */
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 0.9rem;
+    .why-feature p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.4;
     }
 
-    .compare-table th {
-      padding: 0.75rem 1rem;
-      text-align: left;
-      font-weight: 600;
-      border-bottom: 2px solid var(--color-gray-200);
-      color: var(--color-dark);
+    /* === INDUSTRIES === */
+    .industries {
+      padding: 5rem 0;
+      background: var(--black);
+      color: var(--white);
     }
 
-    .compare-table td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid var(--color-gray-100);
+    .industries .section-label { color: var(--accent); }
+    .industries .section-title { color: var(--white); }
+    .industries .section-desc { color: rgba(255,255,255,0.6); }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
     }
 
-    .compare-table .label-col {
-      font-weight: 500;
-      color: var(--color-dark);
-    }
-
-    .compare-table .current { color: var(--color-text-light); }
-    .compare-table .proposed { color: var(--color-primary); font-weight: 500; }
-
-    /* --- CTA --- */
-    .cta-section {
-      background: linear-gradient(135deg, var(--color-dark) 0%, #16213e 100%);
-      color: white;
+    .industry-tag {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
       text-align: center;
-      padding: 4rem;
-      border-radius: 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      transition: all 0.2s;
     }
 
-    .cta-section h2 {
-      color: white;
-      margin-bottom: 1rem;
+    .industry-tag:hover {
+      background: rgba(245, 197, 24, 0.1);
+      border-color: rgba(245, 197, 24, 0.3);
+      color: var(--accent);
     }
 
-    .cta-section p {
-      color: rgba(255, 255, 255, 0.7);
+    .industry-tag .ind-icon {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* === CREDIBILITY BAR === */
+    .credibility {
+      padding: 3.5rem 0;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .credibility .container {
+      text-align: center;
+    }
+
+    .credibility-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    .credibility-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .credibility-logos img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    .credibility-logos img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    /* === CTA === */
+    .cta {
+      padding: 5rem 0;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .cta .section-title {
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .cta .section-desc {
       max-width: 500px;
       margin: 0 auto 2rem;
+    }
+
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
     }
 
     .cta-buttons {
       display: flex;
       gap: 1rem;
       justify-content: center;
-      flex-wrap: wrap;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 2rem;
+    .cta-qr {
+      text-align: center;
+    }
+
+    .cta-qr img {
+      width: 100px;
+      height: auto;
       border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.3s;
+      border: 1px solid var(--gray-200);
     }
 
-    .btn-primary {
-      background: var(--color-primary);
-      color: white;
-    }
-
-    .btn-outline {
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      color: white;
-    }
-
-    /* --- Footer --- */
-    .proposal-footer {
-      text-align: center;
-      padding: 2rem 4rem;
-      background: var(--color-gray-50);
-      font-size: 0.85rem;
-      color: var(--color-text-light);
-    }
-
-    .proposal-footer strong {
-      color: var(--color-dark);
-    }
-
-
-    /* --- Pricing Flow Diagram --- */
-    .pricing-flow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .pricing-flow-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      flex: 0 0 auto;
-      max-width: 130px;
-    }
-
-    .pricing-flow-step .step-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25);
-    }
-
-    .pricing-flow-step .step-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--color-dark);
-      line-height: 1.3;
-    }
-
-    .pricing-flow-step .step-sub {
-      font-size: 0.7rem;
-      color: var(--color-text-light);
-      margin-top: 0.15rem;
-    }
-
-    .pricing-flow-arrow {
-      font-size: 1.25rem;
-      color: var(--color-gray-300);
-      padding: 0 0.4rem;
-      margin-top: -1.5rem;
-    }
-
-    /* --- Lead Intelligence Grid --- */
-    .lead-intel-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .lead-intel-item {
-      background: var(--color-gray-50);
-      border: 1px solid var(--color-gray-200);
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-    }
-
-    .lead-intel-item .intel-icon {
-      font-size: 1.25rem;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-
-    .lead-intel-item strong {
+    .cta-qr span {
       display: block;
-      font-size: 0.9rem;
-      color: var(--color-dark);
-      margin-bottom: 0.15rem;
+      font-size: 0.72rem;
+      color: var(--text-light);
+      margin-top: 0.4rem;
     }
 
-    .lead-intel-item span {
-      font-size: 0.8rem;
-      color: var(--color-text-light);
-      line-height: 1.4;
+    /* === FOOTER === */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.6);
+      padding: 3.5rem 0 2rem;
     }
 
-    /* --- Tech Glance Box --- */
-    .tech-glance {
-      background: var(--color-gray-50);
-      border: 1px solid var(--color-gray-200);
-      border-radius: 0.75rem;
-      padding: 1.25rem 1.5rem;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: var(--color-text-light);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .tech-glance .glance-icon {
-      font-size: 1.25rem;
-      flex-shrink: 0;
-    }
-
-    /* --- Value List --- */
-    .value-list {
-      list-style: none;
-      margin: 1.25rem 0;
-    }
-
-    .value-list li {
-      padding: 0.5rem 0 0.5rem 2rem;
-      position: relative;
-      font-size: 0.95rem;
-    }
-
-    .value-list li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--color-primary);
-      font-weight: 700;
-      font-size: 1rem;
-    }
-
-    .value-list li strong {
-      color: var(--color-dark);
-    }
-
-    /* --- Cost Comparison Box --- */
-    .cost-compare {
+    .footer-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin: 1.5rem 0;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
     }
 
-    .cost-compare-card {
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      text-align: center;
+    .footer-brand .logo-img {
+      height: 44px;
+      width: auto;
+      margin-bottom: 1rem;
     }
 
-    .cost-compare-card.saas {
-      background: var(--color-gray-50);
-      border: 1px solid var(--color-gray-200);
+    .footer-about {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
     }
 
-    .cost-compare-card.custom {
-      background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,107,53,0.03));
-      border: 2px solid var(--color-primary);
-    }
-
-    .cost-compare-card .compare-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .cost-compare-card.saas .compare-label { color: var(--color-text-light); }
-    .cost-compare-card.custom .compare-label { color: var(--color-primary); }
-
-    .cost-compare-card .compare-price {
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 0.25rem;
-    }
-
-    .cost-compare-card.saas .compare-price { color: var(--color-text-light); }
-    .cost-compare-card.custom .compare-price { color: var(--color-primary); }
-
-    .cost-compare-card .compare-detail {
+    footer h4 {
       font-size: 0.8rem;
-      color: var(--color-text-light);
-      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    footer ul a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    footer ul a:hover { color: var(--accent); }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-contact-item strong {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover { color: var(--accent); }
+
+    /* === MOBILE MENU === */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--text);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 1024px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .hero h1 { font-size: 2.5rem; }
+
+      .hero-image { height: 300px; }
+
+      .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .industries-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .why .container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .why-image { height: 320px; }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
     }
 
     @media (max-width: 768px) {
-      .cost-compare { grid-template-columns: 1fr; }
-    }
+      .topbar .container {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+      }
 
-    /* --- Print Styles --- */
-    @media print {
-      body { background: white; font-size: 11pt; }
-      .cover { min-height: auto; padding: 3rem 2rem; page-break-after: always; }
-      .document { box-shadow: none; max-width: 100%; }
-      .section { padding: 2rem 2.5rem; page-break-inside: avoid; }
-      .tiers { grid-template-columns: repeat(2, 1fr); font-size: 9pt; }
-      .tier { padding: 1rem; }
-      .benefits-grid { grid-template-columns: 1fr 1fr; }
-      .cta-section { page-break-before: always; }
-      .btn { border: 1px solid var(--color-text); }
-      .pricing-flow { gap: 0.5rem; }
-      .pricing-flow-step .step-icon { box-shadow: none; border: 2px solid var(--color-primary); }
-      .lead-intel-grid { grid-template-columns: 1fr 1fr; }
-    }
+      .menu-toggle { display: block; }
 
-    @media (max-width: 768px) {
-      .cover h1 { font-size: 2rem; }
-      .cover-meta { flex-direction: column; gap: 1rem; }
-      .section { padding: 2rem 1.5rem; }
-      .tiers { grid-template-columns: 1fr; }
-      .benefits-grid { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: 1fr 1fr; }
-      .pricing-flow { gap: 0.25rem; }
-      .pricing-flow-step { max-width: 100px; }
-      .pricing-flow-step .step-icon { width: 44px; height: 44px; font-size: 1.1rem; }
-      .pricing-flow-arrow { font-size: 1rem; padding: 0 0.2rem; }
-      .lead-intel-grid { grid-template-columns: 1fr; }
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 2rem 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      }
+
+      nav.open { display: flex; }
+
+      .hero { padding: 3rem 0; }
+      .hero h1 { font-size: 2rem; }
+      .hero-image { height: 240px; }
+
+      .trust-bar .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+      }
+
+      .solutions-grid { grid-template-columns: 1fr; }
+
+      .build-cord .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .why-features { grid-template-columns: 1fr; }
+
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+
+      .credibility-logos { gap: 2rem; }
+      .credibility-logos img { height: 36px; }
+
+      .cta-content {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ==================== COVER PAGE ==================== -->
-  <div class="cover">
-    <div class="cover-logo">W</div>
-    <div class="cover-label">Website Redesign Proposal</div>
-    <h1>A Faster, Smarter Website for <span>Autac Inc.</span></h1>
-    <p class="cover-subtitle">Modern web technology for a nearly 80-year legacy — faster, leaner, and built to convert.</p>
-    <div class="cover-meta">
-      <div>
-        <strong>Prepared for</strong>
-        Autac Inc.<br>Branford, CT
-      </div>
-      <div>
-        <strong>Prepared by</strong>
-        Chris Hauman<br>Webbersaurus
-      </div>
-      <div>
-        <strong>Date</strong>
-        February 20, 2026
-      </div>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span>P.O. Box 306, North Branford, CT 06471 &nbsp;|&nbsp; Mon&ndash;Fri 8am&ndash;5pm</span>
+      <span><a href="tel:8002433161">800.243.3161</a> &nbsp;|&nbsp; 100% Woman-Owned Since 1947</span>
     </div>
   </div>
 
-  <div class="document">
-
-    <!-- ==================== 1. EXECUTIVE SUMMARY ==================== -->
-    <div class="section">
-      <div class="section-number">1</div>
-      <h2>Executive Summary</h2>
-      <p>Autac Inc. has been a trusted name in retractile power cords and coil cords for nearly 80 years. The current website has served the business well, but web technology and Google's ranking algorithms have changed significantly in recent years. What worked in 2021 — a content-rich WordPress site with broad keyword coverage — may no longer be the most effective approach. Google now rewards lean, fast-loading sites with focused, authoritative content over sheer page volume.</p>
-      <p>We propose building a modern static HTML/CSS/JS website that puts Autac's core strengths front and center: your products, your expertise, and a clear path for visitors to request a quote. By streamlining the site architecture and taking advantage of today's lightweight web standards, we can deliver a dramatically faster experience that ranks better and converts more visitors into customers.</p>
-      <p>One key upgrade: your product catalog will be rebuilt from a static PDF into a fully searchable, filterable HTML experience. Instead of downloading a PDF and scrolling through pages, customers will be able to search by product type, cord length, gauge, or connector — and find exactly what they need in seconds. HTML catalog pages are also indexed by Google, meaning your individual products can show up directly in search results, something a PDF simply cannot do. And because pricing is a competitive concern, we'll build in an email-verification gate — your products and specs stay fully public for SEO, but pricing is only revealed after a visitor confirms their email address, keeping competitors out while building you a list of verified leads.</p>
-      <p>This proposal outlines a comprehensive redesign package — including content strategy, SEO migration, custom development, professional copywriting, and a built-in lead generation gateway — at $7,500.</p>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a class="logo" href="#">
+        <img src="logo.png" alt="Autac USA — Re-Trak-Tul Kords">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="#">Build Your Cord</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="nav-cta">Get a Quote</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- ==================== 2. CURRENT SITE AUDIT ==================== -->
-    <div class="section">
-      <div class="section-number">2</div>
-      <h2>Where Things Stand Today</h2>
-      <p>We reviewed <strong>autacusa.com</strong> to understand the current site landscape and identify the best opportunities for improvement. Here is a snapshot of the site as it exists today:</p>
-
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-number">~370</div>
-          <div class="stat-label">Indexed URLs</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">294</div>
-          <div class="stat-label">Blog Posts</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">24</div>
-          <div class="stat-label">Category Archives</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">~15</div>
-          <div class="stat-label">Core Business Pages</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">75+ Years of American Manufacturing</div>
+        <h1>The Source for <span>Coil Cords</span> Since 1947</h1>
+        <p class="hero-sub">World's largest inventory of retractile power cords &mdash; over 400 part numbers in stock. Custom UL-listed cables built to your specs. Most orders ship within one day.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-red">Request a Quote &rarr;</a>
+          <a href="#" class="btn btn-outline-white">View Products</a>
         </div>
       </div>
-
-      <h3>Opportunities</h3>
-      <ul class="findings">
-        <li>
-          <strong>Content consolidation:</strong> The site has grown to 294 blog posts over several years. Google's algorithms have evolved — they now favor fewer, more comprehensive articles over many posts targeting similar keywords. Consolidating overlapping content (e.g., multiple "coiled extension cord" and "retractile cord" variations) into definitive guides will strengthen rankings.
-        </li>
-        <li>
-          <strong>Tighter topical focus:</strong> Some blog content covers adjacent topics (badge reels, general cabling) that made sense as part of a broader SEO strategy but may no longer align with how Google evaluates topical authority. Narrowing the focus to Autac's core expertise will help Google clearly understand what the business does best.
-        </li>
-        <li>
-          <strong>Platform modernization:</strong> WordPress and Divi were the right tools when the site was built, but they carry overhead — 200KB+ of framework CSS, JavaScript for page building, and database-driven rendering. Modern static sites achieve the same visual results with a fraction of the code, loading significantly faster.
-        </li>
-        <li>
-          <strong>Fresh core pages:</strong> The About, Contact, FAQ, and product pages haven't been refreshed since 2023. Updating these pages with current information and modern design patterns is an opportunity to make a strong first impression.
-        </li>
-        <li>
-          <strong>Streamlined user experience:</strong> Simplifying the site structure will make it easier for visitors to find what they need and take action.
-        </li>
-      </ul>
+      <div class="hero-image">
+        <img src="groundbreaking.jpg" alt="Robert N. Burkle and daughter Marie-Louise at the Autac facility groundbreaking, circa 1960s">
+        <div class="hero-image-caption">Robert N. Burkle &amp; Marie-Louise at the original Autac facility groundbreaking</div>
+      </div>
     </div>
+  </section>
 
-    <!-- ==================== 3. PROPOSED REDESIGN ==================== -->
-    <div class="section">
-      <div class="section-number">3</div>
-      <h2>Proposed Redesign</h2>
-      <p>We recommend rebuilding the site as a clean static HTML/CSS/JS site, taking advantage of how far web standards have come. This is a comprehensive, all-inclusive package — no add-ons, no surprise costs.</p>
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-item">
+        <div class="trust-icon">&#9889;</div>
+        <div>
+          <div class="trust-label">Ships Next Day</div>
+          <div class="trust-sub">Most in-stock orders</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#9733;</div>
+        <div>
+          <div class="trust-label">400+ Part Numbers</div>
+          <div class="trust-sub">Largest inventory worldwide</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#9745;</div>
+        <div>
+          <div class="trust-label">UL/CUL Listed</div>
+          <div class="trust-sub">Certified quality</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#9881;</div>
+        <div>
+          <div class="trust-label">Custom Built</div>
+          <div class="trust-sub">Any gauge, length, color</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="single-tier">
-        <div class="tier recommended" style="max-width:560px;margin:0 auto;">
-          <div class="tier-badge">Webbersaurus Partner Rate</div>
-          <div class="tier-name">What's Included</div>
-          <div class="tier-price">$7,500</div>
-          <p style="font-size:0.85rem;color:var(--color-text-light);margin-bottom:1.25rem;margin-top:-0.75rem">This is an Autac-only price. The redesign, recoding, searchable catalog, and custom lead generation gateway require serious time and effort — but the result will blow every competitor's site out of the water while preserving the boutique customer experience Autac is known for.</p>
+  <!-- SOLUTIONS -->
+  <section class="solutions">
+    <div class="container">
+      <div class="section-label">Solutions</div>
+      <div class="section-title">Engineered for Every Industry</div>
+      <p class="section-desc">Custom and stock retractile cords powering critical applications across communications, electrical, and utility sectors.</p>
+
+      <div class="solutions-grid">
+        <a class="solution-card" href="#">
+          <div class="solution-thumb">
+            <img src="communications-solutions.png" alt="Autac communications and security cord solutions">
+          </div>
+          <div class="solution-info">
+            <h3>Communications &amp; Security</h3>
+            <p>Retractile cords for telecom, data, and security system applications.</p>
+            <div class="solution-link">View solutions &rarr;</div>
+          </div>
+        </a>
+        <a class="solution-card" href="#">
+          <div class="solution-thumb">
+            <img src="electrical-solutions.png" alt="Autac electrical and electronic cord solutions">
+          </div>
+          <div class="solution-info">
+            <h3>Electrical &amp; Electronic</h3>
+            <p>Power cords and cable assemblies for industrial and commercial equipment.</p>
+            <div class="solution-link">View solutions &rarr;</div>
+          </div>
+        </a>
+        <a class="solution-card" href="#">
+          <div class="solution-thumb">
+            <img src="utility-solutions.png" alt="Autac utility and broadband cord solutions">
+          </div>
+          <div class="solution-info">
+            <h3>Utility &amp; Broadband</h3>
+            <p>Durable retractile cords for utility, broadband, and outdoor applications.</p>
+            <div class="solution-link">View solutions &rarr;</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILD YOUR CORD BANNER -->
+  <section class="build-cord">
+    <div class="container">
+      <div>
+        <h3>Need Something Custom?</h3>
+        <p>Use our Build Your Cord tool to spec your exact gauge, conductor count, length, material, and color.</p>
+      </div>
+      <a href="#" class="btn btn-white">Build Your Cord &rarr;</a>
+    </div>
+  </section>
+
+  <!-- WHY AUTAC -->
+  <section class="why">
+    <div class="container">
+      <div class="why-image">
+        <img src="marie-louise-headshot.jpg" alt="Marie-Louise Burkle, CEO of Autac USA">
+        <div class="why-image-overlay">
+          <div>
+            <div class="name">Marie-Louise Burkle</div>
+            <div class="title">CEO, Autac USA Inc.</div>
+          </div>
+          <img class="badge" src="made-in-usa.png" alt="Made in the USA">
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Why Autac</div>
+        <div class="section-title">75+ Years of American Manufacturing</div>
+        <p class="section-desc">Founded in 1947 by Robert N. Burkle, Autac is the second-oldest company in the retractile cord industry and the only one that is 100% woman-owned. CEO Marie-Louise Burkle leads a team dedicated to quality, innovation, and same-day service from our North Branford, CT facility.</p>
+
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon">&#9733;</div>
+            <div>
+              <h4>Family-Owned Legacy</h4>
+              <p>Three generations of cord manufacturing expertise</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">&#9889;</div>
+            <div>
+              <h4>Same-Day Shipping</h4>
+              <p>Most in-stock orders ship within 24 hours</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">&#127482;&#127480;</div>
+            <div>
+              <h4>Made in the USA</h4>
+              <p>Manufactured in North Branford, Connecticut</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">&#9881;</div>
+            <div>
+              <h4>Full Customization</h4>
+              <p>Any gauge, conductor, length, material, color</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="industries">
+    <div class="container">
+      <div class="section-label">Industries We Serve</div>
+      <div class="section-title">Trusted Across Every Sector</div>
+      <p class="section-desc">From hospital operating rooms to factory floors, Autac cords power critical equipment worldwide.</p>
+
+      <div class="industries-grid">
+        <div class="industry-tag">
+          <span class="ind-icon">&#9764;</span>
+          Medical &amp; Dental
+        </div>
+        <div class="industry-tag">
+          <span class="ind-icon">&#128225;</span>
+          Telecom &amp; Security
+        </div>
+        <div class="industry-tag">
+          <span class="ind-icon">&#128663;</span>
+          Automotive
+        </div>
+        <div class="industry-tag">
+          <span class="ind-icon">&#129302;</span>
+          Robotics &amp; Automation
+        </div>
+        <div class="industry-tag">
+          <span class="ind-icon">&#128161;</span>
+          Electronics
+        </div>
+        <div class="industry-tag">
+          <span class="ind-icon">&#127981;</span>
+          Industrial Manufacturing
+        </div>
+        <div class="industry-tag">
+          <span class="ind-icon">&#128737;</span>
+          Defense &amp; Aerospace
+        </div>
+        <div class="industry-tag">
+          <span class="ind-icon">&#9889;</span>
+          Utility &amp; Broadband
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY BAR -->
+  <section class="credibility">
+    <div class="container">
+      <div class="credibility-label">Recognized &amp; Affiliated</div>
+      <div class="credibility-logos">
+        <img src="naed-logo.jpg" alt="NAED — National Association of Electrical Distributors">
+        <img src="manu-ct.jpg" alt="ManufactureCT">
+        <img src="cbia-article.png" alt="Connecticut Business & Industry Association">
+        <img src="inc-profile.png" alt="Inc. Magazine company profile">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="section-label">Get Started</div>
+      <div class="section-title">Ready to Order or Need a Custom Quote?</div>
+      <p class="section-desc">Tell us about your project and we'll get back to you within one business day with pricing and availability.</p>
+      <div class="cta-content">
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-red">Request a Quote &rarr;</a>
+          <a href="#" class="btn btn-accent">Shop Online</a>
+        </div>
+        <div class="cta-qr">
+          <img src="qr-code.png" alt="Scan for product catalog">
+          <span>Scan for catalog</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="logo-img" src="logo.png" alt="Autac USA">
+          <p class="footer-about">The source for coil cords since 1947. The only 100% woman-owned retractile cord manufacturer in the industry. Proudly made in North Branford, Connecticut.</p>
+        </div>
+        <div>
+          <h4>Products</h4>
           <ul>
-            <li>25+ page static HTML/CSS/JS site</li>
-            <li>Mobile-first responsive design</li>
-            <li>On-page SEO &amp; Google Analytics</li>
-            <li>Contact &amp; quote request forms</li>
-            <li>Content consolidation: 294 posts → ~25–30 quality articles</li>
-            <li>301 redirect strategy for consolidated URLs</li>
-            <li>Full SEO migration audit</li>
-            <li>Searchable &amp; filterable HTML catalog (replaces PDF)</li>
-            <li>Email-verified pricing gateway + lead capture</li>
-            <li>Private lead dashboard + weekly email digest</li>
-            <li>Interactive "Build Your Cord" tool</li>
-            <li>Color chart integration</li>
-            <li>Structured data &amp; schema markup</li>
-            <li>Wisconsin-targeted landing pages</li>
-            <li>Professional copywriting &amp; content rewrite</li>
+            <li><a href="#">Retractile Cords</a></li>
+            <li><a href="#">Coiled Cords</a></li>
+            <li><a href="#">Curly Cords</a></li>
+            <li><a href="#">Cord Sets</a></li>
+            <li><a href="#">Product Catalog</a></li>
+            <li><a href="#">Shop Online</a></li>
           </ul>
         </div>
-      </div>
-
-
-      <p style="font-size:0.85rem;color:var(--color-primary);margin-top:0.5rem"><strong>Early commitment discount: 😊</strong> Take an additional 5% off ($7,125) when the deposit ($3,500) is received within 15 days of this proposal.</p>
-      <p style="font-size:0.85rem;color:var(--color-text);margin-top:0.75rem"><strong>Monthly growth plan:</strong> After launch, we'll add one new state-targeted landing page per month — expanding Autac's local search visibility across the country, one state at a time.</p>
-    </div>
-
-    <!-- ==================== 4. PAGE INVENTORY ==================== -->
-    <div class="section">
-      <div class="section-number">4</div>
-      <h2>Page Inventory</h2>
-      <p>Here is a complete breakdown of every page and feature included in the redesign.</p>
-
-      <table class="inventory-table">
-        <thead>
-          <tr>
-            <th>Page / Feature</th>
-            <th style="text-align:center;width:100px">Included</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Core Pages</td></tr>
-          <tr><td>Homepage</td><td class="check">✓</td></tr>
-          <tr><td>About Us / Our Story (Nearly 80 Years)</td><td class="check">✓</td></tr>
-          <tr><td>Contact / Request a Quote</td><td class="check">✓</td></tr>
-          <tr><td>FAQ</td><td class="check">✓</td></tr>
-          <tr><td>News &amp; Press</td><td class="check">✓</td></tr>
-          <tr><td>Terms &amp; Privacy</td><td class="check">✓</td></tr>
-
-          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Product Pages</td></tr>
-          <tr><td>Retractile Cords</td><td class="check">✓</td></tr>
-          <tr><td>Coiled Cords</td><td class="check">✓</td></tr>
-          <tr><td>Curly Cords</td><td class="check">✓</td></tr>
-          <tr><td>Cord Sets</td><td class="check">✓</td></tr>
-          <tr><td>Color Charts</td><td class="check">✓</td></tr>
-
-          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Solution / Industry Pages</td></tr>
-          <tr><td>Electrical &amp; Electronic Solutions</td><td class="check">✓</td></tr>
-          <tr><td>Communications &amp; Security Solutions</td><td class="check">✓</td></tr>
-          <tr><td>Utility &amp; Broadband Solutions</td><td class="check">✓</td></tr>
-
-          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Wisconsin-Targeted Pages</td></tr>
-          <tr><td>Wisconsin geo-targeted landing pages for local search visibility</td><td class="check">✓</td></tr>
-
-          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">Content &amp; Tools</td></tr>
-          <tr><td>Build Your Cord (Interactive Tool)</td><td class="check">✓</td></tr>
-          <tr style="background:linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,107,53,0.03));border-left:3px solid var(--color-primary)"><td style="font-weight:600;color:var(--color-dark);padding:1rem"><strong style="color:var(--color-primary)">★ Product Catalog (Searchable/Filterable + Pricing Protection)</strong><br><span style="font-weight:400;font-size:0.85rem;color:var(--color-text-light)">Rebuilt in HTML to replace the current PDF — searchable, browsable, mobile-friendly, and Google-indexable. Pricing is gated behind email verification so competitors can't casually access it, and every viewer becomes a known lead.</span></td><td class="check" style="vertical-align:middle">✓</td></tr>
-          <tr><td>Promotions / Specials</td><td class="check">✓</td></tr>
-          <tr><td>Blog Hub (25–30 Consolidated Articles)</td><td class="check">✓</td></tr>
-          <tr><td>Shop Online (link to existing e-commerce)</td><td class="check">✓</td></tr>
-
-          <tr><td colspan="2" style="background:var(--color-dark);color:white;font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px">SEO &amp; Infrastructure</td></tr>
-          <tr><td>301 Redirect Map (294+ URLs)</td><td class="check">✓</td></tr>
-          <tr><td>Full SEO Migration Audit</td><td class="check">✓</td></tr>
-          <tr><td>Schema / Structured Data Markup</td><td class="check">✓</td></tr>
-          <tr><td>Professional Copywriting</td><td class="check">✓</td></tr>
-        </tbody>
-      </table>
-
-      <p style="font-size:0.85rem;color:var(--color-text-light)">25+ pages + blog hub — everything included at one price.</p>
-    </div>
-
-    <!-- ==================== 5. SEARCHABLE CATALOG WITH PRICING PROTECTION ==================== -->
-    <div class="section">
-      <div class="section-number">5</div>
-      <h2>Searchable Catalog with Pricing Protection</h2>
-
-      <h3>The Problem with a PDF Catalog</h3>
-      <p>Right now, Autac's product catalog lives inside a PDF. That means it's invisible to Google — no individual product page will ever show up in search results. Customers have to download the file and scroll through it manually. And when it comes to pricing, it's all or nothing: the PDF is either public (and competitors can grab it) or hidden behind a login that most real customers won't bother with.</p>
-
-      <h3>The Solution: Public Products, Protected Pricing</h3>
-      <p>We'll rebuild the catalog as a fully searchable HTML experience. Every product — specs, categories, images, descriptions — lives on its own indexable page. Google can see it, rank it, and drive traffic to it. But pricing stays hidden until a visitor verifies their email address with a simple one-time step.</p>
-
-      <h3>How It Works</h3>
-      <div class="pricing-flow">
-        <div class="pricing-flow-step">
-          <div class="step-icon">🔍</div>
-          <div class="step-label">Browse Catalog</div>
-          <div class="step-sub">Search &amp; filter freely</div>
-        </div>
-        <div class="pricing-flow-arrow">→</div>
-        <div class="pricing-flow-step">
-          <div class="step-icon">🔓</div>
-          <div class="step-label">Unlock Pricing</div>
-          <div class="step-sub">Click to reveal prices</div>
-        </div>
-        <div class="pricing-flow-arrow">→</div>
-        <div class="pricing-flow-step">
-          <div class="step-icon">✉️</div>
-          <div class="step-label">Enter Email</div>
-          <div class="step-sub">Quick inline form</div>
-        </div>
-        <div class="pricing-flow-arrow">→</div>
-        <div class="pricing-flow-step">
-          <div class="step-icon">🔢</div>
-          <div class="step-label">Get Code</div>
-          <div class="step-sub">6-digit code via email</div>
-        </div>
-        <div class="pricing-flow-arrow">→</div>
-        <div class="pricing-flow-step">
-          <div class="step-icon">💲</div>
-          <div class="step-label">See Prices</div>
-          <div class="step-sub">Unlocked for 60 days</div>
-        </div>
-      </div>
-      <p style="font-size:0.85rem;color:var(--color-text-light);text-align:center;margin-top:-0.5rem">The entire flow takes about 30 seconds. No accounts, no passwords — just a verified email.</p>
-
-      <h3>What You Get from This</h3>
-      <ul class="value-list">
-        <li><strong>Pricing protected from casual browsing</strong> — competitors can't just pull up your price list without leaving a trail</li>
-        <li><strong>Every pricing viewer is a known, verified lead</strong> — you'll have their real email address, confirmed and deliverable</li>
-        <li><strong>Zero ongoing cost</strong> — the verification system runs on the same servers you're already subscribed to, so there's nothing extra to pay for</li>
-      </ul>
-
-      <h3>Built-In Lead Intelligence</h3>
-      <p>Your catalog doesn't just show products — it quietly collects data that helps you sell smarter. Here's what you'll see:</p>
-      <div class="lead-intel-grid">
-        <div class="lead-intel-item">
-          <div class="intel-icon">📊</div>
-          <div>
-            <strong>Demand Signals</strong>
-            <span>Which products get the most pricing views — so you know what's generating interest</span>
-          </div>
-        </div>
-        <div class="lead-intel-item">
-          <div class="intel-icon">🏢</div>
-          <div>
-            <strong>Competitor Awareness</strong>
-            <span>Spot email domains like @competitor.com — know who's looking at your prices</span>
-          </div>
-        </div>
-        <div class="lead-intel-item">
-          <div class="intel-icon">🔎</div>
-          <div>
-            <strong>Product Gap Insights</strong>
-            <span>See what visitors search for that you don't carry — uncover new product opportunities</span>
-          </div>
-        </div>
-        <div class="lead-intel-item">
-          <div class="intel-icon">🔥</div>
-          <div>
-            <strong>Hot Lead Detection</strong>
-            <span>Identify who's looking most frequently — these are the people ready for follow-up</span>
-          </div>
-        </div>
-      </div>
-      <p style="font-size:0.95rem;color:var(--color-dark);font-weight:500;text-align:center;margin-top:0.5rem">Your catalog becomes a lead generation tool, not just a product list.</p>
-
-      <h3>How You'll Access Your Leads</h3>
-      <p>Collecting lead intelligence is only useful if it's easy to act on. You'll have two ways to stay on top of incoming leads — one that comes to you, and one you can check anytime.</p>
-
-      <div class="lead-intel-grid">
-        <div class="lead-intel-item" style="flex-direction:column;gap:0.5rem">
-          <div style="display:flex;align-items:center;gap:0.75rem">
-            <div class="intel-icon">📬</div>
-            <strong style="font-size:1rem">Weekly Email Digest</strong>
-          </div>
-          <span>Every Monday morning, you'll receive an automated summary straight to your inbox — no logging in, no checking dashboards. It includes how many people unlocked pricing that week, their email addresses, which products they viewed, repeat visitors flagged as hot leads, and any competitor domains that showed up. It works from your phone, your desktop, anywhere you read email.</span>
-        </div>
-        <div class="lead-intel-item" style="flex-direction:column;gap:0.5rem">
-          <div style="display:flex;align-items:center;gap:0.75rem">
-            <div class="intel-icon">📊</div>
-            <strong style="font-size:1rem">Private Admin Dashboard</strong>
-          </div>
-          <span>A password-protected page on your own website where you can see every lead in real time. Sort by date, filter by product, flag competitor domains, and spot your hottest leads — the ones who keep coming back. Need to hand a list to your sales team? Export everything to a spreadsheet with one click. It's always up to date and always available.</span>
-        </div>
-      </div>
-      <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:0.5rem">Both are included at no extra cost — the digest keeps you informed passively, and the dashboard is there when you want to dig deeper.</p>
-
-      <h3>Why Custom-Built Beats a Monthly Subscription</h3>
-      <p>Off-the-shelf lead capture and gated-content platforms charge monthly fees — typically $100–$300/mo for the features described above. Over two years, that's $2,400–$7,200 spent on a tool you don't own and can't customize. If you cancel, your lead data and pricing gate disappear with it.</p>
-      <p>Hiring a freelance developer to custom-build a system like this — the searchable catalog, email verification flow, admin dashboard, and weekly digest — typically runs $5,000–$8,000 as a standalone project. We've built $3,000 of that value directly into this proposal — it's not an add-on or a separate line item. It's already included in the $7,500 total because we want Autac to have the best possible site from day one.</p>
-      <p>Because we're building this custom for Autac, you pay once and own it forever. The email verification runs on our servers — the same hosting you're already subscribed to — so there's no new service to sign up for, no per-lead fees, and no third-party platform to manage. It's yours.</p>
-
-      <div class="cost-compare">
-        <div class="cost-compare-card saas">
-          <div class="compare-label">Typical SaaS Platform</div>
-          <div class="compare-price">$150–$300/mo</div>
-          <div class="compare-detail">$3,600–$7,200 over 2 years<br>Cancel and it's gone</div>
-        </div>
-        <div class="cost-compare-card custom">
-          <div class="compare-label">Custom-Built (Included in This Proposal)</div>
-          <div class="compare-price">$3,000 value — already built in</div>
-          <div class="compare-detail">$0/mo forever after<br>Runs on your existing hosting<br><strong>Included in the $7,500 total</strong></div>
-        </div>
-      </div>
-
-      <div class="tech-glance">
-        <div class="glance-icon">⚙️</div>
         <div>
-          <strong style="color:var(--color-dark)">Tech at a Glance:</strong> The catalog and email verification system run on our servers — the same hosting you're already subscribed to. No extra servers, no new subscriptions, no ongoing maintenance. It just works — and it's yours.
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">News &amp; Press</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
-      </div>
-    </div>
-
-    <!-- ==================== 6. BENEFITS ==================== -->
-    <div class="section">
-      <div class="section-number">6</div>
-      <h2>Benefits of the Redesign</h2>
-
-      <div class="benefits-grid">
-        <div class="benefit">
-          <div class="benefit-icon">🧭</div>
-          <div>
-            <h4>Find What You Need — Fast</h4>
-            <p>A streamlined site structure, intuitive navigation, and a searchable, filterable catalog mean customers can find the exact cord, spec, or answer they're looking for in seconds — not minutes of scrolling through PDFs or blog archives.</p>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <strong>Toll-Free:</strong> 800.243.3161
           </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">✨</div>
-          <div>
-            <h4>A Fresh, Modern Look &amp; Feel</h4>
-            <p>A clean, professional design that reflects nearly 80 years of expertise. First impressions happen in seconds — a modern site tells visitors Autac is the real deal before they read a word.</p>
+          <div class="footer-contact-item">
+            <strong>Local:</strong> (203) 481-3444
           </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">⚡</div>
-          <div>
-            <h4>Dramatically Faster Load Times</h4>
-            <p>Static HTML loads in under 1 second. Google has made page speed a direct ranking factor — faster sites rank higher and convert better.</p>
+          <div class="footer-contact-item">
+            <strong>Address:</strong> P.O. Box 306<br>North Branford, CT 06471
           </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">📈</div>
-          <div>
-            <h4>Better Search Rankings</h4>
-            <p>A focused site with consolidated, authoritative content sends clear signals to Google about what Autac does — and who should find you.</p>
-          </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">🔒</div>
-          <div>
-            <h4>Airtight Security</h4>
-            <p>Static sites have virtually no attack surface — no database, no plugins to patch, no server-side code to exploit.</p>
-          </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">🎯</div>
-          <div>
-            <h4>Higher Conversion Rates</h4>
-            <p>A focused site with clear calls to action turns more visitors into quote requests. Every page will have a purpose.</p>
-          </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">🛡️</div>
-          <div>
-            <h4>Lead-Generating Catalog</h4>
-            <p>Your product catalog becomes a lead machine — pricing is protected from competitors while every verified viewer is captured as a known lead.</p>
-          </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">🔍</div>
-          <div>
-            <h4>Google-Visible Products</h4>
-            <p>Every product gets its own searchable page — no more hiding inside a PDF that Google can't read or rank.</p>
+          <div class="footer-contact-item">
+            <strong>Hours:</strong> Mon&ndash;Fri 8am&ndash;5pm
           </div>
         </div>
       </div>
-
-      <p style="margin-top:1.5rem">The current site has served Autac well, but design trends and user expectations have moved on. Visitors today expect clean layouts, crisp typography, generous whitespace, and a site that feels as polished on their phone as it does on a desktop. The redesign delivers all of that — a look and feel that matches the quality of your products and the reputation you've built over nearly 80 years. When a potential customer lands on the new site, they'll immediately see a company that's modern, established, and easy to do business with.</p>
-    </div>
-
-    <!-- ==================== 7. TIMELINE ==================== -->
-    <div class="section">
-      <div class="section-number">7</div>
-      <h2>Estimated Timeline</h2>
-      <p>Timeline begins from project kickoff (signed agreement + initial deposit). Estimated days are shown below. Includes two rounds of revisions.</p>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker">1–7</div>
-          <div class="timeline-content">
-            <h4>Discovery &amp; Strategy</h4>
-            <p>SEO audit, content consolidation plan, copywriting, wireframes &amp; design mockups.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">8–28</div>
-          <div class="timeline-content">
-            <h4>Design &amp; Development</h4>
-            <p>Build all pages, product catalog, Build Your Cord tool &amp; blog hub.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">29–45</div>
-          <div class="timeline-content">
-            <h4>Migration &amp; Launch</h4>
-            <p>Redirect mapping, SEO migration, testing, revisions &amp; go-live. Monthly support begins.</p>
-          </div>
-        </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Autac USA Inc. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></span>
       </div>
-
-      <p style="font-size:0.85rem;color:var(--color-text-light)">Estimated 30–45 days from kickoff to launch.</p>
     </div>
-
-    <!-- ==================== 8. WHY STATIC HTML ==================== -->
-    <div class="section">
-      <div class="section-number">8</div>
-      <h2>Why Move to Static HTML</h2>
-      <p>WordPress and Divi have served millions of businesses well — they made professional web design accessible to everyone. But for a site like Autac Inc.'s, where content updates are infrequent and performance directly impacts search rankings, modern static HTML offers meaningful advantages.</p>
-
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th class="label-col">Factor</th>
-            <th>WordPress + Divi</th>
-            <th>Static HTML/CSS/JS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="label-col">Page Load Speed</td>
-            <td class="current">3–5 seconds typical (database queries, PHP rendering, framework CSS/JS)</td>
-            <td class="proposed">Under 1 second (pre-built HTML, no server processing)</td>
-          </tr>
-          <tr>
-            <td class="label-col">Security</td>
-            <td class="current">Requires regular plugin, theme, and core updates to stay secure</td>
-            <td class="proposed">No database or server-side code — minimal attack surface</td>
-          </tr>
-          <tr>
-            <td class="label-col">Maintenance</td>
-            <td class="current">Ongoing updates for WordPress, plugins, Divi, and PHP</td>
-            <td class="proposed">Minimal — files don't change unless you change them</td>
-          </tr>
-          <tr>
-            <td class="label-col">SEO Performance</td>
-            <td class="current">Core Web Vitals can be impacted by framework overhead</td>
-            <td class="proposed">Excellent Core Web Vitals; clean, semantic HTML for Google to parse</td>
-          </tr>
-          <tr>
-            <td class="label-col">Uptime</td>
-            <td class="current">Depends on database, PHP, and plugin stability</td>
-            <td class="proposed">99.99% — static files served from CDN edge nodes</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
-    <!-- ==================== FOOTER ==================== -->
-    <div class="proposal-footer">
-      <strong>Webbersaurus</strong> · Branford, Connecticut · <a href="https://www.webbersaur.us" style="color:var(--color-primary);text-decoration:none">webbersaur.us</a><br>
-      This proposal is valid for 30 days from the date above. Pricing may be adjusted based on scope changes discussed during kickoff.
-    </div>
-
-  </div>
+  </footer>
 
 </body>
 </html>
