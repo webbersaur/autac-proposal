@@ -102,6 +102,57 @@
     nav a:hover { color: var(--red); }
     nav a.active { color: var(--red); font-weight: 700; }
 
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown > a::after {
+      content: ' ▾';
+      font-size: 0.7em;
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -0.75rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      min-width: 200px;
+      padding: 0.5rem 0;
+      z-index: 200;
+      padding-top: 0.75rem;
+    }
+
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      right: 0;
+      height: 0.75rem;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.85rem !important;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--gray-50);
+    }
+
+    .nav-dropdown-menu .dropdown-divider {
+      border-top: 1px solid var(--gray-100);
+      margin: 0.35rem 0;
+    }
+
     .nav-cta {
       background: var(--accent);
       color: var(--black) !important;
@@ -653,7 +704,16 @@
       <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
       <nav>
         <a href="about.html">About</a>
-        <a href="products.html">Products</a>
+        <div class="nav-dropdown">
+          <a href="products.html">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="products.html">Full Catalog</a>
+            <a href="products/retractile-cords.html">Retractile Cords</a>
+            <a href="products/curly-cords.html">Curly Cords</a>
+            <a href="products/coiled-cords.html">Coiled Cords</a>
+            <a href="products/color-charts.html">Color Charts</a>
+          </div>
+        </div>
         <a href="solutions.html">Solutions</a>
         <a href="build-your-cord.html" class="active">Build Your Cord</a>
         <a href="#">Blog</a>
