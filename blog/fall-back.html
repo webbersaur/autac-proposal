@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Autac USA | Retractile Cord News &amp; Insights</title>
-  <meta name="description" content="Stay up to date with Autac USA. Industry insights, retractile cord engineering tips, manufacturing news, and custom cord solutions from America's oldest coiled cord manufacturer.">
-  <meta property="og:title" content="Blog — Autac USA | Retractile Cord News &amp; Insights">
-  <meta property="og:description" content="Stay up to date with Autac USA. Industry insights, retractile cord engineering tips, manufacturing news, and custom cord solutions from America's oldest coiled cord manufacturer.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.autacusa.com/blog/">
+  <title>Fall Back | Autac USA Blog</title>
+  <meta name="description" content="How our mindset shapes our day — why 'waking up on the wrong side of the bed' doesn't have to define your whole day. Cultivating resilience and positivity at Autac.">
+  <meta property="og:title" content="Fall Back | Autac USA Blog">
+  <meta property="og:description" content="How our mindset shapes our day — why 'waking up on the wrong side of the bed' doesn't have to define your whole day. Cultivating resilience and positivity at Autac.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.autacusa.com/blog/fall-back.html">
   <meta property="og:site_name" content="Autac USA">
   <meta property="og:image" content="https://www.autacusa.com/logo.png">
-  <link rel="canonical" href="https://www.autacusa.com/blog/">
+  <link rel="canonical" href="https://www.autacusa.com/blog/fall-back.html">
   <link rel="icon" type="image/png" href="../logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -274,73 +274,116 @@
     .btn-white { background: var(--white); color: var(--red); }
     .btn-white:hover { background: var(--gray-100); }
 
-    /* === BLOG LISTING === */
-    .blog-listing {
-      padding: 4rem 0;
-    }
-
-    .blog-grid {
-      max-width: 800px;
-      margin: 0 auto;
+    /* === ARTICLE META === */
+    .article-meta {
       display: flex;
-      flex-direction: column;
       gap: 1.5rem;
-    }
-
-    .blog-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 0.75rem;
-      padding: 1.75rem;
-      transition: all 0.2s;
-      text-decoration: none;
-      display: block;
-    }
-
-    .blog-card:hover {
-      border-color: var(--red);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-      transform: translateY(-2px);
-    }
-
-    .blog-card-meta {
-      font-size: 0.8rem;
+      align-items: center;
+      font-size: 0.85rem;
       color: var(--text-light);
-      margin-bottom: 0.5rem;
+      margin-top: 1rem;
     }
 
-    .blog-card h3 {
-      font-size: 1.2rem;
+    /* === ARTICLE BODY === */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .article-body h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--black);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .article-body h3 {
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--black);
+      margin: 2rem 0 0.75rem;
+    }
+
+    .article-body p {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 0 0 1.5rem 1.5rem;
+      line-height: 1.8;
+    }
+
+    .article-body li {
       margin-bottom: 0.5rem;
+      font-size: 1.02rem;
     }
 
-    .blog-card p {
-      font-size: 0.92rem;
-      color: var(--text-light);
-      line-height: 1.6;
+    .article-body strong {
+      color: var(--black);
     }
 
-    .blog-card .read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      margin-top: 0.75rem;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--red);
-    }
-
-    .blog-series-label {
+    /* === CTA === */
+    .cta {
+      padding: 5rem 0;
+      background: var(--white);
       text-align: center;
-      margin-bottom: 2rem;
+    }
+
+    .cta .section-title {
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .cta .section-desc {
+      margin: 0 auto 2rem;
     }
 
     .cta-buttons {
       display: flex;
       gap: 1rem;
       justify-content: center;
+    }
+
+    /* === RELATED POSTS === */
+    .related-posts {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 2.5rem 0;
+    }
+
+    .related-posts .container {
+      max-width: 760px;
+    }
+
+    .related-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .related-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.4rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .related-links a:hover {
+      border-color: var(--red);
+      color: var(--red);
     }
 
     /* === FOOTER === */
@@ -463,9 +506,19 @@
       .page-hero { padding: 3rem 0; }
       .page-hero h1 { font-size: 2rem; }
 
+      .article-body h2 { font-size: 1.35rem; }
+
+      .article-body {
+        padding: 2rem 1.25rem;
+      }
+
       .cta-buttons {
         flex-direction: column;
         align-items: center;
+      }
+
+      .related-links {
+        flex-direction: column;
       }
 
       .footer-grid { grid-template-columns: 1fr; }
@@ -520,94 +573,43 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <div class="page-hero-badge">Blog &amp; Vlog Series</div>
-      <h1>The Autac <span>Blog</span></h1>
-      <p>Business wisdom, company culture, and the philosophy behind nearly 80 years of American manufacturing &mdash; by CEO Marie Louise Burkle.</p>
+      <div class="page-hero-badge">Blog</div>
+      <h1><span>Fall Back</span></h1>
+      <div class="article-meta">
+        <span>By Marie Louise Burkle</span>
+        <span>November 6, 2023</span>
+      </div>
     </div>
   </section>
 
-  <!-- BLOG LISTING -->
-  <section class="blog-listing">
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>Since we are all recovering from "falling back," many of us probably "woke up on the wrong side of the bed" this Monday morning. But is it because the time change influenced our sleep pattern, or did we manifest a lousy start to the week??? While it certainly is a reality that sleep disturbances can provide a difficult start to the day, it's not a guarantee of unfortunate events or that your day will be filled with unnecessary challenges. Expecting the worst is offering negativity an invitation to your doorstep. There is a delicate balance between our emotional state and the vast number of external circumstances that can influence us. Our mindset can significantly shape our day. Even the most minor shift in our perspective can have a profound impact on our mental, emotional, physical, spiritual, and fiscal well-being. Somedays, we will wake up on the wrong side of the bed, whether due to a time change, stress, illness, or life in today's world. That doesn't mean you have to live an entire day of your life in misery. You can choose to cultivate a positive and resilient attitude and set a path to navigate life's challenges with grace, composure, and dignity.</p>
+
+  </article>
+
+  <!-- CTA -->
+  <section class="cta">
     <div class="container">
-      <div class="blog-grid">
+      <div class="section-label">Get Started</div>
+      <div class="section-title">Need Help Choosing?</div>
+      <p class="section-desc">Autac manufactures over 400 standard coiled cord configurations &mdash; and builds custom cords to your exact specifications. Tell us what you need and we'll recommend the right solution.</p>
+      <div class="cta-buttons">
+        <a href="../quote.html" class="btn btn-red">Request a Quote &rarr;</a>
+        <a href="../build-your-cord.html" class="btn btn-accent">Build Your Cord</a>
+      </div>
+    </div>
+  </section>
 
-        <a href="good-customer-service-costs-less.html" class="blog-card">
-          <div class="blog-card-meta">November 21, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Good Customer Service Costs Less Than Bad Customer Service</h3>
-          <p>Decades of business practices have proven that financing quality customer support yields the most significant financial benefits.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="perseverance-substitute-for-talent.html" class="blog-card">
-          <div class="blog-card-meta">November 20, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Perseverance Is a Great Substitute for Talent</h3>
-          <p>Steve Martin once said it best. Hard work, dedication and determination can make anything possible.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="customer-service-vs-servitude.html" class="blog-card">
-          <div class="blog-card-meta">November 20, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Customer Service vs. Customer Servitude</h3>
-          <p>The values and priorities in business have shifted from pleasing the customer to obliging the shareholder.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="we-sell-customer-service.html" class="blog-card">
-          <div class="blog-card-meta">November 9, 2023 &middot; Marie Louise Burkle</div>
-          <h3>We Sell Customer Service and Give People Wire to Remember Us By</h3>
-          <p>Our brand is dependent on consistent, quality wire and cable. You don't survive 76 years selling lousy wire.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="roman-philosophy.html" class="blog-card">
-          <div class="blog-card-meta">November 8, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Roman Philosophy</h3>
-          <p>"If one does not know to which port one is sailing, no wind is favorable." &mdash; Seneca</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="business-exists-to-create-customers.html" class="blog-card">
-          <div class="blog-card-meta">November 7, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Business Exists to Create Customers</h3>
-          <p>It sure doesn't feel that way anymore. Maybe we're old school, but earning our client's trust is the best investment we can make.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="fall-back.html" class="blog-card">
-          <div class="blog-card-meta">November 6, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Fall Back</h3>
-          <p>Did you "wake up on the wrong side of the bed" this Monday? Our mindset can significantly shape our day.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="dont-get-your-knickers-in-a-knot.html" class="blog-card">
-          <div class="blog-card-meta">November 3, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Don't Get Your Knickers in a Knot</h3>
-          <p>Fun Friday! A lighthearted approach to remind people to focus on finding solutions rather than dwelling on the problem.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="man-grows-tired-standing-still.html" class="blog-card">
-          <div class="blog-card-meta">November 2, 2023 &middot; Marie Louise Burkle</div>
-          <h3>The Proverb: A Man Grows Most Tired When Standing Still</h3>
-          <p>Though we are a small company, we are a mighty force. Our hustle is what makes us mighty.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="happy-november.html" class="blog-card">
-          <div class="blog-card-meta">November 1, 2023 &middot; Marie Louise Burkle</div>
-          <h3>Happy November!!!!!</h3>
-          <p>Kicking off our Blog/Vlog Series by exploring famous clich&eacute;s that make us better at doing business.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
-        <a href="coiled-extension-cords.html" class="blog-card">
-          <div class="blog-card-meta">Autac USA</div>
-          <h3>Coiled Extension Cords: The Complete Guide</h3>
-          <p>Everything you need to know about coiled extension cords &mdash; how they work, types, specifications, and applications.</p>
-          <span class="read-more">Read more &rarr;</span>
-        </a>
-
+  <!-- RELATED CONTENT -->
+  <section class="related-posts">
+    <div class="container">
+      <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 1rem;">Related Posts</h3>
+      <div class="related-links">
+        <a href="dont-get-your-knickers-in-a-knot.html">Don't Get Your Knickers in a Knot &rarr;</a>
+        <a href="business-exists-to-create-customers.html">Business Exists to Create Customers &rarr;</a>
+        <a href="happy-november.html">Happy November!!!!! &rarr;</a>
       </div>
     </div>
   </section>
