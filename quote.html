@@ -360,7 +360,10 @@
       background: rgba(204, 10, 43, 0.02);
     }
 
-    .option-tile input { position: absolute; opacity: 0; pointer-events: none; }
+    .option-tile input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .option-tile:focus-within { border-color: var(--red); box-shadow: 0 0 0 3px rgba(204, 10, 43, 0.2); }
+    fieldset { border: none; margin: 0; padding: 0; }
+    fieldset legend { font-size: 0.88rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
 
     .option-tile-icon {
       font-size: 2rem;
@@ -469,7 +472,8 @@
       color: var(--red);
     }
 
-    .checkbox-option input { display: none; }
+    .checkbox-option input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .checkbox-option:focus-within { border-color: var(--red); box-shadow: 0 0 0 3px rgba(204, 10, 43, 0.2); }
 
     .checkbox-check {
       width: 18px;
@@ -798,6 +802,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- TOP BAR -->
   <div class="topbar">
@@ -837,7 +842,7 @@
   </header>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
+  <section id="main-content" class="page-hero">
     <div class="container">
       <div class="page-hero-badge">Fast Quotes</div>
       <h1>Get Your <span>Quote</span></h1>
@@ -880,26 +885,29 @@
           <h2>What do you need?</h2>
           <p>Select the type of product you're looking for. Not sure? No problem &mdash; just pick the closest match and we'll help you figure it out.</p>
 
-          <div class="option-tiles">
-            <label class="option-tile" onclick="selectTile(this, 'productType')">
-              <input type="radio" name="productType" value="Standard Catalog Cord">
-              <span class="option-tile-icon">&#128203;</span>
-              <span class="option-tile-label">Standard Cord</span>
-              <span class="option-tile-desc">Choose from our 400+ in-stock UL-listed part numbers</span>
-            </label>
-            <label class="option-tile" onclick="selectTile(this, 'productType')">
-              <input type="radio" name="productType" value="Custom Cord">
-              <span class="option-tile-icon">&#9881;&#65039;</span>
-              <span class="option-tile-label">Custom Cord</span>
-              <span class="option-tile-desc">Built to your exact specifications &mdash; gauge, length, material &amp; more</span>
-            </label>
-            <label class="option-tile" onclick="selectTile(this, 'productType')">
-              <input type="radio" name="productType" value="Not Sure / Need Help">
-              <span class="option-tile-icon">&#128172;</span>
-              <span class="option-tile-label">Not Sure</span>
-              <span class="option-tile-desc">Describe your needs and we'll recommend the right solution</span>
-            </label>
-          </div>
+          <fieldset>
+            <legend>Product Type</legend>
+            <div class="option-tiles">
+              <label class="option-tile" onclick="selectTile(this, 'productType')">
+                <input type="radio" name="productType" value="Standard Catalog Cord">
+                <span class="option-tile-icon">&#128203;</span>
+                <span class="option-tile-label">Standard Cord</span>
+                <span class="option-tile-desc">Choose from our 400+ in-stock UL-listed part numbers</span>
+              </label>
+              <label class="option-tile" onclick="selectTile(this, 'productType')">
+                <input type="radio" name="productType" value="Custom Cord">
+                <span class="option-tile-icon">&#9881;&#65039;</span>
+                <span class="option-tile-label">Custom Cord</span>
+                <span class="option-tile-desc">Built to your exact specifications &mdash; gauge, length, material &amp; more</span>
+              </label>
+              <label class="option-tile" onclick="selectTile(this, 'productType')">
+                <input type="radio" name="productType" value="Not Sure / Need Help">
+                <span class="option-tile-icon">&#128172;</span>
+                <span class="option-tile-label">Not Sure</span>
+                <span class="option-tile-desc">Describe your needs and we'll recommend the right solution</span>
+              </label>
+            </div>
+          </fieldset>
 
           <div class="form-group" id="partNumberGroup" style="display:none">
             <label for="partNumbers">Part Number(s) <span class="optional">(if known)</span></label>
@@ -944,51 +952,51 @@
             <textarea id="application" placeholder="Briefly describe how the cord will be used. For example: 'Power cord for handheld barcode scanner in a warehouse environment' or 'Coiled handset cord for wall-mounted hospital phone system'"></textarea>
           </div>
 
-          <div class="form-group">
-            <label>Environment / Requirements <span class="optional">(select all that apply)</span></label>
-          </div>
-          <div class="checkbox-grid">
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="Indoor">
-              <span class="checkbox-check">&#10003;</span>
-              Indoor Use
-            </label>
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="Outdoor">
-              <span class="checkbox-check">&#10003;</span>
-              Outdoor Use
-            </label>
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="High Temperature">
-              <span class="checkbox-check">&#10003;</span>
-              High Temperature
-            </label>
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="Chemical Exposure">
-              <span class="checkbox-check">&#10003;</span>
-              Chemical Exposure
-            </label>
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="Oil / Grease">
-              <span class="checkbox-check">&#10003;</span>
-              Oil / Grease
-            </label>
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="Abrasion / Heavy Wear">
-              <span class="checkbox-check">&#10003;</span>
-              Abrasion / Heavy Wear
-            </label>
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="UL/CUL Listing Required">
-              <span class="checkbox-check">&#10003;</span>
-              UL/CUL Listing Required
-            </label>
-            <label class="checkbox-option" onclick="toggleCheck(this)">
-              <input type="checkbox" name="env" value="Shielding / EMI">
-              <span class="checkbox-check">&#10003;</span>
-              Shielding / EMI
-            </label>
-          </div>
+          <fieldset>
+            <legend>Environment / Requirements <span class="optional">(select all that apply)</span></legend>
+            <div class="checkbox-grid">
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="Indoor">
+                <span class="checkbox-check">&#10003;</span>
+                Indoor Use
+              </label>
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="Outdoor">
+                <span class="checkbox-check">&#10003;</span>
+                Outdoor Use
+              </label>
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="High Temperature">
+                <span class="checkbox-check">&#10003;</span>
+                High Temperature
+              </label>
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="Chemical Exposure">
+                <span class="checkbox-check">&#10003;</span>
+                Chemical Exposure
+              </label>
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="Oil / Grease">
+                <span class="checkbox-check">&#10003;</span>
+                Oil / Grease
+              </label>
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="Abrasion / Heavy Wear">
+                <span class="checkbox-check">&#10003;</span>
+                Abrasion / Heavy Wear
+              </label>
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="UL/CUL Listing Required">
+                <span class="checkbox-check">&#10003;</span>
+                UL/CUL Listing Required
+              </label>
+              <label class="checkbox-option" onclick="toggleCheck(this)">
+                <input type="checkbox" name="env" value="Shielding / EMI">
+                <span class="checkbox-check">&#10003;</span>
+                Shielding / EMI
+              </label>
+            </div>
+          </fieldset>
 
           <div class="wizard-nav">
             <button class="btn btn-outline" onclick="prevStep()">&larr; Back</button>
@@ -1349,7 +1357,7 @@
       for (var i = 0; i < fields.length; i++) {
         var el = document.getElementById(fields[i]);
         if (!el.value.trim()) {
-          el.style.borderColor = 'var(--red)';
+          el.style.borderColor = '#cc0a2b';
           if (valid) el.focus();
           valid = false;
         } else {
@@ -1439,18 +1447,25 @@
         howHeard: document.getElementById('howHeard').value
       };
 
+      var submitBtn = document.querySelector('.wizard-nav .btn-accent');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
+
       fetch('https://formspree.io/f/xwpkgjqo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(formData)
-      }).catch(function() {});
-
-      // Hide steps and progress, show success
-      document.querySelectorAll('.wizard-step').forEach(function(s) { s.classList.remove('active'); });
-      document.querySelector('.progress-bar').style.display = 'none';
-      document.getElementById('wizardSuccess').classList.add('active');
-
-      document.querySelector('.wizard-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }).then(function(res) {
+        if (!res.ok) throw new Error('Server error');
+        document.querySelectorAll('.wizard-step').forEach(function(s) { s.classList.remove('active'); });
+        document.querySelector('.progress-bar').style.display = 'none';
+        document.getElementById('wizardSuccess').classList.add('active');
+        document.querySelector('.wizard-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }).catch(function() {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Submit Quote Request &rarr;';
+        alert('Something went wrong submitting your request. Please try again or call us at 800.243.3161.');
+      });
     }
   </script>
 

@@ -364,8 +364,12 @@
     .option-card input {
       position: absolute;
       opacity: 0;
-      pointer-events: none;
+      width: 0;
+      height: 0;
     }
+    .option-card:focus-within { border-color: var(--red); box-shadow: 0 0 0 3px rgba(204, 10, 43, 0.2); }
+    fieldset { border: none; margin: 0; padding: 0; }
+    fieldset legend { font-size: 0.88rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
 
     .option-card-label {
       font-size: 0.88rem;
@@ -694,6 +698,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- TOP BAR -->
   <div class="topbar">
@@ -733,7 +738,7 @@
   </header>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
+  <section id="main-content" class="page-hero">
     <div class="container">
       <div class="page-hero-badge">Custom Configurator</div>
       <h1>Build Your <span>Custom Cord</span></h1>
@@ -756,38 +761,41 @@
               <div class="step-title">Insulation Material</div>
             </div>
             <p class="step-desc">Choose the primary insulation material for your cord.</p>
-            <div class="option-cards">
-              <label class="option-card" onclick="selectOption(this, 'material')">
-                <input type="radio" name="material" value="PVC">
-                <span class="option-card-label">PVC</span>
-                <span class="option-card-sub">Most common, cost-effective</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'material')">
-                <input type="radio" name="material" value="TPE">
-                <span class="option-card-label">TPE</span>
-                <span class="option-card-sub">Flexible, wide temp range</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'material')">
-                <input type="radio" name="material" value="Polypropylene">
-                <span class="option-card-label">Polypropylene</span>
-                <span class="option-card-sub">Lightweight, chemical resistant</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'material')">
-                <input type="radio" name="material" value="Polyurethane">
-                <span class="option-card-label">Polyurethane</span>
-                <span class="option-card-sub">Abrasion resistant, rugged</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'material')">
-                <input type="radio" name="material" value="TPR">
-                <span class="option-card-label">TPR</span>
-                <span class="option-card-sub">Excellent flexibility</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'material')">
-                <input type="radio" name="material" value="Nylon Core">
-                <span class="option-card-label">Nylon Core</span>
-                <span class="option-card-sub">High strength, durable</span>
-              </label>
-            </div>
+            <fieldset>
+              <legend>Insulation Material</legend>
+              <div class="option-cards">
+                <label class="option-card" onclick="selectOption(this, 'material')">
+                  <input type="radio" name="material" value="PVC">
+                  <span class="option-card-label">PVC</span>
+                  <span class="option-card-sub">Most common, cost-effective</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'material')">
+                  <input type="radio" name="material" value="TPE">
+                  <span class="option-card-label">TPE</span>
+                  <span class="option-card-sub">Flexible, wide temp range</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'material')">
+                  <input type="radio" name="material" value="Polypropylene">
+                  <span class="option-card-label">Polypropylene</span>
+                  <span class="option-card-sub">Lightweight, chemical resistant</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'material')">
+                  <input type="radio" name="material" value="Polyurethane">
+                  <span class="option-card-label">Polyurethane</span>
+                  <span class="option-card-sub">Abrasion resistant, rugged</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'material')">
+                  <input type="radio" name="material" value="TPR">
+                  <span class="option-card-label">TPR</span>
+                  <span class="option-card-sub">Excellent flexibility</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'material')">
+                  <input type="radio" name="material" value="Nylon Core">
+                  <span class="option-card-label">Nylon Core</span>
+                  <span class="option-card-sub">High strength, durable</span>
+                </label>
+              </div>
+            </fieldset>
           </div>
 
           <!-- STEP 2: JACKET MATERIAL -->
@@ -797,38 +805,41 @@
               <div class="step-title">Jacket Material</div>
             </div>
             <p class="step-desc">Select the outer jacket for your cord.</p>
-            <div class="option-cards">
-              <label class="option-card" onclick="selectOption(this, 'jacket')">
-                <input type="radio" name="jacket" value="PVC">
-                <span class="option-card-label">PVC</span>
-                <span class="option-card-sub">Standard jacket</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'jacket')">
-                <input type="radio" name="jacket" value="TPE">
-                <span class="option-card-label">TPE</span>
-                <span class="option-card-sub">Flexible jacket</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'jacket')">
-                <input type="radio" name="jacket" value="TPR">
-                <span class="option-card-label">TPR</span>
-                <span class="option-card-sub">Rubber-like feel</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'jacket')">
-                <input type="radio" name="jacket" value="Hytrel">
-                <span class="option-card-label">Hytrel</span>
-                <span class="option-card-sub">High-performance elastomer</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'jacket')">
-                <input type="radio" name="jacket" value="NFRTTPU">
-                <span class="option-card-label">NFRTTPU</span>
-                <span class="option-card-sub">Non-flame retardant TPU</span>
-              </label>
-              <label class="option-card" onclick="selectOption(this, 'jacket')">
-                <input type="radio" name="jacket" value="FRPTU">
-                <span class="option-card-label">FRPTU</span>
-                <span class="option-card-sub">Flame retardant TPU</span>
-              </label>
-            </div>
+            <fieldset>
+              <legend>Jacket Material</legend>
+              <div class="option-cards">
+                <label class="option-card" onclick="selectOption(this, 'jacket')">
+                  <input type="radio" name="jacket" value="PVC">
+                  <span class="option-card-label">PVC</span>
+                  <span class="option-card-sub">Standard jacket</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'jacket')">
+                  <input type="radio" name="jacket" value="TPE">
+                  <span class="option-card-label">TPE</span>
+                  <span class="option-card-sub">Flexible jacket</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'jacket')">
+                  <input type="radio" name="jacket" value="TPR">
+                  <span class="option-card-label">TPR</span>
+                  <span class="option-card-sub">Rubber-like feel</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'jacket')">
+                  <input type="radio" name="jacket" value="Hytrel">
+                  <span class="option-card-label">Hytrel</span>
+                  <span class="option-card-sub">High-performance elastomer</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'jacket')">
+                  <input type="radio" name="jacket" value="NFRTTPU">
+                  <span class="option-card-label">NFRTTPU</span>
+                  <span class="option-card-sub">Non-flame retardant TPU</span>
+                </label>
+                <label class="option-card" onclick="selectOption(this, 'jacket')">
+                  <input type="radio" name="jacket" value="FRPTU">
+                  <span class="option-card-label">FRPTU</span>
+                  <span class="option-card-sub">Flame retardant TPU</span>
+                </label>
+              </div>
+            </fieldset>
           </div>
 
           <!-- STEP 3: CONDUCTOR SPECS -->
@@ -1291,17 +1302,23 @@
         notes: document.getElementById('notes') ? document.getElementById('notes').value : ''
       };
 
+      var submitBtn = document.querySelector('.btn-red.btn-full');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
+
       fetch('https://formspree.io/f/xwpkgjqo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(formData)
-      }).catch(function() {});
-
-      document.getElementById('formSuccess').style.display = 'block';
-      window.scrollTo({ top: document.getElementById('formSuccess').offsetTop - 100, behavior: 'smooth' });
-      setTimeout(function() {
-        document.getElementById('formSuccess').style.display = 'none';
-      }, 8000);
+      }).then(function(res) {
+        if (!res.ok) throw new Error('Server error');
+        document.getElementById('formSuccess').style.display = 'block';
+        window.scrollTo({ top: document.getElementById('formSuccess').offsetTop - 100, behavior: 'smooth' });
+      }).catch(function() {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Submit Quote Request &rarr;';
+        alert('Something went wrong submitting your request. Please try again or call us at 800.243.3161.');
+      });
     }
 
     // Reset

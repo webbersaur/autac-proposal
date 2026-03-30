@@ -1064,6 +1064,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- TOP BAR -->
   <div class="topbar">
@@ -1103,7 +1104,7 @@
   </header>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
+  <section id="main-content" class="page-hero">
     <div class="container">
       <div class="page-hero-badge">Product Catalog</div>
       <h1>Over 400 Part Numbers, <span>Ready to Ship</span></h1>
@@ -1186,9 +1187,9 @@
 
   <!-- PRICING MODAL -->
   <div class="modal-overlay" id="pricingModal" onclick="if(event.target===this)closePricingModal()">
-    <div class="modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Unlock Catalog Pricing">
       <div class="modal-header">
-        <button class="modal-close" onclick="closePricingModal()">&times;</button>
+        <button class="modal-close" onclick="closePricingModal()" aria-label="Close">&times;</button>
         <h3>Unlock Catalog Pricing</h3>
         <p>No account needed &mdash; just verify your email</p>
       </div>
