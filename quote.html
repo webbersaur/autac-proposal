@@ -999,11 +999,11 @@
           </fieldset>
 
           <div class="form-group" style="margin-top:1.5rem;">
-            <label class="checkbox-option" onclick="toggleCheck(this)" style="display:flex;align-items:flex-start;gap:0.75rem;padding:1rem 1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:0.5rem;">
+            <div class="checkbox-option" onclick="toggleCheck(this)" style="display:flex;align-items:flex-start;gap:0.75rem;padding:1rem 1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:0.5rem;cursor:pointer;">
               <input type="checkbox" id="nda-acknowledge">
               <span class="checkbox-check" style="margin-top:2px;">&#10003;</span>
               <span style="font-size:0.88rem;line-height:1.5;">I acknowledge that by requesting a quote, Autac may wish to discuss a mutual Non-Disclosure Agreement (NDA) to protect proprietary information shared during the quoting process.</span>
-            </label>
+            </div>
           </div>
 
           <div class="wizard-nav">
@@ -1305,6 +1305,7 @@
 
     // Checkbox toggle
     function toggleCheck(el) {
+      event.preventDefault();
       el.classList.toggle('checked');
       var cb = el.querySelector('input');
       cb.checked = !cb.checked;
