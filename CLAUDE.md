@@ -16,7 +16,7 @@ python3 -m http.server 8080
 
 ## Site Structure
 
-### Public Pages (11 total, indexed in sitemap.xml)
+### Public Pages (indexed in sitemap.xml)
 - `index.html` — Homepage
 - `about.html` — Company history, leadership, woman-owned messaging
 - `products.html` — Product catalog with filtering (loads from JSON)
@@ -25,19 +25,26 @@ python3 -m http.server 8080
 - `products/coiled-cords.html` — Coiled cord category
 - `products/color-charts.html` — Conductor color reference
 - `solutions.html` — Industry-specific solutions
-- `contact.html` — Contact form and info
-- `quote.html` — 5-step guided quote wizard with progress bar
-- `build-your-cord.html` — 8-step custom cord configurator with live summary panel
+- `contact.html` — Contact form (wired to Supabase)
+- `quote.html` — 5-step guided quote wizard (wired to Supabase)
+- `build-your-cord.html` — 8-step custom cord configurator (wired to Supabase)
+- `shop-online.html` — Links to eBay store
+- `media.html` — 8 YouTube videos from WordPress site
+- `news.html` — News & press index
+- `news/*.html` — 9 individual news/press articles
+- `blog/index.html` — Blog index
+- `blog/*.html` — 11 blog posts (Blog/Vlog Series from WordPress)
 
 ### Non-indexed Files (blocked in robots.txt)
 - `proposal-v1.html` — Webbersaurus website redesign proposal (different brand colors)
 - `invoice-deposit.html` — Webbersaurus deposit invoice
 - `mockup.html` — Design mockup/test page
+- `admin.html` — Supabase-powered dashboard (OTP auth via Resend SMTP)
 
 ## Architecture & Patterns
 
 ### No Shared CSS/JS
-Every page has its own complete inline `<style>` block and `<script>` block. When creating new pages, copy the full header/nav/footer structure and CSS from an existing page. This means **sitewide changes (nav, footer, theme) must be applied to all 11 pages individually**.
+Every page has its own complete inline `<style>` block and `<script>` block. When creating new pages, copy the full header/nav/footer structure and CSS from an existing page. This means **sitewide changes (nav, footer, theme) must be applied to all pages individually**.
 
 ### CSS Theme (consistent across all pages)
 - `--red: #cc0a2b` / `--red-light: #e01235` — Primary CTA color
@@ -53,20 +60,22 @@ Every page follows: Topbar → Sticky Header (logo + nav + CTA) → Page Hero �
 - Products has a hover dropdown with invisible bridge (`::before` spacer) to prevent flickering
 - Mobile: hamburger toggle with `nav.open` class
 - "Get a Quote" yellow CTA button links to `quote.html`
-- Blog link points to `blog/` (directory to be created)
+- Blog link points to `blog/`
 - Product subpages use `../` prefix for root-level links
 
-### Forms (No Backend)
-Both `quote.html` and `build-your-cord.html` are client-side only — success messages display but no data is POSTed. Forms will need a backend (Formspree, Netlify Forms, etc.) for production.
+### Forms (Supabase Backend)
+All three forms (`contact.html`, `quote.html`, `build-your-cord.html`) submit to Supabase tables via the JS client. A Supabase Edge Function (`supabase/functions/notify-submission/`) sends email notifications on new submissions via Resend SMTP.
 
-- **quote.html**: `nextStep()`/`prevStep()`/`goToStep()` navigation, `validateContact()` on step 4, generates reference number `QR-YYYYMMDD-XXXX`
-- **build-your-cord.html**: `cordConfig` state object, `updateSummary()` updates sticky sidebar, auto-calculates extended length (5x retracted)
+- **contact.html**: Simple contact form → `contacts` table
+- **quote.html**: `nextStep()`/`prevStep()`/`goToStep()` navigation, `validateContact()` on step 4, generates reference number `QR-YYYYMMDD-XXXX` → `quotes` table
+- **build-your-cord.html**: `cordConfig` state object, `updateSummary()` updates sticky sidebar, auto-calculates extended length (5x retracted) → `cord_configs` table
 
 ## SEO Status
-- Canonical tags on all 11 pages (www.autacusa.com)
+- Canonical tags on all pages (www.autacusa.com)
 - Unique title tags and meta descriptions per page
+- JSON-LD structured data on all pages
+- Open Graph tags on homepage
 - robots.txt and sitemap.xml in place
-- **Not yet implemented:** JSON-LD structured data, Open Graph tags, blog content
 
 ## When Adding New Pages
 1. Copy header/nav/footer HTML and full `<style>` block from an existing page
