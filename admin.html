@@ -919,7 +919,7 @@
 
       if (!email || !password || !confirm) { showAuthError('Please fill in all fields.'); return; }
       if (ALLOWED_EMAILS.indexOf(email) === -1) { showAuthError('This email is not authorized. Contact your administrator.'); return; }
-      if (password.length < 6) { showAuthError('Password must be at least 6 characters.'); return; }
+      if (password.length < 8) { showAuthError('Password must be at least 8 characters.'); return; }
       if (password !== confirm) { showAuthError('Passwords do not match.'); return; }
 
       var result = await sb.auth.signUp({ email: email, password: password });
