@@ -256,6 +256,21 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.autacusa.com/75th-anniversary.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.autacusa.com/2026-price-adjustments.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.autacusa.com/holiday-schedule.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://www.autacusa.com/shop-online.html</loc>
     <lastmod>2026-03-25</lastmod>
     <priority>0.5</priority>
