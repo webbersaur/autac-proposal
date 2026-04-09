@@ -1594,7 +1594,7 @@
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzaW96b2pnZ2xzZW16d2p6Y2V5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0ODI0MDUsImV4cCI6MjA5MTA1ODQwNX0.sZsWS2jeeIPEnau9W0f1XqZlfM5XXlUwov7up4Y1VMU'
     );
     var pendingEmail = '';
-    var pendingOtpType = 'magiclink';
+    var pendingOtpType = 'email';
 
     function isPricingUnlocked() {
       // Check for Supabase session in localStorage
@@ -1767,8 +1767,6 @@
       pendingEmail = email;
 
       try {
-        // Check if user already exists by attempting sign-in
-        // signInWithOtp sends 'signup' type for new users, 'magiclink' for existing
         var { error } = await supabaseClient.auth.signInWithOtp({ email: email });
         btn.disabled = false;
         btn.textContent = 'Send Access Code \u2192';
@@ -1813,7 +1811,6 @@
       btn.textContent = 'Verifying...';
 
       try {
-        // Use the tracked OTP type from sendCode
         var result = await supabaseClient.auth.verifyOtp({
           email: pendingEmail,
           token: code,
