@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coiled Cords — Autac USA | Shielded & Miniature Retractile Cords</title>
-  <meta name="description" content="Autac coiled cords: shielded cords for EMI protection and miniature cords for space-constrained applications. PVC and Auta-Prene, UL listed, made in the USA.">
-  <meta property="og:title" content="Coiled Cords — Autac USA | Shielded & Miniature Retractile Cords">
-  <meta property="og:description" content="Autac coiled cords: shielded cords for EMI protection and miniature cords for space-constrained applications. PVC and Auta-Prene, UL listed, made in the USA.">
+  <title>Cord Sets — Autac USA | Custom Power Cord Assemblies</title>
+  <meta name="description" content="Custom cord sets and power cord assemblies from Autac USA. Straight and retractile configurations with molded plugs, custom lengths, and UL-listed options. Made in USA.">
+  <meta property="og:title" content="Cord Sets — Autac USA | Custom Power Cord Assemblies">
+  <meta property="og:description" content="Custom cord sets and power cord assemblies from Autac USA. Straight and retractile configurations with molded plugs, custom lengths, and UL-listed options.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.autacusa.com/products/coiled-cords.html">
+  <meta property="og:url" content="https://www.autacusa.com/products/cord-sets.html">
   <meta property="og:site_name" content="Autac USA">
   <meta property="og:image" content="https://www.autacusa.com/logo.png">
-  <link rel="canonical" href="https://www.autacusa.com/products/coiled-cords.html">
+  <link rel="canonical" href="https://www.autacusa.com/products/cord-sets.html">
   <link rel="icon" type="image/png" href="../logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Cord Sets",
+    "description": "Custom cord sets and power cord assemblies with molded plugs. Available in straight and retractile configurations with custom lengths and UL-listed options.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Autac USA"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Autac USA Inc.",
+      "url": "https://www.autacusa.com"
+    },
+    "countryOfOrigin": "US"
+  }
+  </script>
   <style>
     :root {
       --black: #1a1a1a;
@@ -118,7 +136,7 @@
     }
 
     .nav-dropdown > a::after {
-      content: ' ▾';
+      content: ' \25BE';
       font-size: 0.7em;
     }
 
@@ -276,127 +294,233 @@
 
     /* === OVERVIEW === */
     .overview {
-      padding: 4rem 0;
+      padding: 5rem 0;
     }
 
-    .overview-grid {
+    .overview .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 2.5rem;
+      gap: 4rem;
+      align-items: center;
     }
 
-    .overview-card {
+    .overview-image {
       background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 0.75rem;
-      padding: 2rem;
-    }
-
-    .overview-card .card-icon {
+      border: 2px dashed var(--gray-200);
+      border-radius: 1rem;
+      min-height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
-      background: rgba(204, 10, 43, 0.08);
-      border-radius: 0.5rem;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
+      color: var(--gray-300);
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
-    .overview-card h3 {
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .benefit-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+
+    .benefit-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 0.5rem;
+      background: rgba(204, 10, 43, 0.08);
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .benefit-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.3rem;
+    }
+
+    .benefit-card p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* === CORD SET TYPES === */
+    .types-section {
+      padding: 5rem 0;
+      background: var(--gray-50);
+    }
+
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .type-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      transition: all 0.2s;
+    }
+
+    .type-card:hover {
+      border-color: var(--red);
+      box-shadow: 0 4px 16px rgba(204, 10, 43, 0.08);
+    }
+
+    .type-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 0.75rem;
+      background: rgba(204, 10, 43, 0.08);
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .type-card h3 {
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--black);
       margin-bottom: 0.5rem;
     }
 
-    .overview-card p {
-      font-size: 0.9rem;
+    .type-card p {
+      font-size: 0.88rem;
       color: var(--text-light);
       line-height: 1.6;
-    }
-
-    /* === PRODUCT SECTIONS === */
-    .product-section {
-      padding: 4rem 0;
-    }
-
-    .product-section:nth-child(even) {
-      background: var(--gray-50);
-    }
-
-    .product-section-header {
       margin-bottom: 1rem;
     }
 
-    .product-meta {
+    .type-card ul {
+      list-style: none;
+    }
+
+    .type-card ul li {
+      font-size: 0.82rem;
+      color: var(--text);
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--gray-100);
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
 
-    .product-meta-item {
+    .type-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .check-icon {
+      color: var(--red);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* === APPLICATIONS === */
+    .applications {
+      padding: 5rem 0;
+    }
+
+    .applications .container {
+      text-align: center;
+    }
+
+    .applications .section-desc {
+      margin: 0 auto 3rem;
+      max-width: 600px;
+    }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .app-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: 0.75rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .app-card:hover {
+      border-color: var(--red);
+      background: var(--white);
+    }
+
+    .app-card .app-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .app-card h4 {
       font-size: 0.85rem;
-      color: var(--text-light);
-    }
-
-    .product-meta-item strong {
+      font-weight: 600;
       color: var(--black);
     }
 
-    .product-note {
-      background: rgba(245, 197, 24, 0.1);
-      border: 1px solid rgba(245, 197, 24, 0.3);
-      border-radius: 0.5rem;
-      padding: 0.75rem 1rem;
-      font-size: 0.85rem;
-      color: var(--text);
-      margin-bottom: 2rem;
+    /* === SPECS === */
+    .specs-section {
+      padding: 5rem 0;
+      background: var(--gray-50);
     }
 
-    .product-table-wrap {
-      overflow-x: auto;
-      border-radius: 0.5rem;
-      border: 1px solid var(--gray-200);
+    .specs-section .container {
+      max-width: 800px;
     }
 
-    .product-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
+    .specs-section .section-title {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
     }
 
-    .product-table thead {
-      background: var(--black);
-      color: var(--white);
+    .specs-section .section-desc {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
     }
 
-    .product-table th {
-      padding: 0.75rem 1rem;
-      text-align: left;
-      font-weight: 600;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gray-200);
+      font-size: 0.92rem;
     }
 
-    .product-table td {
-      padding: 0.65rem 1rem;
-      border-bottom: 1px solid var(--gray-100);
-      white-space: nowrap;
-    }
-
-    .product-table tbody tr:hover {
-      background: rgba(204, 10, 43, 0.03);
-    }
-
-    .product-table tbody tr:last-child td {
+    .spec-row:last-child {
       border-bottom: none;
+    }
+
+    .spec-label {
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .spec-value {
+      color: var(--text-light);
+      text-align: right;
     }
 
     /* === BUILD YOUR CORD === */
@@ -530,19 +654,29 @@
       color: var(--text);
     }
 
-    /* === LOADING === */
-    .loading {
-      text-align: center;
-      padding: 3rem;
-      color: var(--text-light);
-      font-size: 0.95rem;
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--accent);
+      color: var(--black);
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+      font-weight: 700;
+      text-decoration: none;
     }
+
+    .skip-link:focus { top: 0; }
 
     /* === RESPONSIVE === */
     @media (max-width: 1024px) {
-      .overview-grid {
+      .overview .container {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
       }
+
+      .types-grid { grid-template-columns: 1fr; }
+      .app-grid { grid-template-columns: repeat(2, 1fr); }
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -578,11 +712,8 @@
       .page-hero { padding: 3rem 0; }
       .page-hero h1 { font-size: 2rem; }
 
-      .overview-grid { grid-template-columns: 1fr; }
-
-      .product-table { font-size: 0.78rem; }
-      .product-table th,
-      .product-table td { padding: 0.5rem 0.6rem; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .app-grid { grid-template-columns: 1fr 1fr; }
 
       .build-cord .container {
         flex-direction: column;
@@ -606,6 +737,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- TOP BAR -->
   <div class="topbar">
@@ -648,45 +780,197 @@
   <!-- PAGE HERO -->
   <section id="main-content" class="page-hero">
     <div class="container">
-      <div class="page-hero-badge">Product Category</div>
-      <h1>Coiled <span>Cords</span></h1>
-      <p>Shielded and miniature retractile coiled cords for EMI-sensitive environments and space-constrained applications. UL listed, made in the USA.</p>
+      <div class="page-hero-badge">Power Distribution</div>
+      <h1>Cord <span>Sets</span></h1>
+      <p>Complete power cord assemblies with molded plugs and connectors &mdash; available in straight and retractile configurations, built to your specifications.</p>
     </div>
   </section>
 
   <!-- OVERVIEW -->
   <section class="overview">
     <div class="container">
-      <div class="section-label">Overview</div>
-      <div class="section-title">Shielded & Miniature Coiled Cords</div>
-      <p class="section-desc">Autac coiled cords deliver signal integrity and compact flexibility where it matters most. From EMI-protected shielded lines to ultra-compact miniature cords, every product is built to perform.</p>
+      <div>
+        <div class="section-label">What Are Cord Sets?</div>
+        <div class="section-title">Power Cords, Ready to Connect</div>
+        <p class="section-desc">A cord set is a complete power cord assembly consisting of a flexible cable with factory-attached plugs or connectors on one or both ends. Autac manufactures cord sets in both straight and retractile configurations, with a wide range of plug types, wire gauges, and lengths to match your exact application.</p>
 
-      <div class="overview-grid">
-        <div class="overview-card">
-          <div class="card-icon">&#128737;</div>
-          <h3>Shielded Cords for EMI Protection</h3>
-          <p>Spiral-wrap and foil shielding options provide 90%+ coverage for electromagnetic interference protection. Available in PVC and Auta-Prene jacketing with individually served shielded conductors for maximum noise rejection in sensitive signal and data applications.</p>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">&#128268;</div>
+            <h4>Plug-and-Play</h4>
+            <p>Factory-terminated with molded plugs &mdash; no field wiring required.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">&#9745;</div>
+            <h4>UL/CUL Listed</h4>
+            <p>Cord sets meet rigorous UL and CUL safety standards for commercial and industrial use.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">&#128736;</div>
+            <h4>Fully Customizable</h4>
+            <p>Any gauge, length, plug type, material, and color combination to match your spec.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">&#127942;</div>
+            <h4>Made in USA</h4>
+            <p>Assembled in North Branford, CT with rigorous quality control on every unit.</p>
+          </div>
         </div>
-        <div class="overview-card">
-          <div class="card-icon">&#128268;</div>
-          <h3>Miniature Cords for Tight Spaces</h3>
-          <p>Ultra-compact coiled cords with small OD profiles for instruments, medical devices, and electronics where space is at a premium. Available with optional foil shield and drain wire for applications requiring both compact size and EMI protection.</p>
+      </div>
+      <div class="overview-image">
+        Cord Set Product Image
+      </div>
+    </div>
+  </section>
+
+  <!-- CORD SET TYPES -->
+  <section class="types-section">
+    <div class="container">
+      <div style="text-align:center;">
+        <div class="section-label">Configurations</div>
+        <div class="section-title">Cord Set Types</div>
+        <p class="section-desc" style="margin:0 auto;">Autac builds cord sets for power, signal, and data applications. Choose a standard configuration or tell us your requirements.</p>
+      </div>
+
+      <div class="types-grid">
+        <div class="type-card">
+          <div class="type-icon">&#8634;</div>
+          <h3>Retractile Cord Sets</h3>
+          <p>Coiled power cord assemblies that extend and retract, keeping workspaces tangle-free.</p>
+          <ul>
+            <li><span class="check-icon">&#10003;</span> Self-retracting coiled design</li>
+            <li><span class="check-icon">&#10003;</span> 1:5 extension ratio standard</li>
+            <li><span class="check-icon">&#10003;</span> TPE, TPR, PVC, or Neoprene</li>
+            <li><span class="check-icon">&#10003;</span> Molded NEMA plugs available</li>
+            <li><span class="check-icon">&#10003;</span> 2&ndash;25+ conductors</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <div class="type-icon">&#9866;</div>
+          <h3>Straight Cord Sets</h3>
+          <p>Standard non-coiled power cord assemblies with molded plugs for fixed installations.</p>
+          <ul>
+            <li><span class="check-icon">&#10003;</span> Custom lengths available</li>
+            <li><span class="check-icon">&#10003;</span> Multiple plug configurations</li>
+            <li><span class="check-icon">&#10003;</span> Hospital-grade options</li>
+            <li><span class="check-icon">&#10003;</span> Right-angle and inline plugs</li>
+            <li><span class="check-icon">&#10003;</span> Color-coded jackets</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <div class="type-icon">&#128274;</div>
+          <h3>Shielded Cord Sets</h3>
+          <p>EMI-protected cord assemblies for sensitive electronic and medical equipment.</p>
+          <ul>
+            <li><span class="check-icon">&#10003;</span> Spiral or braided shielding</li>
+            <li><span class="check-icon">&#10003;</span> Data and signal applications</li>
+            <li><span class="check-icon">&#10003;</span> Medical-grade available</li>
+            <li><span class="check-icon">&#10003;</span> Foil + drain wire options</li>
+            <li><span class="check-icon">&#10003;</span> Low-interference design</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCT SECTIONS (loaded dynamically) -->
-  <div id="product-sections">
-    <div class="loading">Loading product data...</div>
-  </div>
+  <!-- APPLICATIONS -->
+  <section class="applications">
+    <div class="container">
+      <div class="section-label">Applications</div>
+      <div class="section-title">Where Cord Sets Are Used</div>
+      <p class="section-desc">From hospital equipment to factory floors, Autac cord sets power critical equipment across every industry.</p>
+
+      <div class="app-grid">
+        <div class="app-card">
+          <div class="app-icon">&#9764;</div>
+          <h4>Medical &amp; Dental</h4>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">&#127981;</div>
+          <h4>Industrial Equipment</h4>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">&#128225;</div>
+          <h4>Telecom &amp; Data</h4>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">&#128187;</div>
+          <h4>Office &amp; IT</h4>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">&#9889;</div>
+          <h4>Power Tools</h4>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">&#128663;</div>
+          <h4>Automotive</h4>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">&#128737;</div>
+          <h4>Defense &amp; Aerospace</h4>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">&#129302;</div>
+          <h4>Robotics &amp; Automation</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIFICATIONS -->
+  <section class="specs-section">
+    <div class="container">
+      <div class="section-label" style="text-align:center;">Specifications</div>
+      <div class="section-title">Cord Set Options</div>
+      <p class="section-desc">Every cord set is built to order. Below are the standard specification ranges &mdash; custom options available on request.</p>
+
+      <div class="spec-row">
+        <span class="spec-label">Wire Gauge</span>
+        <span class="spec-value">26 AWG &ndash; 10 AWG</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Conductor Count</span>
+        <span class="spec-value">2 &ndash; 25+ conductors</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Insulation Materials</span>
+        <span class="spec-value">PVC, TPE, TPR, Neoprene</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Voltage Rating</span>
+        <span class="spec-value">Up to 600V</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Amperage Rating</span>
+        <span class="spec-value">Up to 20A</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Plug Types</span>
+        <span class="spec-value">NEMA 1-15P, 5-15P, 6-15P, 6-20P, Hospital Grade</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Connector Types</span>
+        <span class="spec-value">IEC C13, C15, C19, stripped &amp; tinned, ring terminals, custom</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Shielding</span>
+        <span class="spec-value">Spiral serve, braided, foil + drain</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-label">Listings</span>
+        <span class="spec-value">UL/CUL, RoHS compliant options</span>
+      </div>
+    </div>
+  </section>
 
   <!-- BUILD YOUR CORD -->
   <section class="build-cord">
     <div class="container">
       <div>
-        <h3>Don't See Your Exact Spec?</h3>
-        <p>We build custom coiled cords to order &mdash; any gauge, conductor count, length, shielding, and color.</p>
+        <h3>Need a Custom Cord Set?</h3>
+        <p>Tell us your plug type, gauge, length, and material &mdash; we'll build it to spec.</p>
       </div>
       <a href="../build-your-cord.html" class="btn btn-white">Build Your Cord &rarr;</a>
     </div>
@@ -696,8 +980,8 @@
   <section class="cta">
     <div class="container">
       <div class="section-label">Get Started</div>
-      <div class="section-title">Need a Coiled Cord Quote?</div>
-      <p class="section-desc">Tell us about your application and we'll recommend the right cord &mdash; or build one from scratch.</p>
+      <div class="section-title">Ready to Order?</div>
+      <p class="section-desc">Request a quote on any cord set configuration, or tell us your specs and we'll build it custom.</p>
       <div class="cta-buttons">
         <a href="../quote.html" class="btn btn-red">Request a Quote &rarr;</a>
         <a href="../build-your-cord.html" class="btn btn-accent">Build Your Cord</a>
@@ -719,6 +1003,7 @@
             <li><a href="retractile-cords.html">Retractile Cords</a></li>
             <li><a href="coiled-cords.html">Coiled Cords</a></li>
             <li><a href="curly-cords.html">Curly Cords</a></li>
+            <li><a href="cord-sets.html">Cord Sets</a></li>
             <li><a href="../products.html">Product Catalog</a></li>
           </ul>
         </div>
@@ -753,96 +1038,10 @@
     </div>
   </footer>
 
-  <script>
-    const CATEGORIES = ['shielded-comm', 'pvc-shielded', 'pvc-miniature', 'pvc-miniature-foil'];
-
-    fetch('../catalog/data/products.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('product-sections');
-        container.innerHTML = '';
-
-        CATEGORIES.forEach((catId, index) => {
-          const category = data.categories.find(c => c.id === catId);
-          if (!category) return;
-
-          const products = data.products.filter(p => p.category === catId);
-          if (products.length === 0) return;
-
-          const section = document.createElement('section');
-          section.className = 'product-section';
-          section.id = catId;
-
-          let noteHtml = '';
-          if (category.note) {
-            noteHtml = '<div class="product-note">' + category.note + '</div>';
-          }
-
-          let shieldMeta = '';
-          if (category.shield) {
-            shieldMeta = '<span class="product-meta-item"><strong>Shield:</strong> ' + category.shield + '</span>';
-          }
-
-          section.innerHTML = `
-            <div class="container">
-              <div class="product-section-header">
-                <div class="section-label">${category.name}</div>
-                <div class="section-title" style="font-size:1.75rem;">${category.name}</div>
-              </div>
-              <div class="product-meta">
-                <span class="product-meta-item"><strong>Conductor:</strong> ${category.conductor}</span>
-                <span class="product-meta-item"><strong>Insulation:</strong> ${category.insulation}</span>
-                <span class="product-meta-item"><strong>Jacket:</strong> ${category.jacket}</span>
-                <span class="product-meta-item"><strong>Extension Ratio:</strong> ${category.extensionRatio}</span>
-                <span class="product-meta-item"><strong>Listing:</strong> ${category.listing}</span>
-                ${shieldMeta}
-              </div>
-              ${noteHtml}
-              <div class="product-table-wrap">
-                <table class="product-table">
-                  <thead>
-                    <tr>
-                      <th>Catalog #</th>
-                      <th>Conductors</th>
-                      <th>AWG</th>
-                      <th>Voltage</th>
-                      <th>Amps</th>
-                      <th>Retracted Lengths</th>
-                      <th>Listing</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${products.map(p => `
-                      <tr>
-                        <td><strong>${p.catNo}</strong></td>
-                        <td>${p.conductors}</td>
-                        <td>${p.awg}</td>
-                        <td>${p.voltage}</td>
-                        <td>${p.ampRating}A</td>
-                        <td>${p.retractedLengths.map(l => l + '"').join(', ')}</td>
-                        <td>${category.listing}</td>
-                      </tr>
-                    `).join('')}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          `;
-
-          container.appendChild(section);
-        });
-      })
-      .catch(err => {
-        document.getElementById('product-sections').innerHTML =
-          '<div class="loading">Unable to load product data. Please try again later.</div>';
-        console.error('Error loading products:', err);
-      });
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script>
     (async function() {
-      var sb = supabase.createClient('https://jsiozojgglsemzwjzcey.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzaW96b2pnZ2xzZW16d2p6Y2V5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0ODI0MDUsImV4cCI6MjA5MTA1ODQwNX0.sZsWS2jeeIPEnau9W0f1XqZlfM5XXlUwov7up4Y1VMU');
+      var sb = supabase.createClient('https://jsiozojgglsemzwjzcey.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzaW96b2pnZ2xzZW16d2p6Y2V5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0ODI0MDUsImV4cCI6MjA5MTA1ODQwNX0.sZsWS2jeeIPEnau5W0f1XqZlfM5XXlUwov7up4Y1VMU');
       var r = await sb.auth.getSession();
       if (r.data.session) sb.from('page_views').insert([{ email: r.data.session.user.email, page: location.pathname, title: document.title }]);
     })();
