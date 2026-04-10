@@ -1,2 +1,6 @@
 seo-content-strategy.md
 blog/BLOG-STYLE-GUIDE.md
+.DS_Store
+.vscode/
+supabase/.temp/
+autac supabase.rtf
