@@ -66,7 +66,7 @@ Every page follows: Topbar → Sticky Header (logo + nav + CTA) → Page Hero �
 
 ### Navigation
 - Products has a hover dropdown with invisible bridge (`::before` spacer) to prevent flickering
-- Dropdown items: Full Catalog, Retractile Cords, Curly Cords, Coiled Cords, Cord Sets, Color Charts
+- Dropdown items: Full Catalog, Retractile Cords, Curly Cords, Coiled Cords, Color Charts
 - Mobile: hamburger toggle with `nav.open` class
 - "Get a Quote" yellow CTA button links to `quote.html`
 - Blog link points to `blog/`
@@ -93,6 +93,6 @@ All three forms (`contact.html`, `quote.html`, `build-your-cord.html`) submit to
 2. Add `<link rel="canonical">` tag in `<head>`
 3. Add the page to `sitemap.xml`
 4. For pages in subdirectories, use `../` prefix for root-level asset/page links
-5. Ensure nav dropdown includes all 6 product links (Catalog, Retractile, Curly, Coiled, Cord Sets, Color Charts)
+5. Ensure nav dropdown includes all 5 product links (Catalog, Retractile, Curly, Coiled, Color Charts)
 6. Ensure footer has all 3 legal links (Privacy Policy, Terms of Service, Terms of Sale)
 7. Add JSON-LD structured data appropriate to the page type
