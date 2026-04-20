@@ -4,3 +4,6 @@ blog/BLOG-STYLE-GUIDE.md
 .vscode/
 supabase/.temp/
 autac supabase.rtf
+review-notes.md
+Invoice *.pdf
+invoice-deposit.html
