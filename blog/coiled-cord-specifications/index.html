@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coiled Cord Specifications: How to Read and Compare Specs | Autac USA</title>
+  <meta name="description" content="A complete technical reference for coiled cord specifications — AWG wire gauge, conductor count, voltage and amperage ratings, jacket materials, UL cord types, temperature ratings, shielding, and more. From Autac USA, America's coiled cord manufacturer since 1947.">
+  <meta property="og:title" content="Coiled Cord Specifications: How to Read and Compare Specs | Autac USA">
+  <meta property="og:description" content="A complete technical reference for coiled cord specifications — AWG wire gauge, conductor count, voltage and amperage ratings, jacket materials, UL cord types, temperature ratings, shielding, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.autacusa.com/blog/coiled-cord-specifications/">
+  <meta property="og:site_name" content="Autac USA">
+  <meta property="og:image" content="https://www.autacusa.com/logo.png">
+  <link rel="canonical" href="https://www.autacusa.com/blog/coiled-cord-specifications/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VCNRLKCL6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-3VCNRLKCL6");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #1a1a1a;
+      --black-light: #2a2a2a;
+      --red: #cc0a2b;
+      --red-light: #e01235;
+      --accent: #f5c518;
+      --accent-dark: #d4a80e;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #d8dde6;
+      --gray-300: #b0b8c7;
+      --text: #2c3345;
+      --text-light: #5a6478;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* === TOP BAR === */
+    .topbar {
+      background: var(--black);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8rem;
+      padding: 0.5rem 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* === HEADER === */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--red); }
+    nav a.active { color: var(--red); font-weight: 700; }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown > a::after {
+      content: ' ▾';
+      font-size: 0.7em;
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -0.75rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      min-width: 200px;
+      padding: 0.5rem 0;
+      z-index: 200;
+      padding-top: 0.75rem;
+    }
+
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      right: 0;
+      height: 0.75rem;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.85rem !important;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--gray-50);
+    }
+
+    .nav-dropdown-menu .dropdown-divider {
+      border-top: 1px solid var(--gray-100);
+      margin: 0.35rem 0;
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--black) !important;
+      padding: 0.6rem 1.25rem;
+      border-radius: 0.4rem;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-dark); }
+
+    /* === PAGE HERO === */
+    .page-hero {
+      background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
+      color: var(--white);
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(245, 197, 24, 0.04);
+    }
+
+    .page-hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .page-hero h1 span { color: var(--accent); }
+
+    .page-hero p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* === SHARED === */
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .section-desc {
+      color: var(--text-light);
+      max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-red { background: var(--red); color: var(--white); }
+    .btn-red:hover { background: var(--red-light); }
+    .btn-accent { background: var(--accent); color: var(--black); }
+    .btn-accent:hover { background: var(--accent-dark); }
+    .btn-outline { background: transparent; color: var(--red); border: 2px solid var(--red); }
+    .btn-outline:hover { background: var(--red); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--red); }
+    .btn-white:hover { background: var(--gray-100); }
+
+    /* === ARTICLE META === */
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 1rem;
+    }
+
+    /* === ARTICLE BODY === */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .article-body h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--black);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .article-body h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--black);
+      margin: 2rem 0 0.75rem;
+    }
+
+    .article-body p {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 0 0 1.5rem 1.5rem;
+      line-height: 1.8;
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+      font-size: 1.02rem;
+    }
+
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.92rem;
+    }
+
+    .article-body th {
+      background: var(--black);
+      color: var(--white);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .article-body td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .article-body tr:nth-child(even) td {
+      background: var(--gray-50);
+    }
+
+    .article-body strong {
+      color: var(--black);
+    }
+
+    /* === CTA === */
+    .cta {
+      padding: 5rem 0;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .cta .section-title {
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .cta .section-desc {
+      margin: 0 auto 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* === RELATED POSTS === */
+    .related-posts {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 2.5rem 0;
+    }
+
+    .related-posts .container {
+      max-width: 760px;
+    }
+
+    .related-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .related-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.4rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .related-links a:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.6);
+      padding: 3.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-img {
+      height: 44px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+
+    .footer-about {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+
+    footer h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 0.6rem; }
+
+    footer ul a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    footer ul a:hover { color: var(--accent); }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-contact-item strong { color: rgba(255,255,255,0.8); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover { color: var(--accent); }
+
+    /* === MOBILE MENU === */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--text);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar .container {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+      }
+
+      .menu-toggle { display: block; }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 2rem 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      }
+
+      nav.open { display: flex; }
+
+      .page-hero { padding: 3rem 0; }
+      .page-hero h1 { font-size: 2rem; }
+
+      .article-body h2 { font-size: 1.35rem; }
+
+      .article-body {
+        padding: 2rem 1.25rem;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .related-links {
+        flex-direction: column;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--accent);
+      color: var(--black);
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 0; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Coiled Cord Specifications: How to Read and Compare Specs",
+    "description": "A complete technical reference for coiled cord specifications — AWG wire gauge, conductor count, voltage and amperage ratings, jacket materials, UL cord types, temperature ratings, shielding, and more.",
+    "datePublished": "2025-11-15",
+    "author": {
+      "@type": "Person",
+      "name": "Marie-Louise Burkle",
+      "jobTitle": "CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Autac USA"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Autac USA",
+      "url": "https://www.autacusa.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.autacusa.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.autacusa.com/blog/coiled-cord-specifications/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span>P.O. Box 306, North Branford, CT 06471 &nbsp;|&nbsp; Mon&ndash;Fri 8am&ndash;5pm</span>
+      <span><a href="tel:8002433161">800.243.3161</a> &nbsp;|&nbsp; 100% Woman-Owned · Est. 1947</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a class="logo" href="/">
+        <img src="/logo.png" alt="Autac USA — Re-Trak-Tul Kords">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+      <nav>
+        <a href="/about/">About</a>
+        <div class="nav-dropdown">
+          <a href="/products/">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="/products/">Full Catalog</a>
+            <a href="/products/retractile-cords/">Retractile Cords</a>
+            <a href="/products/curly-cords/">Curly Cords</a>
+            <a href="/products/coiled-cords/">Coiled Cords</a>
+            <a href="/products/color-charts/">Color Charts</a>
+          </div>
+        </div>
+        <a href="/solutions/">Solutions</a>
+        <a href="/build-your-cord/">Build Your Cord</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/news/">News</a>
+        <a href="/contact/">Contact</a>
+        <a href="/quote/" class="nav-cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section id="main-content" class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">Technical Reference</div>
+      <h1>Coiled Cord Specifications: How to <span>Read and Compare Specs</span></h1>
+      <p>A manufacturer's guide to understanding every specification on a coiled cord datasheet &mdash; wire gauge, voltage, amperage, jacket materials, cord types, and more.</p>
+      <div class="article-meta">
+        <span>Published November 15, 2025</span>
+        <span>12 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <h2>Why Specifications Matter</h2>
+
+    <p>A coiled cord specification sheet is a dense block of abbreviations, numbers, and material codes. If you are an engineer, purchasing manager, or maintenance professional selecting retractile cords for a project, reading those specs accurately is the difference between a cord that performs safely for years and one that fails in the field &mdash; or worse, creates a hazard.</p>
+
+    <p>At Autac USA, we have been manufacturing coiled cords in North Branford, Connecticut since 1947. Over nearly eight decades, we have seen every specification misread and every shortcut attempted. This guide is our attempt to put the complete reference in one place &mdash; a resource you can bookmark and return to whenever you need to evaluate coiled cord specifications, compare options, or write a specification for a custom order.</p>
+
+    <p>We will cover each specification category in the order you will typically encounter them on a datasheet: wire gauge, conductor count, voltage and amperage ratings, jacket materials, cord type designations, length measurements, temperature ratings, and shielding.</p>
+
+    <h2>AWG Wire Gauge Explained</h2>
+
+    <p><strong>AWG</strong> stands for American Wire Gauge, the standard system for measuring the diameter of electrical conductors in North America. The critical thing to understand about AWG is that <strong>the numbers run in reverse</strong>: a lower AWG number means a thicker wire with greater current-carrying capacity. A higher AWG number means a thinner wire.</p>
+
+    <p>In coiled cord applications, wire gauges typically range from <strong>10 AWG</strong> (the heaviest, used for high-amperage industrial power cords) down to <strong>26 AWG</strong> (the lightest, used for miniature signal and communication cords). The gauge you need depends on two factors: the amperage your circuit demands and the length of the cord run. Longer cords experience more voltage drop, which may require stepping up to a thicker gauge.</p>
+
+    <h3>How Gauge Affects Coiled Cord Performance</h3>
+
+    <p>Wire gauge does not just determine electrical capacity &mdash; it directly affects the mechanical behavior of a coiled cord. Heavier gauges (10&ndash;14 AWG) produce stiffer, heavier coils with stronger retractile force. They resist extension and snap back with more energy. Lighter gauges (20&ndash;26 AWG) create supple, lightweight coils that extend easily and retract gently. Choosing the right gauge means balancing electrical requirements against the physical handling characteristics your application demands.</p>
+
+    <p>A 10 AWG coiled power cord on a factory floor needs to handle high current and withstand rough treatment &mdash; the stiffness is acceptable. A 24 AWG coiled cord on a medical instrument needs to move freely without dragging the device across a table &mdash; flexibility is paramount.</p>
+
+    <h2>Amperage Ratings by Wire Gauge</h2>
+
+    <p>The amperage rating of a coiled cord tells you the maximum continuous current the cord can safely carry without overheating. This rating is determined primarily by the wire gauge, but also by the number of conductors, the jacket material, and the ambient temperature. The following table shows standard amperage ratings for common coiled cord gauges at 30&deg;C (86&deg;F) ambient temperature.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>AWG Gauge</th>
+            <th>Conductor Diameter</th>
+            <th>Max Amperage (Power Cord)</th>
+            <th>Typical Applications</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>10 AWG</strong></td>
+            <td>2.588 mm</td>
+            <td>30 A</td>
+            <td>Heavy industrial tools, welding equipment, high-draw motors</td>
+          </tr>
+          <tr>
+            <td><strong>12 AWG</strong></td>
+            <td>2.053 mm</td>
+            <td>25 A</td>
+            <td>Industrial machinery, large power tools, commercial equipment</td>
+          </tr>
+          <tr>
+            <td><strong>14 AWG</strong></td>
+            <td>1.628 mm</td>
+            <td>18 A</td>
+            <td>Workshop tools, kitchen appliances, medium-duty equipment</td>
+          </tr>
+          <tr>
+            <td><strong>16 AWG</strong></td>
+            <td>1.291 mm</td>
+            <td>13 A</td>
+            <td>Light power tools, fans, monitors, point-of-sale systems</td>
+          </tr>
+          <tr>
+            <td><strong>18 AWG</strong></td>
+            <td>1.024 mm</td>
+            <td>10 A</td>
+            <td>Small appliances, desk equipment, chargers, low-draw devices</td>
+          </tr>
+          <tr>
+            <td><strong>20 AWG</strong></td>
+            <td>0.812 mm</td>
+            <td>5 A (signal/control)</td>
+            <td>Control circuits, sensors, low-voltage instrumentation</td>
+          </tr>
+          <tr>
+            <td><strong>22 AWG</strong></td>
+            <td>0.644 mm</td>
+            <td>3 A (signal/control)</td>
+            <td>Data cables, barcode scanners, communication devices</td>
+          </tr>
+          <tr>
+            <td><strong>24 AWG</strong></td>
+            <td>0.511 mm</td>
+            <td>2 A (signal/control)</td>
+            <td>Telephone handsets, headsets, lightweight instrumentation</td>
+          </tr>
+          <tr>
+            <td><strong>26 AWG</strong></td>
+            <td>0.405 mm</td>
+            <td>1 A (signal/control)</td>
+            <td>Miniature sensors, microphone cables, fine-gauge signals</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Important:</strong> These are general ratings. Actual ampacity depends on cord type, insulation material, number of conductors bundled together, and ambient temperature. Always consult the specific UL listing for the cord assembly you are evaluating. At Autac, every cord we manufacture ships with ratings that reflect the actual tested configuration, not generic wire tables.</p>
+
+    <h2>Conductor Count</h2>
+
+    <p>The conductor count tells you how many individual insulated wires are bundled inside the cord jacket. This is expressed as a number followed by a "C" or by a slash notation: <strong>3C</strong> or <strong>16/3</strong> (meaning 16 AWG, 3 conductors).</p>
+
+    <ul>
+      <li><strong>2-conductor</strong> &mdash; Ungrounded circuits. Used for double-insulated devices that do not require an equipment ground. Common in low-voltage signal cords and some small appliance cords (flat 2-prong plug).</li>
+      <li><strong>3-conductor</strong> &mdash; The standard for grounded power cords in North America. Hot, neutral, and equipment ground. Required for any device with a 3-prong plug or metal chassis.</li>
+      <li><strong>4-conductor</strong> &mdash; Common in telephone and intercom cords (RJ11 connections). Also used in 3-phase control circuits and some specialized power applications.</li>
+      <li><strong>5&ndash;12 conductors</strong> &mdash; Multi-circuit control cables for pendant controllers, PLCs, and communication stations. Each conductor carries a separate signal or power circuit.</li>
+      <li><strong>12&ndash;25+ conductors</strong> &mdash; High-conductor-count coiled cables for complex instrumentation, multi-channel data, and industrial control systems where running multiple separate cables would be impractical.</li>
+    </ul>
+
+    <p>More conductors mean a larger outer diameter, more weight, and a stiffer coil. When specifying high-conductor-count coiled cords, discuss your flexibility requirements with the manufacturer &mdash; conductor arrangement, lay direction, and jacket wall thickness can all be adjusted to optimize the retractile behavior.</p>
+
+    <h2>Voltage Ratings: 300V vs. 600V</h2>
+
+    <p>The voltage rating on a coiled cord indicates the maximum voltage the insulation system is designed to withstand safely. In practice, you will encounter two standard ratings in power cord applications:</p>
+
+    <ul>
+      <li><strong>300V</strong> &mdash; Standard for SJT, SJTO, and other "Junior Service" cord types. Adequate for standard 120V and 240V circuits in indoor commercial and light industrial environments.</li>
+      <li><strong>600V</strong> &mdash; Standard for SO, SOW, SOOW, and other heavy-duty "Service" cord types. Required for industrial environments, outdoor installations, and anywhere local codes or facility standards mandate the higher insulation rating.</li>
+    </ul>
+
+    <p>The voltage rating is <strong>not</strong> the operating voltage &mdash; it is the insulation's rated capacity. A 600V-rated cord on a 120V circuit is not "overkill" in industrial settings; it provides an additional safety margin against insulation degradation from abrasion, chemical exposure, heat cycling, and mechanical stress that industrial cords routinely endure.</p>
+
+    <p><strong>Rule of thumb:</strong> If the cord will be used in a factory, warehouse, outdoor setting, or any environment with mechanical or chemical hazards, specify 600V-rated cord types. For climate-controlled office, medical, and retail environments, 300V-rated cords are appropriate.</p>
+
+    <h2>UL Cord Type Designations</h2>
+
+    <p>UL cord type designations encode a cord's construction, voltage rating, and environmental suitability in a compact letter code. Understanding this code lets you quickly assess whether a cord is appropriate for your application. Here is how to decode the most common designations you will find on coiled cords.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Cord Type</th>
+            <th>Voltage</th>
+            <th>Description</th>
+            <th>Typical Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SJT</strong></td>
+            <td>300V</td>
+            <td>Service Junior, Thermoplastic jacket</td>
+            <td>Indoor light/medium-duty: office equipment, POS, medical devices</td>
+          </tr>
+          <tr>
+            <td><strong>SJTO</strong></td>
+            <td>300V</td>
+            <td>SJT + Oil-resistant outer jacket</td>
+            <td>Commercial kitchens, light industrial where oil exposure is present</td>
+          </tr>
+          <tr>
+            <td><strong>SJTOW</strong></td>
+            <td>300V</td>
+            <td>SJTO + Weather/water-resistant</td>
+            <td>Outdoor light-duty, wet locations, foodservice patios</td>
+          </tr>
+          <tr>
+            <td><strong>SO</strong></td>
+            <td>600V</td>
+            <td>Service cord, Oil-resistant, thermoset jacket</td>
+            <td>Heavy industrial, factory floors, construction</td>
+          </tr>
+          <tr>
+            <td><strong>SOW</strong></td>
+            <td>600V</td>
+            <td>SO + Weather/water-resistant</td>
+            <td>Outdoor industrial, wet environments, mining</td>
+          </tr>
+          <tr>
+            <td><strong>SOOW</strong></td>
+            <td>600V</td>
+            <td>SO + Oil-resistant + Weather-resistant (all components)</td>
+            <td>The most demanding environments: oil rigs, chemical plants, extreme outdoor</td>
+          </tr>
+          <tr>
+            <td><strong>SVT</strong></td>
+            <td>300V</td>
+            <td>Service Vacuum, Thermoplastic</td>
+            <td>Light-duty appliances, vacuum cleaners, personal electronics</td>
+          </tr>
+          <tr>
+            <td><strong>ST</strong></td>
+            <td>600V</td>
+            <td>Service, Thermoplastic jacket</td>
+            <td>General-purpose industrial, non-oil environments</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Decoding the Letters</h3>
+
+    <ul>
+      <li><strong>S</strong> = Service grade (flexible cord for portable use)</li>
+      <li><strong>J</strong> = Junior service (300V rating, thinner insulation). Without "J" = 600V rating.</li>
+      <li><strong>T</strong> = Thermoplastic jacket (PVC or TPE)</li>
+      <li><strong>O</strong> = Oil-resistant outer jacket</li>
+      <li><strong>OO</strong> = Oil-resistant outer jacket AND oil-resistant conductor insulation</li>
+      <li><strong>W</strong> = Weather and water-resistant (rated for outdoor and wet locations)</li>
+      <li><strong>V</strong> = Vacuum type (lighter construction for appliance cords)</li>
+    </ul>
+
+    <p>When the "J" is absent from the designation, the cord is rated for 600V. This is the single most important letter to watch for when comparing coiled cord specifications. An "SO" cord and an "SJT" cord may look similar on the outside, but they are built to fundamentally different safety standards.</p>
+
+    <h2>Jacket Materials Compared</h2>
+
+    <p>The jacket material is arguably the most important specification for a coiled cord's real-world performance. It determines flexibility, retractile memory, chemical resistance, temperature range, abrasion resistance, and lifespan. Here is how the most common jacket materials compare.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Temp Range</th>
+            <th>Oil Resistance</th>
+            <th>Flexibility</th>
+            <th>Retractile Memory</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>PVC</strong></td>
+            <td>-20&deg;F to 150&deg;F</td>
+            <td>Poor</td>
+            <td>Good</td>
+            <td>Good</td>
+            <td>Indoor, climate-controlled environments, budget-conscious applications</td>
+          </tr>
+          <tr>
+            <td><strong>TPE</strong></td>
+            <td>-40&deg;F to 221&deg;F</td>
+            <td>Good</td>
+            <td>Excellent</td>
+            <td>Very Good</td>
+            <td>Industrial settings needing flexibility and chemical resistance</td>
+          </tr>
+          <tr>
+            <td><strong>Polypropylene</strong></td>
+            <td>-20&deg;F to 180&deg;F</td>
+            <td>Excellent</td>
+            <td>Good</td>
+            <td>Good</td>
+            <td>Communications, signal cords, lightweight applications</td>
+          </tr>
+          <tr>
+            <td><strong>Polyurethane (PUR)</strong></td>
+            <td>-40&deg;F to 176&deg;F</td>
+            <td>Very Good</td>
+            <td>Excellent</td>
+            <td>Excellent</td>
+            <td>High-flex robotic applications, drag chains, medical</td>
+          </tr>
+          <tr>
+            <td><strong>TPR</strong></td>
+            <td>-50&deg;F to 221&deg;F</td>
+            <td>Very Good</td>
+            <td>Excellent</td>
+            <td>Very Good</td>
+            <td>Wide temperature range applications, cold storage, outdoor</td>
+          </tr>
+          <tr>
+            <td><strong>Neoprene</strong></td>
+            <td>-40&deg;F to 194&deg;F</td>
+            <td>Excellent</td>
+            <td>Good</td>
+            <td>Very Good</td>
+            <td>Oil-heavy industrial, mining, outdoor, harsh environments</td>
+          </tr>
+          <tr>
+            <td><strong>Auta-Prene</strong></td>
+            <td>-40&deg;F to 194&deg;F</td>
+            <td>Excellent</td>
+            <td>Very Good</td>
+            <td>Excellent</td>
+            <td>Autac's proprietary neoprene alternative &mdash; superior retractile memory and durability for demanding applications</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Choosing the Right Jacket</h3>
+
+    <p><strong>PVC</strong> is the default for cost-sensitive indoor applications. It works well in offices, retail, and medical environments where the cord is not exposed to chemicals, extreme temperatures, or heavy mechanical abuse. PVC stiffens in cold temperatures and can crack if flexed repeatedly below freezing.</p>
+
+    <p><strong>TPE (thermoplastic elastomer)</strong> offers a significant upgrade in flexibility and temperature range. It is a good mid-range choice for light industrial and medical applications where the cord needs to maintain its retractile behavior across a wider temperature window.</p>
+
+    <p><strong>Polypropylene</strong> is lightweight and resistant to most chemicals, making it the standard choice for communication and signal cords. It is not typically used for power cords due to its lower heat resistance under sustained electrical loads.</p>
+
+    <p><strong>Polyurethane (PUR)</strong> delivers exceptional abrasion resistance and flexibility retention over millions of flex cycles. It is the premier choice for robotic, automated, and high-cycle applications where the cord must maintain performance under constant motion.</p>
+
+    <p><strong>TPR (thermoplastic rubber)</strong> provides rubber-like flexibility with thermoplastic processing advantages. Its standout characteristic is extreme cold-temperature performance &mdash; it remains flexible well below the freezing point, making it ideal for cold storage, freezer, and outdoor winter applications.</p>
+
+    <p><strong>Neoprene</strong> and Autac's proprietary <strong>Auta-Prene</strong> are the heavy-duty workhorses. Both offer excellent oil resistance, abrasion resistance, and broad temperature tolerance. Auta-Prene is specifically engineered for retractile cord applications, delivering superior spring memory and cycle life compared to standard neoprene compounds. When your coiled cord will face oil, solvents, outdoor exposure, or heavy physical abuse, these materials are the right choice.</p>
+
+    <h2>Retracted vs. Extended Length and the 5:1 Ratio</h2>
+
+    <p>Every coiled cord specification includes two length measurements: the <strong>retracted length</strong> (the compact resting state) and the <strong>extended length</strong> (maximum working reach). The industry-standard ratio is approximately <strong>5:1</strong> &mdash; a cord extends to roughly five times its retracted length.</p>
+
+    <p>A specification might read: <em>"Retracted: 2 ft / Extended: 10 ft"</em> or <em>"24&Prime; retracted, 10&prime; extended."</em> Some manufacturers list only the retracted length and expect you to calculate the extended length. Others list only the extended length. Always confirm both values and verify the ratio with the manufacturer.</p>
+
+    <h3>How to Calculate the Length You Need</h3>
+
+    <ol>
+      <li>Measure the maximum distance from the cord's fixed end (outlet, junction box, or mounting point) to the farthest point the connected device needs to reach.</li>
+      <li>Subtract the combined length of the two tangent leads (see next section).</li>
+      <li>The remaining distance is your minimum extended coil length.</li>
+      <li>Divide by 5 to get the minimum retracted coil length.</li>
+      <li>Add 10&ndash;15% margin &mdash; you do not want to fully extend a coiled cord to 100% of its rated extension on a regular basis, as this accelerates fatigue.</li>
+    </ol>
+
+    <p>Autac manufactures retracted lengths from approximately 1 foot to 10 feet, yielding working extensions from 5 feet up to 50 feet. Custom lengths beyond this range are available for specialized applications.</p>
+
+    <h2>Tangent Leads</h2>
+
+    <p>Tangent leads are the <strong>straight, non-coiled sections</strong> at each end of a coiled cord. They typically measure 6 to 12 inches, though custom lengths up to several feet are common. Tangent leads serve two critical functions:</p>
+
+    <ul>
+      <li><strong>Strain relief</strong> &mdash; The transition from coiled to straight cord is a stress concentration point. The tangent lead absorbs bending and pulling forces that would otherwise fatigue the first coil.</li>
+      <li><strong>Connector clearance</strong> &mdash; The straight section provides room for the plug, connector, or strain relief boot to sit flat against an outlet or device without the coil interfering.</li>
+    </ul>
+
+    <p>When comparing cord specifications, note whether the listed lengths include or exclude the tangent leads. A "2-foot retracted" cord with 12-inch tangent leads on each side has an overall retracted length of 4 feet &mdash; but only 2 feet of that is coiled and retractile. The tangent leads add fixed, non-retracting length. This distinction matters for fit in tight spaces.</p>
+
+    <h2>Temperature Ratings</h2>
+
+    <p>Temperature ratings specify the ambient temperature range in which the cord can operate safely without degradation. This is not the temperature the cord itself reaches under load &mdash; it is the external environment the cord must withstand.</p>
+
+    <ul>
+      <li><strong>Standard PVC cords:</strong> -20&deg;F to 150&deg;F (-29&deg;C to 65&deg;C)</li>
+      <li><strong>TPE and TPR cords:</strong> -40&deg;F to 221&deg;F (-40&deg;C to 105&deg;C)</li>
+      <li><strong>Neoprene and Auta-Prene cords:</strong> -40&deg;F to 194&deg;F (-40&deg;C to 90&deg;C)</li>
+      <li><strong>Polyurethane cords:</strong> -40&deg;F to 176&deg;F (-40&deg;C to 80&deg;C)</li>
+    </ul>
+
+    <p>Cold temperature performance deserves special attention for coiled cords. A cord that becomes stiff in cold weather loses its retractile behavior &mdash; it extends but refuses to coil back. If your application involves cold storage, unheated warehouses, outdoor winter use, or refrigerated trucks, choose a jacket material rated for the lowest temperature you expect. PVC is the worst performer in cold; TPR and neoprene-family compounds are the best.</p>
+
+    <p>At the high end, sustained heat exposure softens thermoplastic jackets and can cause the coil to relax permanently, losing its spring memory. Cords routed near heat sources, engines, or industrial ovens need materials with high heat ratings and thermoset properties.</p>
+
+    <h2>Shielding</h2>
+
+    <p>Shielded coiled cords contain a conductive layer between the conductors and the outer jacket that blocks electromagnetic interference (EMI) and radio frequency interference (RFI). Shielding is specified when the cord carries sensitive signals near electrical noise sources &mdash; motors, inverters, welding equipment, RF transmitters, or high-voltage switching gear.</p>
+
+    <h3>Common Shielding Types</h3>
+
+    <ul>
+      <li><strong>Braided shield</strong> &mdash; Woven mesh of tinned copper or aluminum wire. Provides excellent EMI protection (85&ndash;98% coverage typical). The most common shielding type for coiled cords. Adds moderate stiffness.</li>
+      <li><strong>Spiral (serve) shield</strong> &mdash; Helical wrap of wire strands. Easier to terminate and more flexible than braid, but lower coverage (70&ndash;90%). Good for applications where some flexibility must be preserved.</li>
+      <li><strong>Foil shield</strong> &mdash; Aluminum/polyester laminate tape wrapped around the conductors. Provides 100% coverage and is effective against high-frequency interference. Fragile under repeated flexing &mdash; less ideal for coiled cords that extend and retract frequently.</li>
+      <li><strong>Combination (foil + braid)</strong> &mdash; Maximum shielding effectiveness for the most demanding EMI environments. Used in medical, military, and precision instrumentation applications. Adds significant bulk and stiffness.</li>
+    </ul>
+
+    <p>Shielded coiled cords have a somewhat reduced extension ratio (closer to 4:1 rather than 5:1) and greater retractile force due to the added stiffness. Factor this into your length calculations. The shield also requires a proper drain wire or ground termination at one or both ends to be effective &mdash; an unterminated shield provides no EMI protection.</p>
+
+    <h2>Putting It All Together: Reading a Complete Specification</h2>
+
+    <p>Here is an example of a complete coiled cord specification and what each element means:</p>
+
+    <p style="background: var(--gray-50); padding: 1.25rem 1.5rem; border-radius: 0.5rem; border-left: 4px solid var(--red); font-family: monospace; font-size: 0.95rem; line-height: 2;">
+      <strong>16/3 SJTO, PVC Jacket</strong><br>
+      <strong>300V, 13A rated</strong><br>
+      <strong>Retracted: 3 ft / Extended: 15 ft</strong><br>
+      <strong>Tangent leads: 12&Prime; each end</strong><br>
+      <strong>Temp: -20&deg;F to 150&deg;F</strong><br>
+      <strong>UL/cUL Listed (ZJCZ)</strong>
+    </p>
+
+    <p>Decoded: This is a <strong>16 AWG, 3-conductor</strong> cord with an <strong>oil-resistant thermoplastic (SJTO)</strong> construction rated for <strong>300 volts</strong> and <strong>13 amps</strong>. The <strong>PVC jacket</strong> is appropriate for indoor or light-industrial use. The coiled section retracts to <strong>3 feet</strong> and extends to <strong>15 feet</strong> (5:1 ratio), with <strong>12-inch straight leads</strong> on each end providing strain relief. It operates in temperatures from <strong>-20&deg;F to 150&deg;F</strong> and carries <strong>UL and cUL certification</strong> under the ZJCZ retractile cord category.</p>
+
+    <p>This cord would be well-suited for a commercial kitchen countertop appliance, a point-of-sale terminal, or a light-duty workshop tool &mdash; anywhere you need grounded power with oil resistance in an indoor, temperature-controlled environment.</p>
+
+    <h2>Common Specification Mistakes to Avoid</h2>
+
+    <p>After decades of helping customers specify coiled cords, we see the same errors repeatedly. Here are the most common pitfalls:</p>
+
+    <ol>
+      <li><strong>Undersizing wire gauge for the load.</strong> A cord that runs warm is losing energy to resistance and degrading the insulation. Always match gauge to actual amperage draw, not just the circuit breaker rating.</li>
+      <li><strong>Ignoring voltage rating in industrial settings.</strong> Using 300V-rated SJT cords in factory environments where 600V SO or SOW cords are required by code. The cost difference is small; the liability difference is enormous.</li>
+      <li><strong>Specifying PVC for cold environments.</strong> PVC cords in cold storage or outdoor winter applications lose retractile memory and become brittle. Upgrade to TPR, neoprene, or Auta-Prene.</li>
+      <li><strong>Confusing retracted length with total length.</strong> A "3-foot retracted" cord with 12-inch tangent leads is 5 feet long when retracted. Verify whether specs include or exclude leads.</li>
+      <li><strong>Extending coiled cords to maximum rated length regularly.</strong> Operating at 100% extension accelerates fatigue. Specify a cord that reaches your working distance at 80&ndash;85% extension.</li>
+      <li><strong>Omitting shielding for sensitive equipment.</strong> If your cord runs near motors, VFDs, or welding equipment and carries a signal, you need shielding. Retrofitting it later is not possible.</li>
+      <li><strong>Assuming all retractile cords are UL listed.</strong> Imported and unbranded coiled cords frequently lack UL certification. Verify the UL mark on the cord jacket itself before purchasing for commercial or industrial use.</li>
+    </ol>
+
+    <h2>When to Specify Custom vs. Standard</h2>
+
+    <p>Autac manufactures over 400 standard coiled cord part numbers covering the most common configurations of gauge, conductor count, jacket material, length, and termination. If your requirements fall within these parameters, a standard catalog cord is the fastest and most cost-effective option.</p>
+
+    <p>Custom specifications are warranted when your application requires:</p>
+
+    <ul>
+      <li>Non-standard gauge and conductor count combinations</li>
+      <li>Unusual retracted or extended lengths</li>
+      <li>Specific jacket materials or colors not in the standard catalog</li>
+      <li>Shielding configurations (braid, spiral, foil, or combination)</li>
+      <li>Custom plug and connector terminations</li>
+      <li>Special regulatory certifications beyond UL/cUL</li>
+      <li>Application-specific testing or qualification requirements</li>
+    </ul>
+
+    <p>As a manufacturer &mdash; not a distributor or reseller &mdash; Autac builds custom coiled cords to your exact specifications in our North Branford, Connecticut facility. We control the entire process from wire drawing through coiling and curing, which means we can adjust any parameter without relying on third parties.</p>
+
+  </article>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="section-label">Get Started</div>
+      <div class="section-title">Ready to Specify Your Cord?</div>
+      <p class="section-desc">Whether you need a standard catalog cord or a custom configuration built to your exact specifications, Autac has been manufacturing coiled cords in Connecticut since 1947. Tell us what you need.</p>
+      <div class="cta-buttons">
+        <a href="/quote/" class="btn btn-red">Request a Quote &rarr;</a>
+        <a href="/build-your-cord/" class="btn btn-accent">Build Your Cord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED CONTENT -->
+  <section class="related-posts">
+    <div class="container">
+      <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 1rem;">Related Resources</h3>
+      <div class="related-links">
+        <a href="/products/coiled-cords/">Browse Coiled Cords &rarr;</a>
+        <a href="/products/retractile-cords/">Retractile Cords &rarr;</a>
+        <a href="/products/color-charts/">Color Charts &rarr;</a>
+        <a href="/products/">Full Product Catalog &rarr;</a>
+        <a href="/build-your-cord/">Custom Cord Builder &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="logo-img" src="/logo.png" alt="Autac USA">
+          <p class="footer-about">The source for coil cords since 1947. The only 100% woman-owned retractile cord manufacturer in the industry. Proudly made in North Branford, Connecticut.</p>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul>
+            <li><a href="/products/retractile-cords/">Retractile Cords</a></li>
+            <li><a href="/products/coiled-cords/">Coiled Cords</a></li>
+            <li><a href="/products/curly-cords/">Curly Cords</a></li>
+            <li><a href="/products/">Product Catalog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/holiday-schedule/">Holiday Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <strong>Toll-Free:</strong> 800.243.3161
+          </div>
+          <div class="footer-contact-item">
+            <strong>Local:</strong> (203) 481-3444
+          </div>
+          <div class="footer-contact-item">
+            <strong>Address:</strong> P.O. Box 306<br>North Branford, CT 06471
+          </div>
+          <div class="footer-contact-item">
+            <strong>Hours:</strong> Mon&ndash;Fri 8am&ndash;5pm
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Autac USA Inc. All rights reserved.</span>
+        <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms-of-service/">Terms of Service</a> &nbsp;|&nbsp; <a href="/terms-of-sale/">Terms of Sale</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

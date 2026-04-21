@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cord Sets Explained: What They Are and How to Specify Them | Autac USA</title>
+  <meta name="description" content="A complete guide to cord sets — what they are, how they differ from bare cord and cable assemblies, types of cord sets, components, UL listing requirements, and how to specify them for your application. From Autac USA, manufacturer since 1947.">
+  <meta property="og:title" content="Cord Sets Explained: What They Are and How to Specify Them | Autac USA">
+  <meta property="og:description" content="A complete guide to cord sets — what they are, how they differ from bare cord and cable assemblies, types of cord sets, components, UL listing requirements, and how to specify them for your application.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.autacusa.com/blog/cord-sets-explained/">
+  <meta property="og:site_name" content="Autac USA">
+  <meta property="og:image" content="https://www.autacusa.com/logo.png">
+  <link rel="canonical" href="https://www.autacusa.com/blog/cord-sets-explained/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VCNRLKCL6"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-3VCNRLKCL6");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #1a1a1a;
+      --black-light: #2a2a2a;
+      --red: #cc0a2b;
+      --red-light: #e01235;
+      --accent: #f5c518;
+      --accent-dark: #d4a80e;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #eef1f5;
+      --gray-200: #d8dde6;
+      --gray-300: #b0b8c7;
+      --text: #2c3345;
+      --text-light: #5a6478;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* === TOP BAR === */
+    .topbar {
+      background: var(--black);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8rem;
+      padding: 0.5rem 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* === HEADER === */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--red); }
+    nav a.active { color: var(--red); font-weight: 700; }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown > a::after {
+      content: ' ▾';
+      font-size: 0.7em;
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -0.75rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      min-width: 200px;
+      padding: 0.5rem 0;
+      z-index: 200;
+      padding-top: 0.75rem;
+    }
+
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      right: 0;
+      height: 0.75rem;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.85rem !important;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--gray-50);
+    }
+
+    .nav-dropdown-menu .dropdown-divider {
+      border-top: 1px solid var(--gray-100);
+      margin: 0.35rem 0;
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--black) !important;
+      padding: 0.6rem 1.25rem;
+      border-radius: 0.4rem;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-dark); }
+
+    /* === PAGE HERO === */
+    .page-hero {
+      background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
+      color: var(--white);
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(245, 197, 24, 0.04);
+    }
+
+    .page-hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
+    }
+
+    .page-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .page-hero h1 span { color: var(--accent); }
+
+    .page-hero p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* === SHARED === */
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .section-desc {
+      color: var(--text-light);
+      max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-red { background: var(--red); color: var(--white); }
+    .btn-red:hover { background: var(--red-light); }
+    .btn-accent { background: var(--accent); color: var(--black); }
+    .btn-accent:hover { background: var(--accent-dark); }
+    .btn-outline { background: transparent; color: var(--red); border: 2px solid var(--red); }
+    .btn-outline:hover { background: var(--red); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--red); }
+    .btn-white:hover { background: var(--gray-100); }
+
+    /* === ARTICLE META === */
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 1rem;
+    }
+
+    /* === ARTICLE BODY === */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .article-body h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--black);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .article-body h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--black);
+      margin: 2rem 0 0.75rem;
+    }
+
+    .article-body p {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 0 0 1.5rem 1.5rem;
+      line-height: 1.8;
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+      font-size: 1.02rem;
+    }
+
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.92rem;
+    }
+
+    .article-body th {
+      background: var(--black);
+      color: var(--white);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .article-body td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .article-body tr:nth-child(even) td {
+      background: var(--gray-50);
+    }
+
+    .article-body strong {
+      color: var(--black);
+    }
+
+    /* === CTA === */
+    .cta {
+      padding: 5rem 0;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .cta .section-title {
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .cta .section-desc {
+      margin: 0 auto 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* === RELATED POSTS === */
+    .related-posts {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 2.5rem 0;
+    }
+
+    .related-posts .container {
+      max-width: 760px;
+    }
+
+    .related-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .related-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 0.4rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .related-links a:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.6);
+      padding: 3.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-img {
+      height: 44px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+
+    .footer-about {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+
+    footer h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 0.6rem; }
+
+    footer ul a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    footer ul a:hover { color: var(--accent); }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-contact-item strong { color: rgba(255,255,255,0.8); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover { color: var(--accent); }
+
+    /* === MOBILE MENU === */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--text);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar .container {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+      }
+
+      .menu-toggle { display: block; }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 2rem 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      }
+
+      nav.open { display: flex; }
+
+      .page-hero { padding: 3rem 0; }
+      .page-hero h1 { font-size: 2rem; }
+
+      .article-body h2 { font-size: 1.35rem; }
+
+      .article-body {
+        padding: 2rem 1.25rem;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .related-links {
+        flex-direction: column;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--accent);
+      color: var(--black);
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 0; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Cord Sets Explained: What They Are and How to Specify Them",
+    "description": "A complete guide to cord sets — what they are, how they differ from bare cord and cable assemblies, types of cord sets, components, UL listing requirements, and how to specify them for your application.",
+    "datePublished": "2024-09-15",
+    "author": {
+      "@type": "Person",
+      "name": "Marie-Louise Burkle",
+      "jobTitle": "CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Autac USA"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Autac USA",
+      "url": "https://www.autacusa.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.autacusa.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span>P.O. Box 306, North Branford, CT 06471 &nbsp;|&nbsp; Mon&ndash;Fri 8am&ndash;5pm</span>
+      <span><a href="tel:8002433161">800.243.3161</a> &nbsp;|&nbsp; 100% Woman-Owned · Est. 1947</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a class="logo" href="/">
+        <img src="/logo.png" alt="Autac USA — Re-Trak-Tul Kords">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">&#9776;</button>
+      <nav>
+        <a href="/about/">About</a>
+        <div class="nav-dropdown">
+          <a href="/products/">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="/products/">Full Catalog</a>
+            <a href="/products/retractile-cords/">Retractile Cords</a>
+            <a href="/products/curly-cords/">Curly Cords</a>
+            <a href="/products/coiled-cords/">Coiled Cords</a>
+            <a href="/products/color-charts/">Color Charts</a>
+          </div>
+        </div>
+        <a href="/solutions/">Solutions</a>
+        <a href="/build-your-cord/">Build Your Cord</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/news/">News</a>
+        <a href="/contact/">Contact</a>
+        <a href="/quote/" class="nav-cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section id="main-content" class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">Industry Guide</div>
+      <h1>Cord Sets Explained: What They Are and <span>How to Specify Them</span></h1>
+      <p>Everything engineers and procurement professionals need to know about electric cord sets &mdash; components, types, specifications, and UL requirements.</p>
+      <div class="article-meta">
+        <span>Published September 15, 2024</span>
+        <span>12 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <h2>What Is a Cord Set?</h2>
+
+    <p>A <strong>cord set</strong> is a complete, ready-to-use electrical assembly consisting of a length of flexible cord permanently attached to a plug on one end and a connector (or prepared termination) on the other. Unlike bare cord sold by the foot on a spool, a cord set arrives as a finished product &mdash; conductors terminated, strain relief in place, plugs and connectors molded or assembled, and the entire assembly tested and ready to connect equipment to a power source or signal circuit.</p>
+
+    <p>The term <strong>electric cord set</strong> is used broadly across the electrical industry, but you will also encounter the terms <strong>cable cord set</strong>, <strong>cordset</strong> (one word), and <strong>power cord assembly</strong>. These all refer to the same fundamental product category: a flexible cord with factory-installed terminations on both ends. The slight variations in terminology tend to reflect industry tradition rather than meaningful technical distinctions. Appliance manufacturers often say "cord set." Industrial automation engineers may say "cordset." The NEC (National Electrical Code) uses "cord set" as two words in Article 590 and elsewhere.</p>
+
+    <p>The distinction between a cord set and other cord products matters for procurement, compliance, and safety. Here is how the key terms break down:</p>
+
+    <ul>
+      <li><strong>Bare cord (bulk cord)</strong> &mdash; Flexible cable sold by the foot or on reels without any terminations. The buyer cuts it to length and attaches plugs, connectors, or hardwires the ends. Examples: SJT, SO, SOW cord stock.</li>
+      <li><strong>Cord set</strong> &mdash; A finished assembly with plug and connector already attached. Ready to plug in and use. The manufacturer is responsible for the termination quality and UL compliance of the complete assembly.</li>
+      <li><strong>Cable assembly</strong> &mdash; A broader term that includes cord sets but also covers permanently wired harnesses, multi-connector assemblies, and custom cable configurations that may not use standard plugs. Cable assemblies are common in industrial control panels and OEM equipment.</li>
+      <li><strong>Power supply cord</strong> &mdash; A cord set specifically designed to connect an appliance or device to a branch circuit outlet. One end has a plug (e.g., NEMA 5-15P); the other end is typically hardwired into the equipment or terminated with a standard appliance inlet connector (e.g., IEC C13).</li>
+    </ul>
+
+    <p>Understanding these distinctions is critical when writing specifications, issuing purchase orders, or ensuring regulatory compliance. Specifying a "cord set" tells your supplier you need a complete, terminated, tested assembly &mdash; not bulk cord that requires field termination.</p>
+
+    <h2>Components of a Cord Set</h2>
+
+    <p>Every cord set is built from the same core components, regardless of whether it is a simple appliance power cord or a complex multi-conductor industrial assembly. Understanding these components helps you write tighter specifications and evaluate supplier quality.</p>
+
+    <h3>The Cord</h3>
+    <p>The flexible cable itself is the backbone of the assembly. It consists of one or more insulated conductors bundled together inside an outer jacket. The cord type designation &mdash; SJT, SJTO, SO, SOW, SVT, and others &mdash; defines its construction, voltage rating, temperature rating, and approved uses. The cord type is not optional or decorative; it determines where and how the cord set can legally be used. An SJT cord is rated for 300V service and light-to-medium duty indoor use. An SO cord is rated for 600V and approved for heavy-duty industrial and outdoor applications.</p>
+
+    <h3>Conductors</h3>
+    <p>Inside the cord, individual conductors carry current. Each conductor consists of multiple fine copper strands (stranded construction is standard for flexible cords) wrapped in color-coded insulation. The wire gauge (AWG) determines current-carrying capacity: 18 AWG handles light loads up to 7&ndash;10 amps, 16 AWG handles up to 13 amps, 14 AWG up to 15 amps, and 12 AWG up to 20 amps. Conductor count ranges from 2 (hot and neutral, ungrounded) to 3 (adding a ground) to 4 or more for specialized power and control applications.</p>
+
+    <h3>The Plug</h3>
+    <p>The plug is the male component that inserts into a receptacle or outlet. For North American power cord sets, NEMA (National Electrical Manufacturers Association) designations define the plug configuration. NEMA 5-15P is the standard 3-prong 125V/15A plug found on most commercial and residential equipment. NEMA 6-15P is the 250V/15A equivalent. NEMA L5-30P is a 125V/30A twist-lock plug for heavy equipment. The plug configuration must match the receptacle and circuit rating at the installation point.</p>
+
+    <h3>The Connector</h3>
+    <p>The connector is the female component at the other end of the cord set. It may be an IEC (International Electrotechnical Commission) standard inlet like the C13 (the familiar connector on computer power cords), a NEMA connector, a proprietary appliance inlet, or simply prepared and tinned wire ends for hardwiring into equipment. In some cord sets, both ends have connectors &mdash; these are extension cord sets or jumper cord sets.</p>
+
+    <h3>Strain Relief</h3>
+    <p>Where the cord enters the plug or connector body, a strain relief prevents pulling force from transmitting directly to the electrical terminations inside. Strain relief can be a molded rubber boot, a cord grip fitting, a crimp ferrule, or an integral part of the over-molded plug body. Proper strain relief is a UL requirement for listed cord sets and a critical factor in long-term reliability. Without it, flexing and pulling at the plug entry point will eventually break conductor connections.</p>
+
+    <h3>Molding (Over-Molding)</h3>
+    <p>Many cord sets use injection-molded plug and connector bodies. The molding process bonds the plug housing directly to the cord jacket in a single piece, eliminating seams and providing excellent strain relief, moisture resistance, and durability. Over-molded cord sets are standard in high-volume OEM applications &mdash; computer power cords, appliance cords, and medical device cords are almost universally over-molded. For lower-volume or field-serviceable applications, screw-assembled plug bodies allow replacement of damaged plugs without discarding the entire cord set.</p>
+
+    <h2>Types of Cord Sets</h2>
+
+    <h3>Power Cord Sets</h3>
+    <p>The most common category. A power cord set connects equipment to an AC branch circuit. One end has a NEMA plug; the other has a connector or prepared termination appropriate for the equipment. Power cord sets are UL listed under categories such as NICU (portable cord-connected electrical utilization equipment) and carry the cord type marking (SJT, SO, etc.) on the jacket. These are the cord sets that power everything from office computers to CNC machines.</p>
+
+    <h3>Extension Cord Sets</h3>
+    <p>An extension cord set has a plug on one end and a matching receptacle connector on the other, allowing it to extend the reach of another cord set or piece of equipment. UL lists extension cord sets under category ZJCZ2. Extension cord sets must be rated for the same or higher amperage and voltage as the circuit they serve. Using an undersized extension cord set is a common cause of overheating and fire in commercial and industrial facilities.</p>
+
+    <h3>Communication and Signal Cord Sets</h3>
+    <p>Low-voltage cord sets used for data, signal, and control circuits. This category includes telephone handset cords, Ethernet patch cables, serial communication cables, and sensor leads. Conductor counts range from 2 to 25 or more, with wire gauges from 18 AWG down to 26 AWG. Shielding &mdash; either braided or foil &mdash; is common in communication cord sets to prevent electromagnetic interference (EMI) from degrading signal quality.</p>
+
+    <h3>International Cord Sets</h3>
+    <p>Equipment sold globally needs cord sets with country-specific plugs and voltage ratings. A product shipped to the UK requires a BS 1363 plug. Germany and much of continental Europe use CEE 7/7 (Schuko) plugs. China uses GB 2099 plugs. Australia uses AS/NZS 3112. Each country has its own plug configuration, voltage standard (120V or 230V), and safety certification requirements. International cord sets are typically specified as part of the OEM design process, with the equipment manufacturer sourcing region-specific cord sets for each target market.</p>
+
+    <h3>Coiled (Retractile) Cord Sets</h3>
+    <p>This is where Autac's core expertise comes in. A coiled cord set uses retractile cord &mdash; cord that has been heat-set into a helical coil shape &mdash; instead of straight cord. The cord extends when pulled and retracts to its compact coiled length when released. A coiled cord set includes the same plug and connector components as a straight cord set, but the cord itself has engineered spring memory that provides automatic cable management. Coiled cord sets eliminate trip hazards, reduce cable clutter, and extend to approximately 5 times their retracted length on demand.</p>
+
+    <p>Autac has manufactured coiled cord sets in North Branford, Connecticut since 1947. Where most cord set suppliers offer only straight configurations, Autac specializes in the retractile form factor &mdash; both standard catalog configurations and custom-engineered assemblies. If your application benefits from self-retracting cable management, a coiled cord set delivers that functionality without the mechanical complexity of a cord reel.</p>
+
+    <h2>Common Cord Set Configurations</h2>
+
+    <p>The following table shows cord set configurations frequently specified in commercial and industrial applications. These represent the most common combinations of plug type, connector type, cord type, and typical use case.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Plug (Male End)</th>
+            <th>Connector (Female End)</th>
+            <th>Typical Cord Type</th>
+            <th>Common Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>NEMA 5-15P</strong></td>
+            <td>IEC C13</td>
+            <td>SJT, SVT 18/3 or 16/3</td>
+            <td>Computers, monitors, printers, network equipment</td>
+          </tr>
+          <tr>
+            <td><strong>NEMA 5-15P</strong></td>
+            <td>IEC C19</td>
+            <td>SJT 14/3</td>
+            <td>Servers, high-draw IT equipment, UPS systems</td>
+          </tr>
+          <tr>
+            <td><strong>NEMA 5-15P</strong></td>
+            <td>Open / stripped &amp; tinned</td>
+            <td>SJT, SO 16/3 or 14/3</td>
+            <td>OEM equipment, appliances, hardwired devices</td>
+          </tr>
+          <tr>
+            <td><strong>NEMA 5-15P</strong></td>
+            <td>NEMA 5-15R</td>
+            <td>SJT, SJTW 16/3 or 14/3</td>
+            <td>Extension cord sets (indoor general use)</td>
+          </tr>
+          <tr>
+            <td><strong>NEMA 5-15P</strong></td>
+            <td>NEMA 5-15R</td>
+            <td>SO, SOW 12/3</td>
+            <td>Heavy-duty extension cord sets (outdoor/industrial)</td>
+          </tr>
+          <tr>
+            <td><strong>NEMA 6-15P</strong></td>
+            <td>IEC C13 or open end</td>
+            <td>SJT, SO 14/3</td>
+            <td>240V equipment, welders, compressors</td>
+          </tr>
+          <tr>
+            <td><strong>NEMA L5-30P</strong></td>
+            <td>Open end or L5-30R</td>
+            <td>SO, SOW 10/3</td>
+            <td>Generators, temporary power, construction</td>
+          </tr>
+          <tr>
+            <td><strong>NEMA 5-15P (hospital grade)</strong></td>
+            <td>IEC C13 (hospital grade)</td>
+            <td>SJT 16/3 or 14/3</td>
+            <td>Medical equipment, patient care devices</td>
+          </tr>
+          <tr>
+            <td><strong>CEE 7/7 (Schuko)</strong></td>
+            <td>IEC C13</td>
+            <td>H05VV-F 3G0.75</td>
+            <td>European IT and office equipment</td>
+          </tr>
+          <tr>
+            <td><strong>BS 1363</strong></td>
+            <td>IEC C13</td>
+            <td>H05VV-F 3G0.75</td>
+            <td>UK IT and office equipment</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Any of these configurations can be manufactured in coiled (retractile) form. If your application calls for a NEMA 5-15P to IEC C13 cord set but you also need automatic cable retraction, Autac builds that as a coiled cord set &mdash; same plugs, same electrical ratings, but with the added functionality of a self-managing retractile cord.</p>
+
+    <h2>How to Specify a Cord Set</h2>
+
+    <p>Writing a complete cord set specification prevents miscommunication, delays, and incorrect shipments. Whether you are issuing an RFQ to a manufacturer or writing an internal engineering spec, include all of the following parameters:</p>
+
+    <h3>1. Cord Type</h3>
+    <p>Specify the cord type designation: SJT, SJTO, SJTW, SO, SOW, SVT, or other applicable type. This defines the construction, voltage rating, and approved use environment. If you are unsure which cord type your application requires, start with the installation environment: indoor-only and light-duty points to SJT or SVT; outdoor, wet, or oil-exposed environments require SO, SOW, or SJTO.</p>
+
+    <h3>2. Wire Gauge and Conductor Count</h3>
+    <p>State the wire gauge in AWG and the number of conductors. Example: "16/3" means 16 AWG wire, 3 conductors. The gauge must support the amperage draw of the connected equipment with appropriate margin. The conductor count must match the circuit: 2-conductor for ungrounded double-insulated equipment, 3-conductor for grounded equipment, 4+ conductors for specialized power or control.</p>
+
+    <h3>3. Overall Length</h3>
+    <p>Specify the total cord length in feet or meters. For coiled cord sets, specify both the retracted length and the desired extended working length. Standard retractile cords extend to approximately 5 times the retracted coil length. Also specify the tangent lead lengths (the straight, non-coiled sections at each end) if they matter for your installation.</p>
+
+    <h3>4. Plug Type</h3>
+    <p>Identify the plug by its NEMA designation (for North American use) or the applicable international standard. Include the voltage and amperage rating. Specify whether the plug must be hospital grade, right-angle, or have any other special configuration. For twist-lock circuits, specify the NEMA locking designation (e.g., L5-20P, L6-30P).</p>
+
+    <h3>5. Connector Type</h3>
+    <p>Identify the connector at the other end of the cord set. Options include IEC standard connectors (C13, C15, C19), NEMA receptacle connectors, proprietary appliance inlets, ring or spade terminals, or stripped and tinned wire ends. If the cord set will be hardwired into equipment, "open end, stripped and tinned, 1/2-inch strip length" is a valid connector specification.</p>
+
+    <h3>6. Jacket Material and Color</h3>
+    <p>Standard jacket colors are black, white, or gray, but custom colors are available for OEM applications where brand consistency or color-coding matters. If the environment demands a specific jacket material (neoprene for oil resistance, TPE for chemical exposure, Auta-Prene for heavy-duty retractile applications), call it out in the specification.</p>
+
+    <h3>7. Certifications and Compliance</h3>
+    <p>Specify required certifications: UL listed, cUL (CSA) listed, or both. If the cord set is destined for international markets, specify the applicable regional certifications (CE, VDE, CCC, PSE, etc.). For medical applications, specify hospital-grade plugs and connectors where required. For government or military procurement, specify any applicable MIL-SPEC or federal acquisition requirements.</p>
+
+    <h3>8. Straight or Coiled</h3>
+    <p>State whether the cord set should be straight or coiled (retractile). A coiled cord set adds automatic cable management without changing the electrical specifications. If coiled, specify the retracted length, working (extended) length, coil outer diameter if constrained, and tangent lead lengths.</p>
+
+    <h2>UL Listing Requirements for Cord Sets</h2>
+
+    <p>UL (Underwriters Laboratories) listing is not a suggestion for commercial and industrial cord sets &mdash; it is a regulatory and legal requirement in most jurisdictions. Here is what UL listing means and why it matters.</p>
+
+    <p>A UL-listed cord set has been independently tested and certified to meet recognized safety standards for electrical construction, insulation integrity, flame resistance, mechanical durability, and strain relief. The testing evaluates the complete assembly &mdash; cord, plug, connector, and the termination workmanship &mdash; not just the individual components. This is a critical distinction: using UL-listed cord and UL-listed plugs does not automatically make the finished cord set UL listed. The assembly itself must be produced under a UL-authorized manufacturing process with ongoing factory inspections.</p>
+
+    <p>Key UL categories for cord sets include:</p>
+
+    <ul>
+      <li><strong>NICU</strong> &mdash; Portable cord-connected electrical utilization equipment. Covers power supply cords for appliances and devices.</li>
+      <li><strong>ZJCZ</strong> &mdash; Retractile cords. Specifically covers coiled/retractile cord products.</li>
+      <li><strong>ZJCZ2</strong> &mdash; Extension cord sets. Covers cord sets with a plug on one end and a receptacle connector on the other.</li>
+      <li><strong>KCQM</strong> &mdash; Hospital-grade cord sets. Additional requirements for cord sets used in patient care areas of healthcare facilities.</li>
+    </ul>
+
+    <p>For commercial and industrial installations, building codes (NEC Article 400 and Article 590), OSHA workplace safety regulations, and property insurance policies typically require UL-listed cord sets. Using non-listed assemblies can result in code violations, failed inspections, voided insurance coverage, and significant liability exposure in the event of an electrical incident. When specifying cord sets, always require UL listing and verify the listing by checking the UL mark molded or printed on the cord jacket and plug body &mdash; not just in the supplier's marketing materials.</p>
+
+    <p>Autac is a UL-authorized manufacturer. Our cord sets are produced under continuous UL oversight, with regular factory audits and product testing to maintain listing compliance across our entire product line.</p>
+
+    <h2>Common Applications for Cord Sets</h2>
+
+    <h3>OEM Equipment Manufacturing</h3>
+    <p>Original equipment manufacturers are the largest consumers of cord sets. Every product that plugs into a wall outlet ships with a power supply cord set. OEM cord sets are typically over-molded for durability and appearance, manufactured in high volumes, and specified during the product design phase. OEMs that sell internationally need country-specific cord sets for each market &mdash; same equipment, different plug on the cord set.</p>
+
+    <h3>IT and Data Centers</h3>
+    <p>Servers, switches, routers, and storage arrays all connect to power distribution units (PDUs) via cord sets &mdash; usually NEMA 5-15P or NEMA 5-20P to IEC C13 or C19. Data centers consume cord sets in large quantities and often require specific lengths, colors (for circuit identification), and hospital-grade or locking connectors to prevent accidental disconnection.</p>
+
+    <h3>Medical Facilities</h3>
+    <p>Hospital-grade cord sets with green-dot plugs are required in patient care areas. These cord sets meet more stringent UL requirements for grounding reliability, plug retention force, and assembly quality. Patient monitors, infusion pumps, and diagnostic equipment all require hospital-grade cord sets. Coiled cord sets are increasingly used in medical settings where devices move within a limited radius around patient beds.</p>
+
+    <h3>Industrial and Manufacturing</h3>
+    <p>Factory floors use cord sets to connect portable tools, pendant controllers, test equipment, and workstation devices. Industrial cord sets typically use SO or SOW cord for 600V rating, oil resistance, and mechanical durability. Coiled cord sets are particularly valuable on assembly lines and at workbenches where automatic cable retraction prevents cord damage from moving machinery and keeps work areas clear.</p>
+
+    <h3>Foodservice and Retail</h3>
+    <p>Commercial kitchen equipment, POS terminals, display lighting, and countertop devices all connect via cord sets. Foodservice environments demand cord sets with oil-resistant and cleanable jackets. Retail environments prioritize low-profile cord sets that minimize visual clutter and trip hazards in customer areas.</p>
+
+    <h2>Why Coiled Cord Sets?</h2>
+
+    <p>Standard straight cord sets work well when the equipment-to-outlet distance is fixed. But many real-world applications involve equipment that moves, extends, or needs to be pulled to different positions within a work zone. In these situations, a straight cord set creates excess slack that loops on the floor, drapes over surfaces, catches on equipment, and creates trip hazards.</p>
+
+    <p>A coiled cord set solves all of these problems by building cable management into the cord itself. The retractile cord extends to the working distance, holds position under gentle tension, and retracts automatically when released. No cord reels to mount. No manual cord winding. No slack on the floor. The coiled cord set delivers the same electrical performance as its straight equivalent &mdash; same gauge, same voltage rating, same UL listing &mdash; with the added benefit of automatic cable management.</p>
+
+    <p>Autac has been building coiled cord sets since 1947. As the only 100% woman-owned retractile cord manufacturer in the industry, we bring nearly eight decades of coiling expertise to every cord set we produce. Our catalog includes over 400 standard configurations, and our engineering team designs custom coiled cord sets for applications where standard products do not fit. Whether you need a single prototype or a production run of thousands, we manufacture it in-house at our North Branford, Connecticut facility.</p>
+
+  </article>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="section-label">Get Started</div>
+      <div class="section-title">Need a Cord Set?</div>
+      <p class="section-desc">Autac manufactures cord sets in straight and coiled configurations &mdash; standard catalog or custom-engineered to your specifications. Tell us what you need and we will recommend the right solution.</p>
+      <div class="cta-buttons">
+        <a href="/quote/" class="btn btn-red">Request a Quote &rarr;</a>
+        <a href="/build-your-cord/" class="btn btn-accent">Build Your Cord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED CONTENT -->
+  <section class="related-posts">
+    <div class="container">
+      <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 1rem;">Related Resources</h3>
+      <div class="related-links">
+        <a href="/blog/coiled-extension-cords/">Coiled Extension Cords Guide &rarr;</a>
+        <a href="/products/">Full Product Catalog &rarr;</a>
+        <a href="/build-your-cord/">Custom Cord Builder &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="logo-img" src="/logo.png" alt="Autac USA">
+          <p class="footer-about">The source for coil cords since 1947. The only 100% woman-owned retractile cord manufacturer in the industry. Proudly made in North Branford, Connecticut.</p>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul>
+            <li><a href="/products/retractile-cords/">Retractile Cords</a></li>
+            <li><a href="/products/coiled-cords/">Coiled Cords</a></li>
+            <li><a href="/products/curly-cords/">Curly Cords</a></li>
+            <li><a href="/products/">Product Catalog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/holiday-schedule/">Holiday Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <strong>Toll-Free:</strong> 800.243.3161
+          </div>
+          <div class="footer-contact-item">
+            <strong>Local:</strong> (203) 481-3444
+          </div>
+          <div class="footer-contact-item">
+            <strong>Address:</strong> P.O. Box 306<br>North Branford, CT 06471
+          </div>
+          <div class="footer-contact-item">
+            <strong>Hours:</strong> Mon&ndash;Fri 8am&ndash;5pm
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Autac USA Inc. All rights reserved.</span>
+        <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms-of-service/">Terms of Service</a> &nbsp;|&nbsp; <a href="/terms-of-sale/">Terms of Sale</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

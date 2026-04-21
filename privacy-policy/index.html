@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found &mdash; Autac USA</title>
-  <meta name="description" content="The page you're looking for doesn't exist. Browse our retractile cord catalog or contact Autac USA for help finding what you need.">
-  <meta name="robots" content="noindex, follow">
+  <title>Privacy Policy — Autac USA | The Source for Coil Cords Since 1947</title>
+  <meta name="description" content="Privacy policy for Autac USA Inc. Learn how we collect, use, and protect your personal information when you visit autacusa.com.">
+  <link rel="canonical" href="https://www.autacusa.com/privacy-policy/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VCNRLKCL6"></script>
@@ -110,7 +110,9 @@
     nav a:hover { color: var(--red); }
     nav a.active { color: var(--red); font-weight: 700; }
 
-    .nav-dropdown { position: relative; }
+    .nav-dropdown {
+      position: relative;
+    }
 
     .nav-dropdown > a::after {
       content: ' ▾';
@@ -150,7 +152,14 @@
       white-space: nowrap;
     }
 
-    .nav-dropdown-menu a:hover { background: var(--gray-50); }
+    .nav-dropdown-menu a:hover {
+      background: var(--gray-50);
+    }
+
+    .nav-dropdown-menu .dropdown-divider {
+      border-top: 1px solid var(--gray-100);
+      margin: 0.35rem 0;
+    }
 
     .nav-cta {
       background: var(--accent);
@@ -163,17 +172,16 @@
 
     .nav-cta:hover { background: var(--accent-dark); }
 
-    /* === ERROR HERO === */
-    .error-hero {
+    /* === PAGE HERO === */
+    .page-hero {
       background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
       color: var(--white);
-      padding: 6rem 0 5rem;
-      text-align: center;
+      padding: 4rem 0;
       position: relative;
       overflow: hidden;
     }
 
-    .error-hero::after {
+    .page-hero::after {
       content: '';
       position: absolute;
       top: -80px;
@@ -184,118 +192,92 @@
       background: rgba(245, 197, 24, 0.04);
     }
 
-    .error-code {
-      font-size: 7rem;
-      font-weight: 800;
-      line-height: 1;
+    .page-hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
       color: var(--accent);
-      letter-spacing: -4px;
-      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
     }
 
-    .error-hero h1 {
-      font-size: 2.5rem;
+    .page-hero h1 {
+      font-size: 2.75rem;
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 1rem;
       letter-spacing: -1px;
     }
 
-    .error-hero p {
+    .page-hero h1 span { color: var(--accent); }
+
+    .page-hero p {
       font-size: 1.15rem;
       color: rgba(255,255,255,0.7);
       max-width: 600px;
-      margin: 0 auto 2rem;
       line-height: 1.7;
     }
 
-    .error-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 1.75rem;
-      border-radius: 0.4rem;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .btn-accent {
-      background: var(--accent);
-      color: var(--black);
-    }
-
-    .btn-accent:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(245, 197, 24, 0.25);
-    }
-
-    .btn-outline-white {
-      border: 2px solid rgba(255,255,255,0.3);
-      color: var(--white);
-    }
-
-    .btn-outline-white:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* === HELPFUL LINKS === */
-    .helpful {
+    /* === LEGAL CONTENT === */
+    .legal {
       padding: 4rem 0;
-      background: var(--gray-50);
-    }
-
-    .helpful h2 {
-      text-align: center;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--black);
-      margin-bottom: 2.5rem;
-    }
-
-    .helpful-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .helpful-card {
       background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.15s;
     }
 
-    .helpful-card:hover {
-      border-color: var(--red);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    .legal .container {
+      max-width: 800px;
     }
 
-    .helpful-card h3 {
-      font-size: 1rem;
-      color: var(--black);
-      margin-bottom: 0.35rem;
-      font-weight: 700;
-    }
-
-    .helpful-card p {
-      font-size: 0.88rem;
+    .legal-updated {
+      font-size: 0.9rem;
       color: var(--text-light);
-      line-height: 1.5;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .legal h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .legal p {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .legal ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .legal ul li {
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .legal a {
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    .legal a:hover {
+      text-decoration: underline;
     }
 
     /* === FOOTER === */
@@ -333,9 +315,13 @@
       font-weight: 600;
     }
 
-    footer ul { list-style: none; }
+    footer ul {
+      list-style: none;
+    }
 
-    footer ul li { margin-bottom: 0.6rem; }
+    footer ul li {
+      margin-bottom: 0.6rem;
+    }
 
     footer ul a {
       color: rgba(255,255,255,0.6);
@@ -354,7 +340,9 @@
       font-size: 0.88rem;
     }
 
-    .footer-contact-item strong { color: rgba(255,255,255,0.8); }
+    .footer-contact-item strong {
+      color: rgba(255,255,255,0.8);
+    }
 
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -416,9 +404,8 @@
 
       nav.open { display: flex; }
 
-      .error-code { font-size: 5rem; }
-      .error-hero h1 { font-size: 1.75rem; }
-      .error-hero { padding: 4rem 0 3rem; }
+      .page-hero { padding: 3rem 0; }
+      .page-hero h1 { font-size: 2rem; }
 
       .footer-grid { grid-template-columns: 1fr; }
 
@@ -469,41 +456,79 @@
     </div>
   </header>
 
-  <!-- ERROR HERO -->
-  <section class="error-hero">
+  <!-- PAGE HERO -->
+  <section id="main-content" class="page-hero">
     <div class="container">
-      <div class="error-code">404</div>
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-      <div class="error-actions">
-        <a href="/" class="btn btn-accent">Go to Homepage</a>
-        <a href="/contact/" class="btn btn-outline-white">Contact Us</a>
-      </div>
+      <div class="page-hero-badge">Legal</div>
+      <h1>Privacy <span>Policy</span></h1>
+      <p>How Autac USA Inc. collects, uses, and protects your personal information.</p>
     </div>
   </section>
 
-  <!-- HELPFUL LINKS -->
-  <section class="helpful">
+  <!-- LEGAL CONTENT -->
+  <section class="legal">
     <div class="container">
-      <h2>Looking for something specific?</h2>
-      <div class="helpful-grid">
-        <a class="helpful-card" href="/products/">
-          <h3>Product Catalog</h3>
-          <p>Browse our full range of retractile, curly, and coiled cords.</p>
-        </a>
-        <a class="helpful-card" href="/build-your-cord/">
-          <h3>Build Your Cord</h3>
-          <p>Configure a custom cord with our step-by-step tool.</p>
-        </a>
-        <a class="helpful-card" href="/quote/">
-          <h3>Get a Quote</h3>
-          <p>Request pricing for a specific application or volume.</p>
-        </a>
-        <a class="helpful-card" href="/faq/">
-          <h3>FAQ</h3>
-          <p>Answers to common questions about cords and ordering.</p>
-        </a>
-      </div>
+      <p class="legal-updated">Last updated: April 7, 2026</p>
+
+      <h2>Introduction</h2>
+      <p>Autac USA Inc. ("Autac," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website at www.autacusa.com (the "Site").</p>
+
+      <h2>Information We Collect</h2>
+      <p>We collect information you provide directly to us when you:</p>
+      <ul>
+        <li>Submit a contact form inquiry</li>
+        <li>Request a quote through our quote wizard</li>
+        <li>Use our Build Your Cord configurator</li>
+        <li>Access our product catalog with your email address</li>
+      </ul>
+      <p>This information may include your name, email address, phone number, company name, job title, and details about the products or services you are interested in.</p>
+
+      <h2>Automatically Collected Information</h2>
+      <p>When you visit our Site, we may automatically collect certain information including your IP address, browser type, operating system, referring URLs, and pages viewed. We use this information to understand how visitors use our Site and to improve your experience.</p>
+
+      <h2>How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Respond to your inquiries and fulfill your requests</li>
+        <li>Prepare and deliver price quotes</li>
+        <li>Provide product catalog access</li>
+        <li>Send order confirmations and shipping notifications</li>
+        <li>Improve our Site, products, and services</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+
+      <h2>Information Sharing</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with:</p>
+      <ul>
+        <li><strong>Service providers</strong> who assist us in operating our Site and conducting our business (e.g., email delivery, database hosting), subject to confidentiality obligations</li>
+        <li><strong>Legal authorities</strong> when required by law, regulation, or legal process</li>
+      </ul>
+
+      <h2>Data Security</h2>
+      <p>We implement reasonable technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+      <h2>Cookies</h2>
+      <p>Our Site may use cookies and similar technologies to enhance your browsing experience. You can control cookie settings through your browser preferences. Disabling cookies may limit certain features of the Site.</p>
+
+      <h2>Third-Party Links</h2>
+      <p>Our Site may contain links to third-party websites (e.g., our eBay store). We are not responsible for the privacy practices of these external sites and encourage you to review their privacy policies.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>Our Site is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us so we can promptly remove it.</p>
+
+      <h2>Your Rights</h2>
+      <p>Depending on your location, you may have certain rights regarding your personal information, including the right to access, correct, or delete the data we hold about you. To exercise any of these rights, please contact us using the information below.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of the Site after changes are posted constitutes your acceptance of the updated policy.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:sales@autacusa.com">sales@autacusa.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:8002433161">800.243.3161</a></li>
+        <li><strong>Mail:</strong> Autac USA Inc., P.O. Box 306, North Branford, CT 06471</li>
+      </ul>
     </div>
   </section>
 

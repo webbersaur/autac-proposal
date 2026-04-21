@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found &mdash; Autac USA</title>
-  <meta name="description" content="The page you're looking for doesn't exist. Browse our retractile cord catalog or contact Autac USA for help finding what you need.">
-  <meta name="robots" content="noindex, follow">
+  <title>Autac Celebrates 60 Years | Autac USA</title>
+  <meta name="description" content="Autac celebrates 60 years of USA manufacturing, offering over 400 coil cord configurations with most orders shipped within one day from North Branford, CT.">
+  <meta property="og:title" content="Autac Celebrates 60 Years | Autac USA">
+  <meta property="og:description" content="Autac celebrates 60 years of USA manufacturing, offering over 400 coil cord configurations with most orders shipped within one day from North Branford, CT.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.autacusa.com/news/celebrates-60-years/">
+  <meta property="og:site_name" content="Autac USA">
+  <meta property="og:image" content="https://www.autacusa.com/logo.png">
+  <link rel="canonical" href="https://www.autacusa.com/news/celebrates-60-years/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VCNRLKCL6"></script>
@@ -110,7 +116,9 @@
     nav a:hover { color: var(--red); }
     nav a.active { color: var(--red); font-weight: 700; }
 
-    .nav-dropdown { position: relative; }
+    .nav-dropdown {
+      position: relative;
+    }
 
     .nav-dropdown > a::after {
       content: ' ▾';
@@ -150,7 +158,14 @@
       white-space: nowrap;
     }
 
-    .nav-dropdown-menu a:hover { background: var(--gray-50); }
+    .nav-dropdown-menu a:hover {
+      background: var(--gray-50);
+    }
+
+    .nav-dropdown-menu .dropdown-divider {
+      border-top: 1px solid var(--gray-100);
+      margin: 0.35rem 0;
+    }
 
     .nav-cta {
       background: var(--accent);
@@ -163,17 +178,16 @@
 
     .nav-cta:hover { background: var(--accent-dark); }
 
-    /* === ERROR HERO === */
-    .error-hero {
+    /* === PAGE HERO === */
+    .page-hero {
       background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
       color: var(--white);
-      padding: 6rem 0 5rem;
-      text-align: center;
+      padding: 4rem 0;
       position: relative;
       overflow: hidden;
     }
 
-    .error-hero::after {
+    .page-hero::after {
       content: '';
       position: absolute;
       top: -80px;
@@ -184,118 +198,237 @@
       background: rgba(245, 197, 24, 0.04);
     }
 
-    .error-code {
-      font-size: 7rem;
-      font-weight: 800;
-      line-height: 1;
+    .page-hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
       color: var(--accent);
-      letter-spacing: -4px;
-      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
     }
 
-    .error-hero h1 {
-      font-size: 2.5rem;
+    .page-hero h1 {
+      font-size: 2.75rem;
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 1rem;
       letter-spacing: -1px;
     }
 
-    .error-hero p {
+    .page-hero h1 span { color: var(--accent); }
+
+    .page-hero p {
       font-size: 1.15rem;
       color: rgba(255,255,255,0.7);
       max-width: 600px;
-      margin: 0 auto 2rem;
       line-height: 1.7;
     }
 
-    .error-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    /* === SHARED === */
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .section-desc {
+      color: var(--text-light);
+      max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       padding: 0.85rem 1.75rem;
-      border-radius: 0.4rem;
-      font-weight: 700;
-      font-size: 0.9rem;
+      border-radius: 0.5rem;
       text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
     }
 
-    .btn-accent {
-      background: var(--accent);
+    .btn-red { background: var(--red); color: var(--white); }
+    .btn-red:hover { background: var(--red-light); }
+    .btn-accent { background: var(--accent); color: var(--black); }
+    .btn-accent:hover { background: var(--accent-dark); }
+    .btn-outline { background: transparent; color: var(--red); border: 2px solid var(--red); }
+    .btn-outline:hover { background: var(--red); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--red); }
+    .btn-white:hover { background: var(--gray-100); }
+
+    /* === ARTICLE META === */
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 1rem;
+    }
+
+    /* === ARTICLE BODY === */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .article-body h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
       color: var(--black);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: -0.5px;
     }
 
-    .btn-accent:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(245, 197, 24, 0.25);
+    .article-body h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--black);
+      margin: 2rem 0 0.75rem;
     }
 
-    .btn-outline-white {
-      border: 2px solid rgba(255,255,255,0.3);
+    .article-body p {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 0 0 1.5rem 1.5rem;
+      line-height: 1.8;
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+      font-size: 1.02rem;
+    }
+
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.92rem;
+    }
+
+    .article-body th {
+      background: var(--black);
       color: var(--white);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    .btn-outline-white:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+    .article-body td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gray-200);
     }
 
-    /* === HELPFUL LINKS === */
-    .helpful {
-      padding: 4rem 0;
+    .article-body tr:nth-child(even) td {
       background: var(--gray-50);
     }
 
-    .helpful h2 {
-      text-align: center;
-      font-size: 1.75rem;
-      font-weight: 700;
+    .article-body strong {
       color: var(--black);
-      margin-bottom: 2.5rem;
     }
 
-    .helpful-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      max-width: 900px;
-      margin: 0 auto;
+    /* === BACK LINK === */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--red);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
     }
 
-    .helpful-card {
+    .back-link:hover { color: var(--red-light); }
+
+    /* === CTA === */
+    .cta {
+      padding: 5rem 0;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .cta .section-title {
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .cta .section-desc {
+      margin: 0 auto 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* === RELATED POSTS === */
+    .related-posts {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 2.5rem 0;
+    }
+
+    .related-posts .container {
+      max-width: 760px;
+    }
+
+    .related-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .related-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.25rem;
       background: var(--white);
       border: 1px solid var(--gray-200);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      text-decoration: none;
+      border-radius: 0.4rem;
       color: var(--text);
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.15s;
-    }
-
-    .helpful-card:hover {
-      border-color: var(--red);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    }
-
-    .helpful-card h3 {
-      font-size: 1rem;
-      color: var(--black);
-      margin-bottom: 0.35rem;
-      font-weight: 700;
-    }
-
-    .helpful-card p {
+      text-decoration: none;
       font-size: 0.88rem;
-      color: var(--text-light);
-      line-height: 1.5;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .related-links a:hover {
+      border-color: var(--red);
+      color: var(--red);
     }
 
     /* === FOOTER === */
@@ -334,7 +467,6 @@
     }
 
     footer ul { list-style: none; }
-
     footer ul li { margin-bottom: 0.6rem; }
 
     footer ul a {
@@ -416,9 +548,28 @@
 
       nav.open { display: flex; }
 
-      .error-code { font-size: 5rem; }
-      .error-hero h1 { font-size: 1.75rem; }
-      .error-hero { padding: 4rem 0 3rem; }
+      .page-hero { padding: 3rem 0; }
+      .page-hero h1 { font-size: 2rem; }
+
+      .article-body h2 { font-size: 1.35rem; }
+
+      .article-body {
+        padding: 2rem 1.25rem;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .related-links {
+        flex-direction: column;
+      }
 
       .footer-grid { grid-template-columns: 1fr; }
 
@@ -428,9 +579,48 @@
         text-align: center;
       }
     }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--accent);
+      color: var(--black);
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 0; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Autac Celebrates 60 Years",
+    "description": "Autac celebrates 60 years of USA manufacturing, offering over 400 coil cord configurations.",
+    "datePublished": "2007-05-01",
+    "author": {
+      "@type": "Organization",
+      "name": "Autac USA",
+      "url": "https://www.autacusa.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Autac USA",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.autacusa.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- TOP BAR -->
   <div class="topbar">
@@ -469,40 +659,44 @@
     </div>
   </header>
 
-  <!-- ERROR HERO -->
-  <section class="error-hero">
+  <!-- PAGE HERO -->
+  <section id="main-content" class="page-hero">
     <div class="container">
-      <div class="error-code">404</div>
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-      <div class="error-actions">
-        <a href="/" class="btn btn-accent">Go to Homepage</a>
-        <a href="/contact/" class="btn btn-outline-white">Contact Us</a>
+      <div class="page-hero-badge">News &amp; Press</div>
+      <h1>Autac Celebrates <span>60 Years</span></h1>
+      <p>60 years of pride in USA manufacturing — family owned and operated since 1947, with over 400 coil cord configurations in stock.</p>
+      <div class="article-meta">
+        <span>Published May 9, 2007</span>
       </div>
     </div>
   </section>
 
-  <!-- HELPFUL LINKS -->
-  <section class="helpful">
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <a href="/news/" class="back-link">&larr; Back to News</a>
+
+    <h2>60 Years of Pride in USA Manufacturing at Autac</h2>
+
+    <p>May 09, 2007 &mdash; NORTH BRANFORD, CT &mdash; Autac is proud to celebrate its 60th anniversary. The company remains a family owned and operated company, with manufacturing in the USA. Autac is capable of producing coil cord in a wide variety of gauge sizes, number of conductors, lengths, and colors, including clear. The extensive inventory means fast service for the customer, with most orders shipped within one day. Autac's product line includes over 400 off the shelf configurations and maintains over 5,000 cords in stock for immediate delivery.</p>
+
+    <p>In addition to stock cords, Autac also manufactures custom cables to your specifications. We can design and build almost any type of cord that meets UL, CSA, RoHS, and other industry standards. Cords are available in many gauge sizes, conductors, insulations, and jackets. Our customer service and quotation department have over 40 years experience in helping to design cords to meet your specifications. Turn-around time on both standard and many custom quotations is typically 24-48 hours from request.</p>
+
+    <p>Autac curly cords have been used in a variety of applications. From industrial ice cream making machines and pinball machines to aerospace and defense use.</p>
+
+    <p><a href="/news/" class="back-link">&larr; Back to News &amp; Press</a></p>
+
+  </article>
+
+  <!-- CTA -->
+  <section class="cta">
     <div class="container">
-      <h2>Looking for something specific?</h2>
-      <div class="helpful-grid">
-        <a class="helpful-card" href="/products/">
-          <h3>Product Catalog</h3>
-          <p>Browse our full range of retractile, curly, and coiled cords.</p>
-        </a>
-        <a class="helpful-card" href="/build-your-cord/">
-          <h3>Build Your Cord</h3>
-          <p>Configure a custom cord with our step-by-step tool.</p>
-        </a>
-        <a class="helpful-card" href="/quote/">
-          <h3>Get a Quote</h3>
-          <p>Request pricing for a specific application or volume.</p>
-        </a>
-        <a class="helpful-card" href="/faq/">
-          <h3>FAQ</h3>
-          <p>Answers to common questions about cords and ordering.</p>
-        </a>
+      <div class="section-label">Get Started</div>
+      <div class="section-title">Need Help Choosing?</div>
+      <p class="section-desc">Autac manufactures over 400 standard coiled cord configurations &mdash; and builds custom cords to your exact specifications. Tell us what you need and we'll recommend the right solution.</p>
+      <div class="cta-buttons">
+        <a href="/quote/" class="btn btn-red">Request a Quote &rarr;</a>
+        <a href="/build-your-cord/" class="btn btn-accent">Build Your Cord</a>
       </div>
     </div>
   </section>

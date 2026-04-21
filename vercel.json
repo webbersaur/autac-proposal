@@ -1,11 +1,16 @@
 {
   "cleanUrls": false,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "autacusa.com" }],
       "destination": "https://www.autacusa.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!404|proposal-v1|invoice-deposit|admin).*).html",
+      "destination": "/:path/",
       "permanent": true
     }
   ],

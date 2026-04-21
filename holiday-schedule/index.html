@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found &mdash; Autac USA</title>
-  <meta name="description" content="The page you're looking for doesn't exist. Browse our retractile cord catalog or contact Autac USA for help finding what you need.">
-  <meta name="robots" content="noindex, follow">
+  <title>Holiday Schedule — Autac USA</title>
+  <meta name="description" content="Autac USA office and factory holiday schedule for 2026. View our planned closures and standard business hours for the year.">
+  <link rel="canonical" href="https://www.autacusa.com/holiday-schedule/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VCNRLKCL6"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-3VCNRLKCL6");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Holiday Schedule",
+    "description": "Autac USA office and factory holiday schedule for 2026. View our planned closures and standard business hours for the year.",
+    "url": "https://www.autacusa.com/holiday-schedule/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Autac USA Inc.",
+      "url": "https://www.autacusa.com/"
+    }
+  }
+  </script>
   <style>
     :root {
       --black: #1a1a1a;
@@ -110,7 +124,9 @@
     nav a:hover { color: var(--red); }
     nav a.active { color: var(--red); font-weight: 700; }
 
-    .nav-dropdown { position: relative; }
+    .nav-dropdown {
+      position: relative;
+    }
 
     .nav-dropdown > a::after {
       content: ' ▾';
@@ -150,7 +166,14 @@
       white-space: nowrap;
     }
 
-    .nav-dropdown-menu a:hover { background: var(--gray-50); }
+    .nav-dropdown-menu a:hover {
+      background: var(--gray-50);
+    }
+
+    .nav-dropdown-menu .dropdown-divider {
+      border-top: 1px solid var(--gray-100);
+      margin: 0.35rem 0;
+    }
 
     .nav-cta {
       background: var(--accent);
@@ -163,17 +186,16 @@
 
     .nav-cta:hover { background: var(--accent-dark); }
 
-    /* === ERROR HERO === */
-    .error-hero {
+    /* === PAGE HERO === */
+    .page-hero {
       background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
       color: var(--white);
-      padding: 6rem 0 5rem;
-      text-align: center;
+      padding: 4rem 0;
       position: relative;
       overflow: hidden;
     }
 
-    .error-hero::after {
+    .page-hero::after {
       content: '';
       position: absolute;
       top: -80px;
@@ -184,118 +206,119 @@
       background: rgba(245, 197, 24, 0.04);
     }
 
-    .error-code {
-      font-size: 7rem;
-      font-weight: 800;
-      line-height: 1;
+    .page-hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
       color: var(--accent);
-      letter-spacing: -4px;
-      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
     }
 
-    .error-hero h1 {
-      font-size: 2.5rem;
+    .page-hero h1 {
+      font-size: 2.75rem;
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 1rem;
       letter-spacing: -1px;
     }
 
-    .error-hero p {
+    .page-hero h1 span { color: var(--accent); }
+
+    .page-hero p {
       font-size: 1.15rem;
       color: rgba(255,255,255,0.7);
       max-width: 600px;
-      margin: 0 auto 2rem;
       line-height: 1.7;
     }
 
-    .error-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 1.75rem;
-      border-radius: 0.4rem;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .btn-accent {
-      background: var(--accent);
-      color: var(--black);
-    }
-
-    .btn-accent:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(245, 197, 24, 0.25);
-    }
-
-    .btn-outline-white {
-      border: 2px solid rgba(255,255,255,0.3);
-      color: var(--white);
-    }
-
-    .btn-outline-white:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* === HELPFUL LINKS === */
-    .helpful {
+    /* === LEGAL CONTENT === */
+    .legal {
       padding: 4rem 0;
-      background: var(--gray-50);
-    }
-
-    .helpful h2 {
-      text-align: center;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--black);
-      margin-bottom: 2.5rem;
-    }
-
-    .helpful-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .helpful-card {
       background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.15s;
     }
 
-    .helpful-card:hover {
-      border-color: var(--red);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    .legal .container {
+      max-width: 800px;
     }
 
-    .helpful-card h3 {
-      font-size: 1rem;
-      color: var(--black);
-      margin-bottom: 0.35rem;
-      font-weight: 700;
-    }
-
-    .helpful-card p {
-      font-size: 0.88rem;
+    .legal-updated {
+      font-size: 0.9rem;
       color: var(--text-light);
-      line-height: 1.5;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .legal h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .legal p {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .legal ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .legal ul li {
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .legal a {
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    .legal a:hover {
+      text-decoration: underline;
+    }
+
+    .legal table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .legal table th,
+    .legal table td {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .legal table th {
+      font-weight: 700;
+      color: var(--black);
+      background: var(--gray-50);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .legal table td {
+      color: var(--text-light);
     }
 
     /* === FOOTER === */
@@ -333,9 +356,13 @@
       font-weight: 600;
     }
 
-    footer ul { list-style: none; }
+    footer ul {
+      list-style: none;
+    }
 
-    footer ul li { margin-bottom: 0.6rem; }
+    footer ul li {
+      margin-bottom: 0.6rem;
+    }
 
     footer ul a {
       color: rgba(255,255,255,0.6);
@@ -354,7 +381,9 @@
       font-size: 0.88rem;
     }
 
-    .footer-contact-item strong { color: rgba(255,255,255,0.8); }
+    .footer-contact-item strong {
+      color: rgba(255,255,255,0.8);
+    }
 
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -416,9 +445,8 @@
 
       nav.open { display: flex; }
 
-      .error-code { font-size: 5rem; }
-      .error-hero h1 { font-size: 1.75rem; }
-      .error-hero { padding: 4rem 0 3rem; }
+      .page-hero { padding: 3rem 0; }
+      .page-hero h1 { font-size: 2rem; }
 
       .footer-grid { grid-template-columns: 1fr; }
 
@@ -426,6 +454,12 @@
         flex-direction: column;
         gap: 0.75rem;
         text-align: center;
+      }
+
+      .legal table th,
+      .legal table td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -469,41 +503,84 @@
     </div>
   </header>
 
-  <!-- ERROR HERO -->
-  <section class="error-hero">
+  <!-- PAGE HERO -->
+  <section id="main-content" class="page-hero">
     <div class="container">
-      <div class="error-code">404</div>
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-      <div class="error-actions">
-        <a href="/" class="btn btn-accent">Go to Homepage</a>
-        <a href="/contact/" class="btn btn-outline-white">Contact Us</a>
-      </div>
+      <div class="page-hero-badge">Hours & Schedule</div>
+      <h1>Holiday <span>Schedule</span></h1>
+      <p>Planned office and factory closures for 2026. Plan your orders accordingly to avoid delays.</p>
     </div>
   </section>
 
-  <!-- HELPFUL LINKS -->
-  <section class="helpful">
+  <!-- CONTENT -->
+  <section class="legal">
     <div class="container">
-      <h2>Looking for something specific?</h2>
-      <div class="helpful-grid">
-        <a class="helpful-card" href="/products/">
-          <h3>Product Catalog</h3>
-          <p>Browse our full range of retractile, curly, and coiled cords.</p>
-        </a>
-        <a class="helpful-card" href="/build-your-cord/">
-          <h3>Build Your Cord</h3>
-          <p>Configure a custom cord with our step-by-step tool.</p>
-        </a>
-        <a class="helpful-card" href="/quote/">
-          <h3>Get a Quote</h3>
-          <p>Request pricing for a specific application or volume.</p>
-        </a>
-        <a class="helpful-card" href="/faq/">
-          <h3>FAQ</h3>
-          <p>Answers to common questions about cords and ordering.</p>
-        </a>
-      </div>
+      <p class="legal-updated">Updated for 2026</p>
+
+      <h2>Standard Business Hours</h2>
+      <p>Our office and manufacturing facility in North Branford, Connecticut operate on the following regular schedule:</p>
+      <ul>
+        <li><strong>Monday &ndash; Friday:</strong> 8:00 AM &ndash; 5:00 PM Eastern Time</li>
+        <li><strong>Saturday &ndash; Sunday:</strong> Closed</li>
+      </ul>
+
+      <h2>2026 Holiday Closures</h2>
+      <p>Autac USA will be closed on the following dates in 2026. Both our office and factory will be closed, and no orders will ship on these dates.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Holiday</th>
+            <th>Date(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>New Year's Day</td>
+            <td>Thursday, January 1</td>
+          </tr>
+          <tr>
+            <td>Presidents' Day</td>
+            <td>Monday, February 16</td>
+          </tr>
+          <tr>
+            <td>Memorial Day</td>
+            <td>Monday, May 25</td>
+          </tr>
+          <tr>
+            <td>Independence Day</td>
+            <td>Friday, July 3 &ndash; Saturday, July 4</td>
+          </tr>
+          <tr>
+            <td>Labor Day</td>
+            <td>Monday, September 7</td>
+          </tr>
+          <tr>
+            <td>Thanksgiving</td>
+            <td>Thursday, November 26 &ndash; Friday, November 27</td>
+          </tr>
+          <tr>
+            <td>Christmas</td>
+            <td>Thursday, December 24 &ndash; Friday, December 25</td>
+          </tr>
+          <tr>
+            <td>New Year's Eve</td>
+            <td>Thursday, December 31</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Planning Your Orders</h2>
+      <p>To ensure timely delivery, we recommend placing orders well in advance of any scheduled holiday closure. Lead times may be extended during periods surrounding major holidays, particularly Thanksgiving through New Year's. If you have a time-sensitive order, please contact our sales team as early as possible so we can accommodate your schedule.</p>
+      <p>Orders placed via our website during holiday closures will be processed on the next business day. Quote requests and <a href="/build-your-cord/">custom cord configurations</a> submitted during closures will receive a response promptly upon our return.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have questions about our schedule or need to coordinate a delivery around a holiday closure, please reach out:</p>
+      <ul>
+        <li><strong>Phone:</strong> <a href="tel:8002433161">800.243.3161</a></li>
+        <li><strong>Email:</strong> <a href="mailto:sales@autacusa.com">sales@autacusa.com</a></li>
+        <li><strong>Contact Form:</strong> <a href="/contact/">autacusa.com/contact</a></li>
+      </ul>
     </div>
   </section>
 

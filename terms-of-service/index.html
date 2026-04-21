@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found &mdash; Autac USA</title>
-  <meta name="description" content="The page you're looking for doesn't exist. Browse our retractile cord catalog or contact Autac USA for help finding what you need.">
-  <meta name="robots" content="noindex, follow">
+  <title>Terms of Service — Autac USA | The Source for Coil Cords Since 1947</title>
+  <meta name="description" content="Terms of service for Autac USA Inc. Review the terms and conditions governing use of autacusa.com and our products and services.">
+  <link rel="canonical" href="https://www.autacusa.com/terms-of-service/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VCNRLKCL6"></script>
@@ -110,7 +110,9 @@
     nav a:hover { color: var(--red); }
     nav a.active { color: var(--red); font-weight: 700; }
 
-    .nav-dropdown { position: relative; }
+    .nav-dropdown {
+      position: relative;
+    }
 
     .nav-dropdown > a::after {
       content: ' ▾';
@@ -150,7 +152,14 @@
       white-space: nowrap;
     }
 
-    .nav-dropdown-menu a:hover { background: var(--gray-50); }
+    .nav-dropdown-menu a:hover {
+      background: var(--gray-50);
+    }
+
+    .nav-dropdown-menu .dropdown-divider {
+      border-top: 1px solid var(--gray-100);
+      margin: 0.35rem 0;
+    }
 
     .nav-cta {
       background: var(--accent);
@@ -163,17 +172,16 @@
 
     .nav-cta:hover { background: var(--accent-dark); }
 
-    /* === ERROR HERO === */
-    .error-hero {
+    /* === PAGE HERO === */
+    .page-hero {
       background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #333 100%);
       color: var(--white);
-      padding: 6rem 0 5rem;
-      text-align: center;
+      padding: 4rem 0;
       position: relative;
       overflow: hidden;
     }
 
-    .error-hero::after {
+    .page-hero::after {
       content: '';
       position: absolute;
       top: -80px;
@@ -184,118 +192,92 @@
       background: rgba(245, 197, 24, 0.04);
     }
 
-    .error-code {
-      font-size: 7rem;
-      font-weight: 800;
-      line-height: 1;
+    .page-hero-badge {
+      display: inline-block;
+      background: rgba(245, 197, 24, 0.15);
       color: var(--accent);
-      letter-spacing: -4px;
-      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(245, 197, 24, 0.3);
     }
 
-    .error-hero h1 {
-      font-size: 2.5rem;
+    .page-hero h1 {
+      font-size: 2.75rem;
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 1rem;
       letter-spacing: -1px;
     }
 
-    .error-hero p {
+    .page-hero h1 span { color: var(--accent); }
+
+    .page-hero p {
       font-size: 1.15rem;
       color: rgba(255,255,255,0.7);
       max-width: 600px;
-      margin: 0 auto 2rem;
       line-height: 1.7;
     }
 
-    .error-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 1.75rem;
-      border-radius: 0.4rem;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .btn-accent {
-      background: var(--accent);
-      color: var(--black);
-    }
-
-    .btn-accent:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(245, 197, 24, 0.25);
-    }
-
-    .btn-outline-white {
-      border: 2px solid rgba(255,255,255,0.3);
-      color: var(--white);
-    }
-
-    .btn-outline-white:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* === HELPFUL LINKS === */
-    .helpful {
+    /* === LEGAL CONTENT === */
+    .legal {
       padding: 4rem 0;
-      background: var(--gray-50);
-    }
-
-    .helpful h2 {
-      text-align: center;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--black);
-      margin-bottom: 2.5rem;
-    }
-
-    .helpful-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .helpful-card {
       background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color 0.2s, transform 0.15s, box-shadow 0.15s;
     }
 
-    .helpful-card:hover {
-      border-color: var(--red);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    .legal .container {
+      max-width: 800px;
     }
 
-    .helpful-card h3 {
-      font-size: 1rem;
-      color: var(--black);
-      margin-bottom: 0.35rem;
-      font-weight: 700;
-    }
-
-    .helpful-card p {
-      font-size: 0.88rem;
+    .legal-updated {
+      font-size: 0.9rem;
       color: var(--text-light);
-      line-height: 1.5;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .legal h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .legal p {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .legal ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .legal ul li {
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .legal a {
+      color: var(--red);
+      text-decoration: none;
+    }
+
+    .legal a:hover {
+      text-decoration: underline;
     }
 
     /* === FOOTER === */
@@ -333,9 +315,13 @@
       font-weight: 600;
     }
 
-    footer ul { list-style: none; }
+    footer ul {
+      list-style: none;
+    }
 
-    footer ul li { margin-bottom: 0.6rem; }
+    footer ul li {
+      margin-bottom: 0.6rem;
+    }
 
     footer ul a {
       color: rgba(255,255,255,0.6);
@@ -354,7 +340,9 @@
       font-size: 0.88rem;
     }
 
-    .footer-contact-item strong { color: rgba(255,255,255,0.8); }
+    .footer-contact-item strong {
+      color: rgba(255,255,255,0.8);
+    }
 
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -416,9 +404,8 @@
 
       nav.open { display: flex; }
 
-      .error-code { font-size: 5rem; }
-      .error-hero h1 { font-size: 1.75rem; }
-      .error-hero { padding: 4rem 0 3rem; }
+      .page-hero { padding: 3rem 0; }
+      .page-hero h1 { font-size: 2rem; }
 
       .footer-grid { grid-template-columns: 1fr; }
 
@@ -469,41 +456,75 @@
     </div>
   </header>
 
-  <!-- ERROR HERO -->
-  <section class="error-hero">
+  <!-- PAGE HERO -->
+  <section id="main-content" class="page-hero">
     <div class="container">
-      <div class="error-code">404</div>
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-      <div class="error-actions">
-        <a href="/" class="btn btn-accent">Go to Homepage</a>
-        <a href="/contact/" class="btn btn-outline-white">Contact Us</a>
-      </div>
+      <div class="page-hero-badge">Legal</div>
+      <h1>Terms of <span>Service</span></h1>
+      <p>Terms and conditions governing the use of autacusa.com and our products and services.</p>
     </div>
   </section>
 
-  <!-- HELPFUL LINKS -->
-  <section class="helpful">
+  <!-- LEGAL CONTENT -->
+  <section class="legal">
     <div class="container">
-      <h2>Looking for something specific?</h2>
-      <div class="helpful-grid">
-        <a class="helpful-card" href="/products/">
-          <h3>Product Catalog</h3>
-          <p>Browse our full range of retractile, curly, and coiled cords.</p>
-        </a>
-        <a class="helpful-card" href="/build-your-cord/">
-          <h3>Build Your Cord</h3>
-          <p>Configure a custom cord with our step-by-step tool.</p>
-        </a>
-        <a class="helpful-card" href="/quote/">
-          <h3>Get a Quote</h3>
-          <p>Request pricing for a specific application or volume.</p>
-        </a>
-        <a class="helpful-card" href="/faq/">
-          <h3>FAQ</h3>
-          <p>Answers to common questions about cords and ordering.</p>
-        </a>
-      </div>
+      <p class="legal-updated">Last updated: April 7, 2026</p>
+
+      <h2>Acceptance of Terms</h2>
+      <p>By accessing and using the Autac USA Inc. ("Autac," "we," "us," or "our") website at www.autacusa.com (the "Site"), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site.</p>
+
+      <h2>Use of the Site</h2>
+      <p>You may use our Site for lawful purposes only. You agree not to:</p>
+      <ul>
+        <li>Use the Site in any way that violates applicable federal, state, or local laws</li>
+        <li>Attempt to gain unauthorized access to any portion of the Site or its systems</li>
+        <li>Use any automated means (bots, scrapers, etc.) to access or collect data from the Site</li>
+        <li>Interfere with or disrupt the Site's operation or servers</li>
+        <li>Submit false or misleading information through any form on the Site</li>
+      </ul>
+
+      <h2>Product Information</h2>
+      <p>We make every effort to display accurate product descriptions, specifications, and images on our Site. However, we do not warrant that product information is complete, current, or error-free. Product specifications, availability, and pricing are subject to change without notice.</p>
+      <p>Images and descriptions on our Site are for general reference only. Actual products may vary in appearance. For exact specifications, please <a href="/contact/">contact us</a> or <a href="/quote/">request a quote</a>.</p>
+
+      <h2>Quotes and Orders</h2>
+      <p>Submitting a quote request or cord configuration through our Site does not constitute a binding order or contract. All quotes provided by Autac are estimates and are subject to final confirmation. A binding agreement is formed only when Autac issues a written order confirmation.</p>
+      <p>Prices quoted are valid for 30 days from the date of the quote unless otherwise stated. Autac reserves the right to adjust pricing based on material costs, quantities, or custom specifications.</p>
+
+      <h2>Intellectual Property</h2>
+      <p>All content on this Site &mdash; including text, images, logos, graphics, product data, and page layouts &mdash; is the property of Autac USA Inc. and is protected by U.S. copyright and trademark laws. You may not reproduce, distribute, modify, or create derivative works from any content on this Site without our prior written consent.</p>
+      <p>The Autac name, logo, and "Re-Trak-Tul Kords" are trademarks of Autac USA Inc.</p>
+
+      <h2>Disclaimer of Warranties</h2>
+      <p>The Site and all content are provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <p>Autac does not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, Autac USA Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the Site, even if we have been advised of the possibility of such damages.</p>
+      <p>Our total liability for any claim related to the Site shall not exceed the amount you paid to Autac, if any, during the twelve (12) months preceding the claim.</p>
+
+      <h2>Product Warranties</h2>
+      <p>Warranties for Autac products are provided separately at the time of sale and are governed by the specific terms included with your order. Nothing on this Site constitutes a product warranty. For warranty information, please <a href="/contact/">contact our sales team</a>.</p>
+
+      <h2>Third-Party Links</h2>
+      <p>Our Site may contain links to third-party websites, including our eBay store and social media profiles. These links are provided for your convenience only. Autac does not control and is not responsible for the content or practices of any third-party site.</p>
+
+      <h2>Indemnification</h2>
+      <p>You agree to indemnify and hold harmless Autac USA Inc., its officers, employees, and agents from any claims, damages, losses, or expenses (including reasonable attorney's fees) arising from your use of the Site or violation of these Terms.</p>
+
+      <h2>Governing Law</h2>
+      <p>These Terms of Service are governed by and construed in accordance with the laws of the State of Connecticut, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in New Haven County, Connecticut.</p>
+
+      <h2>Changes to These Terms</h2>
+      <p>We reserve the right to update these Terms of Service at any time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of the Site after changes are posted constitutes your acceptance of the revised terms.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions about these Terms of Service, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:sales@autacusa.com">sales@autacusa.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:8002433161">800.243.3161</a></li>
+        <li><strong>Mail:</strong> Autac USA Inc., P.O. Box 306, North Branford, CT 06471</li>
+      </ul>
     </div>
   </section>
 
