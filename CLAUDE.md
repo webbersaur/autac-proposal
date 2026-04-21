@@ -79,7 +79,7 @@ All three forms (`contact.html`, `quote.html`, `build-your-cord.html`) submit to
 - **contact.html**: Simple contact form → `contacts` table
 - **quote.html**: `nextStep()`/`prevStep()`/`goToStep()` navigation, `validateContact()` on step 4, NDA checkbox on step 2, generates reference number `QR-YYYYMMDD-XXXX` → `quotes` table
 - **build-your-cord.html**: `cordConfig` state object, `updateSummary()` updates sticky sidebar, auto-calculates extended length (5x retracted) → `cord_configs` table
-- **products.html**: Pricing behind OTP auth (`verifyOtp` type: `email`), access logged to `pricing_access_log` and `page_views` tables
+- **products.html**: Pricing behind OTP auth (`verifyOtp` type: `magiclink` — required because the customized Magic Link template is what delivers the code; using type `email` returns "Token has expired or is invalid"), access logged to `pricing_access_log` and `page_views` tables
 
 ## SEO Status
 - Canonical tags on all pages (www.autacusa.com)
