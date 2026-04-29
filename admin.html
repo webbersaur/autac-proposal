@@ -428,6 +428,46 @@
       padding: 1.5rem;
     }
 
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--gray-100);
+      background: var(--gray-50);
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    .modal-footer.hidden { display: none; }
+
+    .btn-delete {
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn-delete:hover { background: var(--red-light); }
+    .btn-delete:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .btn-secondary {
+      background: var(--gray-100);
+      color: var(--text);
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover { background: var(--gray-200, #e5e7eb); }
+
     .detail-row {
       display: flex;
       padding: 0.5rem 0;
@@ -847,6 +887,10 @@
         <button class="modal-close" onclick="closeModal()">&times;</button>
       </div>
       <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer hidden" id="modalFooter">
+        <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn-delete" id="modalDeleteBtn" onclick="confirmDelete()">Delete</button>
+      </div>
     </div>
   </div>
 
@@ -1074,7 +1118,7 @@
         ['Phone', r.phone],
         ['Subject', r.subject],
         ['Message', r.message]
-      ]);
+      ], { table: 'contacts', id: r.id, label: 'contact message' });
     }
 
     // ─── QUOTES TABLE ─────────────────────────
@@ -1125,7 +1169,7 @@
         ['Phone', r.phone],
         ['Job Title', r.job_title],
         ['How Heard', r.how_heard]
-      ]);
+      ], { table: 'quotes', id: r.id, label: 'quote request ' + (r.reference_number || '') });
     }
 
     // ─── CORD CONFIGS TABLE ───────────────────
@@ -1443,8 +1487,21 @@
 
     // ─── MODAL ────────────────────────────────
 
-    function openModal(title, rows) {
+    var pendingDelete = null;
+
+    function openModal(title, rows, deleteAction) {
       document.getElementById('modalTitle').textContent = title;
+      var footer = document.getElementById('modalFooter');
+      if (deleteAction) {
+        pendingDelete = deleteAction;
+        footer.classList.remove('hidden');
+        var btn = document.getElementById('modalDeleteBtn');
+        btn.disabled = false;
+        btn.textContent = 'Delete';
+      } else {
+        pendingDelete = null;
+        footer.classList.add('hidden');
+      }
       var html = rows.map(function(r) {
         return '<div class="detail-row"><div class="detail-label">' + esc(r[0]) + '</div><div class="detail-value">' + esc(r[1]) + '</div></div>';
       }).join('');
@@ -1454,6 +1511,35 @@
 
     function closeModal() {
       document.getElementById('modalOverlay').classList.remove('active');
+      pendingDelete = null;
+      document.getElementById('modalFooter').classList.add('hidden');
+    }
+
+    async function confirmDelete() {
+      if (!pendingDelete) return;
+      var d = pendingDelete;
+      var msg = 'Delete this ' + d.label + '?\n\nThis cannot be undone.';
+      if (!window.confirm(msg)) return;
+
+      var btn = document.getElementById('modalDeleteBtn');
+      btn.disabled = true;
+      btn.textContent = 'Deleting...';
+
+      var result = await sb.from(d.table).delete().eq('id', d.id).select();
+      if (result.error) {
+        alert('Delete failed: ' + result.error.message + '\n\nThe Supabase RLS policy may not allow deletes. Check the table policies in the Supabase dashboard.');
+        btn.disabled = false;
+        btn.textContent = 'Delete';
+        return;
+      }
+      if (!result.data || result.data.length === 0) {
+        alert('Delete blocked by Row Level Security.\n\nThe request succeeded but affected 0 rows — Supabase silently blocks deletes when no DELETE policy matches your user. Add an admin DELETE policy in the Supabase SQL editor:\n\ncreate policy "Admin allowlist can delete ' + d.table + '" on ' + d.table + '\n  for delete to authenticated\n  using (auth.jwt() ->> \'email\' in (\'marie@autacusa.com\', \'sales@autacusa.com\'));');
+        btn.disabled = false;
+        btn.textContent = 'Delete';
+        return;
+      }
+      closeModal();
+      loadAllData();
     }
 
     document.addEventListener('keydown', function(e) {
