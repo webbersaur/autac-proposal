@@ -1,0 +1,11 @@
+# Bulk data — regeneratable from GSC API, no need to track in git
+autac-gsc-data*.json
+pages-*.json
+recovery-data-*.json
+daily-impressions.json
+
+# WordPress database dumps and parsed content — large, sourced from Bluehost,
+# regeneratable from the SQL files which live locally
+*.sql
+wp-posts.json
+wp-pages.json

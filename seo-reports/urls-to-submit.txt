@@ -1,0 +1,75 @@
+AUTAC SEO Recovery — GSC URL Inspection Submission List
+Generated: 2026-05-05 (revised after off-topic post triage)
+Limit: 10 URLs/day in Google Search Console URL Inspection
+
+For each URL: GSC → URL Inspection → paste → "Test Live URL" → "Request Indexing"
+
+================================================================
+DAY 1 (Today) — Hub pages first, top KEEP-list blog posts second
+================================================================
+
+# Hub pages (URLs moved from /products/ → root, need re-indexing)
+https://www.autacusa.com/coiled-cords/
+https://www.autacusa.com/retractile-cords/
+https://www.autacusa.com/curly-cords/
+https://www.autacusa.com/cord-sets/
+https://www.autacusa.com/color-charts/
+
+# Top 5 ON-TOPIC restored posts by lost impressions
+https://www.autacusa.com/why-does-a-coiled-extension-lead-heat-up/
+https://www.autacusa.com/can-extension-cords-get-wet/
+https://www.autacusa.com/how-to-fix-a-coiled-cord-with-ease/
+https://www.autacusa.com/telephone-cord/
+https://www.autacusa.com/wire-coil-everything-you-need-to-know/
+
+================================================================
+DAY 2 (Tomorrow) — Restored posts #6-15
+================================================================
+
+https://www.autacusa.com/the-best-extension-cord-for-power-washers/
+https://www.autacusa.com/guide-to-spiral-cord-wraps/
+https://www.autacusa.com/ac-power-cable-cord-understanding-its-importance-and-uses/
+https://www.autacusa.com/coiled-instrument-cable/
+https://www.autacusa.com/cord-cable/
+https://www.autacusa.com/power-cord-for-lift-chair/
+https://www.autacusa.com/coil-cables/
+https://www.autacusa.com/headphone-coiled-extension-cable/
+https://www.autacusa.com/choosing-a-coiled-cable-what-you-need-to-know/
+https://www.autacusa.com/spiral-cables/
+
+================================================================
+DAY 3 — Last 3 restored posts + re-submit any day-1 URLs not yet recrawled
+================================================================
+
+https://www.autacusa.com/phone-extension-cord-everything-you-need-to-know/
+https://www.autacusa.com/extension-cord-retractable/
+https://www.autacusa.com/coil-cord-wire/
+
+# Then re-check GSC URL Inspection on the day-1 hub pages — if any
+# still show "URL is not on Google" or "Crawled - currently not indexed",
+# re-request indexing.
+
+================================================================
+NOT SUBMITTING (intentionally redirected, off-topic to AUTAC)
+================================================================
+These 7 URLs now 301 redirect to relevant AUTAC pages. Don't submit —
+Google will discover the redirects on its own when it next recrawls.
+
+  /straight-wiring-a-cooling-fan/                     → /blog/
+  /how-to-fix-retractable-cord-on-iron/               → /retractile-cords/
+  /tv-cables-cords-everything-.../                    → /blog/
+  /understanding-vga-cable-cord/                      → /cord-sets/
+  /how-to-fix-a-retractable-badge-reel/               → /retractile-cords/
+  /how-to-repair-a-retractable-badge-reel/            → /retractile-cords/
+  /how-to-hide-cable-cords-on-a-wall/                 → /blog/
+
+================================================================
+NOTES
+================================================================
+- Re-run /Users/saurus/Documents/workspace/autac/seo-reports/track_recovery.py
+  in 2 weeks to see how impressions recover on the 23 tracked URLs.
+- The redirect group is tracked separately in the recovery scorecard so we
+  can see whether the link equity actually flowed to the redirect targets.
+- Background context: the December 2025 Google Core Update penalized
+  thin/templated SEO content. The 7 redirects remove pages of exactly that
+  type that we shouldn't be reinforcing as AUTAC content.
