@@ -22,6 +22,14 @@
     { "source": "/about-us/", "destination": "/about/", "permanent": true },
     { "source": "/news-press/", "destination": "/news/", "permanent": true },
 
+    { "source": "/how-to-fix-retractable-cord-on-iron/", "destination": "/retractile-cords/", "permanent": true },
+    { "source": "/how-to-fix-a-retractable-badge-reel/", "destination": "/retractile-cords/", "permanent": true },
+    { "source": "/how-to-repair-a-retractable-badge-reel/", "destination": "/retractile-cords/", "permanent": true },
+    { "source": "/understanding-vga-cable-cord/", "destination": "/cord-sets/", "permanent": true },
+    { "source": "/straight-wiring-a-cooling-fan/", "destination": "/blog/", "permanent": true },
+    { "source": "/tv-cables-cords-everything-you-need-to-know-for-the-best-home-entertainment-setup/", "destination": "/blog/", "permanent": true },
+    { "source": "/how-to-hide-cable-cords-on-a-wall/", "destination": "/blog/", "permanent": true },
+
     {
       "source": "/:path((?!404|proposal-v1|invoice-deposit|admin).*).html",
       "destination": "/:path/",
