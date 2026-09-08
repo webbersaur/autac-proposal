@@ -49,9 +49,15 @@ https://www.thomasnet.com/profile/00469587/autac-inc.html
 #     - Website button reads "Homepage" - confirm target is https://autacusa.com
 #     - Add YouTube (@autaccords) to Social
 
-https://www.shorelinechamberct.com/list/member/autac-incorporated-5197
-#   Live member listing. Page is JS-rendered so it could not be verified
-#   automatically - check the address, zip and website URL by hand.
+[GONE 2026-09-08] https://www.shorelinechamberct.com/list/member/autac-incorporated-5197
+#   Checked in a real browser 2026-09-08: the member URL now 404s and a
+#   directory search for "Autac" returns "No companies found". The chamber
+#   directory itself works (other Branford members list normally). So Autac is
+#   no longer listed - most likely a lapsed membership, or dropped in the
+#   chamber's site migration. ASK THE CLIENT whether they are still a member.
+#   If yes, have the chamber restore the listing with the correct NAP. If no,
+#   rejoining is a paid membership decision, not an SEO task. Nothing wrong to
+#   fix here any more; there is simply no listing.
 
 http://www.industrialinterface.com/company/telephone/899/autac-inc/
 #   Old listing, filed under "telephone". Low value. Update or ignore, but know
@@ -113,6 +119,14 @@ NWBOC (National Women Business Owners Corporation)
 
 https://www.cbia.com/resources/manufacturing/connex-connecticut/
 #   CONNEX Connecticut - state manufacturing supply-chain database.
+#   [READY 2026-09-08] It is the CT tier of CONNEX Marketplace. "State Access"
+#   is FREE for CT manufacturers (statewide profile, in-state search, in-state
+#   RFQs); national supplier access is $650/yr. Sign-up is a personal account
+#   (name, email, password) at https://app.connexmarketplace.com/create-account
+#   then the company profile is built inside the app. Account creation has to
+#   be done by Chris or someone at Autac. CONNSTEP offers free help with data
+#   entry and capability statements once the account exists.
+#   Profile copy: reuse macraes-submission.txt (NAP + description).
 https://www.connstep.org/about
 #   CONNSTEP, the CT State Technology Extension Program, a CBIA affiliate.
 #   Part of the Connecticut Manufacturers' Collaborative (1,200+ companies).
