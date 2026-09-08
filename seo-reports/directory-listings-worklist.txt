@@ -27,17 +27,27 @@
 #   (203) 481-3444, website link is https://autacusa.com/ (no redirect hop).
 #   Was: zip 06471 and http://www.autacusa.com.
 
-https://business.thomasnet.com/get-listed-on-thomasnet
-#   ThomasNet profile ALREADY EXISTS: company ID 469587. Free tier is real -
-#   claim it and check:
-#     - website field points at https://autacusa.com (not www/http)
-#     - address and zip
-#     - the hosted catalog PDF is stale: cdn.thomasnet.com/ccp/00469587/248628.pdf
-#       reads "For the past 64 years", which dates it to ~2011
-#     - add WBENC / 100% woman-owned and the UL listing data - the free tier
-#       supports certifications and diversity attributes, and neither is on
-#       the profile today
-#   ThomasNet blocks automated fetching (403), so this has to be eyes-on.
+https://www.thomasnet.com/profile/00469587/autac-inc.html
+#   [PARTIAL 2026-09-08] Reviewed from a full-page screenshot (site 403s bots).
+#   CORRECT: claimed, Branford CT 06405, Manufacturer, founded 1947, description
+#   text mentions woman-owned + UL/CSA/RoHS/REACH + CAGE 3AWW0, FB + LinkedIn.
+#   STILL TO FIX (in the account's edit view):
+#     - Quality Certifications field says "Not available" - add UL, CSA, RoHS,
+#       REACH as structured entries (buyers filter on the field, not the prose)
+#     - Diversity shows "1 diversity available" - confirm it is WBENC-certified
+#       Woman-Owned, not self-declared
+#     - Key Personnel lists Marie-Louise Burkle twice (once ALL CAPS) - remove dup
+#     - Categories include Audio Visual (AV) Equipment, Controls and Controllers,
+#       Cord and Cordage (= rope/twine), Mechanical Wire Cable and Rope - drop the
+#       off-target ones; confirm Retractile Cords / Coiled Cords / Cord Sets /
+#       Cable Assemblies are present (need "View All" to verify)
+#     - Catalog item is still the stale ~2011 PDF - replace with current catalog
+#       (/catalog/autac-catalog.pdf) and link to https://autacusa.com/products/
+#     - Press releases stop ~2008 (60th anniversary, 2006 TPR launch; one has
+#       "retracile" typo). Add 75th anniversary, recycling program, 2026 price
+#       notice - free, indexed, linked
+#     - Website button reads "Homepage" - confirm target is https://autacusa.com
+#     - Add YouTube (@autaccords) to Social
 
 https://www.shorelinechamberct.com/list/member/autac-incorporated-5197
 #   Live member listing. Page is JS-rendered so it could not be verified
