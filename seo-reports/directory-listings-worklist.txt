@@ -119,7 +119,16 @@ NWBOC (National Women Business Owners Corporation)
 
 https://www.cbia.com/resources/manufacturing/connex-connecticut/
 #   CONNEX Connecticut - state manufacturing supply-chain database.
-#   [READY 2026-09-08] It is the CT tier of CONNEX Marketplace. "State Access"
+#   [SUBMITTED 2026-09-08] Registered by Chris: Autac, Inc., full NAP,
+#   Manufacturer, NAICS 335929, industries Aviation/Aerospace, Automotive,
+#   Medical Devices, Defense, Marine Equipment, Electronics, Sponsored access
+#   (free, CONNSTEP). DUNS skipped (add later - CONNEX warns it slows approval).
+#   SBA Programs left blank (WBENC is not an SBA cert; confirm WOSB with client
+#   before adding). Status: "registration request is being processed", every
+#   org is reviewed; email support@connexmarketplace.com after 7 days if silent.
+#   Once approved: finish the profile (capabilities, certifications, photos)
+#   and record the public profile URL here.
+#   It is the CT tier of CONNEX Marketplace. "State Access"
 #   is FREE for CT manufacturers (statewide profile, in-state search, in-state
 #   RFQs); national supplier access is $650/yr. Sign-up is a personal account
 #   (name, email, password) at https://app.connexmarketplace.com/create-account
