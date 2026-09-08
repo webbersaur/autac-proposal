@@ -20,9 +20,13 @@ THE THREE RECORDS
        SIC 3999 Manufacturing NEC.
 
 STEPS
-  [ ] Claim record 1 via "Update my company information":
-      https://us.kompass.com/register?company=USM02549979
-      (creates a Kompass account - Chris or someone at Autac)
+  [x] 2026-09-08 Claim started: Chris registered a Kompass user profile
+      linked to record 1 (USM02549979). Kompass sent a confirmation email;
+      click the link. Kompass then says login works "as soon as the
+      Administrator of the Company profile confirms that you work in the
+      Company" - since nobody at Autac has ever claimed it, expect Kompass
+      staff to do that check (they may email or call the 203 number). If
+      nothing in ~5 business days, use the chat bubble on the listing page.
   [ ] On record 1 set:
       Company name:   Autac, Inc.
       Address:        25 Thompson Rd, Branford, CT 06405

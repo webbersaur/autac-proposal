@@ -153,6 +153,8 @@ https://gb.kompass.com/c/autac-products-ltd/gb81009225/
 #   North Branford (USNN0041767, same wrong data, PO Box town) and Guilford
 #   (USM42068700, never an Autac address). Plan: claim the Branford one, fix
 #   category/year/phone/https, and have Kompass delete the other two.
+#   [IN PROGRESS 2026-09-08] Chris registered a Kompass user linked to the
+#   Branford record; awaiting email confirmation + Kompass admin approval.
 #   Full punch list: kompass-punchlist.txt
 
 
