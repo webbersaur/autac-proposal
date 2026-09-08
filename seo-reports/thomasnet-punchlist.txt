@@ -1,0 +1,94 @@
+THOMASNET PROFILE PUNCH LIST - Autac, Inc. (company ID 469587)
+Reviewed 2026-09-08 from the live public profile.
+Edit at: thomasnet.com > Login > manage profile (needs the account that claimed it)
+
+NAP for every field:
+  Autac, Inc. / 25 Thompson Rd / Branford, CT 06405 / (203) 481-3444
+  Website: https://autacusa.com   (no www, no http)
+  NEVER the P.O. Box (306, North Branford, CT 06471) - mailing only.
+
+
+ALREADY CORRECT - leave alone
+  [x] Profile is claimed
+  [x] Address: Branford, CT 06405
+  [x] Company type: Manufacturer; Additional: Custom Manufacturer, Distributor
+  [x] Year founded 1947, employees 10-49, sales $1-4.9M
+  [x] Description text mentions woman-owned, UL, CSA, RoHS, REACH, CAGE 3AWW0, SAM
+  [x] Social: Facebook, LinkedIn
+
+
+TO FIX
+
+1. WEBSITE LINK
+   [ ] Open the Website field. It must read exactly: https://autacusa.com
+       (www and http both redirect and count as a hop)
+
+2. QUALITY CERTIFICATIONS  (currently shows "Not available")
+   [ ] Add UL Listed
+   [ ] Add CSA Certified
+   [ ] Add RoHS compliant
+   [ ] Add REACH compliant
+   Buyers filter on this field. Text in the description does not count.
+
+3. DIVERSITY STATUS  (currently "1 diversity available")
+   [ ] Confirm it is "Woman-Owned - WBENC certified", not self-declared
+   [ ] Upload the WBENC certificate if the form asks for it
+   [ ] Add "Small Business" if the option exists
+
+4. KEY PERSONNEL  (duplicate entry)
+   [ ] Delete "MARIE BURKLE, PRESIDENT" (all caps)
+   [ ] Keep "Marie-Louise Burkle, President"
+   [ ] Confirm Richard Harmon (CFO) and Mike Estok (Sales Rep) are current
+
+5. PRODUCT / SERVICE CATEGORIES
+   Currently listed: Audio Visual (AV) Equipment, Controls and Controllers,
+   Cord and Cordage, Electrical Equipment, Electric Wire Cable and Cable
+   Assemblies, Electronic Components, Leads, Mechanical Wire Cable and Rope
+   [ ] Click "View All Products / Services Offered" and confirm these exist:
+         Retractile Cords / Retractable Cords
+         Coiled Cords / Coil Cords
+         Curly Cords
+         Cord Sets / Power Cord Sets
+         Cable Assemblies (custom)
+         Shielded Cords
+         Test Lead Cords
+   [ ] Remove off-target categories:
+         Audio Visual (AV) Equipment
+         Controls and Controllers
+         Cord and Cordage   (rope and twine in ThomasNet's taxonomy)
+         Mechanical Wire, Cable and Rope
+   [ ] Keep: Electric Wire, Cable and Cable Assemblies; Leads; Electrical
+       Equipment; Electronic Components
+
+6. CATALOG  (still the ~2011 PDF, "For the past 64 years")
+   [ ] Delete the old catalog item
+   [ ] Upload current catalog: https://autacusa.com/catalog/autac-catalog.pdf
+   [ ] Set the catalog link / "View Items" to https://autacusa.com/products/
+   [ ] Item description: "Autac retractile, coiled and curly cord catalog -
+       400+ UL-listed part numbers, custom builds with no minimum order"
+
+7. NEWS & PRESS RELEASES  (newest is ~2008; one has "retracile" typo)
+   Free, indexed, and each one carries a link. Add, newest first:
+   [ ] 75th Anniversary (1947-2022)      -> https://autacusa.com/75th-anniversary/
+   [ ] 2026 Price Adjustments notice     -> https://autacusa.com/2026-price-adjustments/
+   [ ] Recycling program                 -> https://autacusa.com/news/  (pick the post)
+   [ ] Any WBENC recertification or Women of Excellence item
+   [ ] Fix "retracile" -> "retractile" in "Retractile Power Cords have a Range of Uses"
+   Copy for these can be lifted from autacusa.com/news/ so it stays consistent.
+
+8. SOCIAL
+   [ ] Add YouTube: https://www.youtube.com/@autaccords
+
+9. ADDITIONAL INFORMATION TILES  (optional, low priority)
+   [ ] "In-stock single straight wire" and "RetractileCord - electrical power"
+       tiles are fine; consider adding one tile each for Coiled Cords, Curly
+       Cords and Cord Sets linking to the matching hub page:
+         https://autacusa.com/retractile-cords/
+         https://autacusa.com/coiled-cords/
+         https://autacusa.com/curly-cords/
+         https://autacusa.com/cord-sets/
+
+
+WHEN DONE
+   Send a screenshot of the public profile. It will be re-checked against this
+   list and the item closed in directory-listings-worklist.txt.
