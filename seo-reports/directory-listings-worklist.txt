@@ -22,11 +22,10 @@
 # NAP inconsistency working against the local/entity signal, and this is the
 # exact error that was wrong in 158 files until 2026-07-14.
 
-https://business.manufacturect.org/list/Details/autac-inc-4057718
-#   VERIFIED WRONG. Shows "25 Thompson Rd, Branford, CT 06471" - that zip is
-#   North Branford (the P.O. Box zip). Should be 06405.
-#   Also shows website as "http://www.autacusa.com" - http AND www, so every
-#   click double-redirects. Change to https://autacusa.com
+[DONE 2026-09-08] https://business.manufacturect.org/list/Details/autac-inc-4057718
+#   FIXED. Verified live 2026-09-08: 25 Thompson Rd, Branford, CT 06405,
+#   (203) 481-3444, website link is https://autacusa.com/ (no redirect hop).
+#   Was: zip 06471 and http://www.autacusa.com.
 
 https://business.thomasnet.com/get-listed-on-thomasnet
 #   ThomasNet profile ALREADY EXISTS: company ID 469587. Free tier is real -
