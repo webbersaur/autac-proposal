@@ -60,9 +60,14 @@ http://www.industrialinterface.com/company/telephone/899/autac-inc/
 
 # ==== TIER 2: FREE ADDS, NOT PRESENT TODAY ====
 
-https://www.macraesbluebook.com/getlisted/form1.cfm
-#   MacRAE'S Blue Book. Free company profile, industrial directory since 1893.
-#   No Autac listing found. Lowest-effort real add on this list - do it first.
+[SUBMITTED 2026-09-08] https://www.macraesbluebook.com/getlisted/form1.cfm
+#   MacRAE'S Blue Book. Submitted 2026-09-08 with full NAP + 1,338-char
+#   description (copy in macraes-submission.txt). Account holder: Chris
+#   (Web Developer). Pending: confirm the registration email, then a MacRAE's
+#   Customer Service Specialist reviews and emails an acknowledgment. Step 2
+#   (product headings) happens after confirmation - pick cords / cord sets /
+#   cable assemblies / electrical wire and cable, avoid rope, cordage, AV.
+#   Once live: record the listing URL here and check the NAP on it.
 
 https://www.iqsdirectory.com/coiled-cable/
 #   IQS Directory "Coiled Cable" category. Autac is NOT listed, and the category
