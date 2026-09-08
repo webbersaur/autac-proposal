@@ -1,0 +1,48 @@
+KOMPASS USA - Autac records, reviewed 2026-09-08 (us.kompass.com)
+
+WHY IT MATTERS
+  Kompass is where "Autac Products Ltd" (Macclesfield, UK, also makes spiral
+  cables) lives with a full profile. Google partly conflates the two Autacs.
+  The US side currently has THREE stub records for the same company, all with
+  wrong or thin data, which makes the US entity look weaker than the UK one.
+
+THE THREE RECORDS
+  1. https://us.kompass.com/c/autac-inc/usm02549979/   KEEP + CLAIM
+       "AUTAC INC. (Servo-motors, Branford)", Branford CT 06405
+       Founded 1982 (wrong, 1947), SIC 3621 Motors and Generators (wrong),
+       website http://autacusa.com (should be https), 10-19 employees,
+       no phone, no description, no products.
+  2. https://us.kompass.com/c/autac/usnn0041767/        DUPLICATE, REMOVE
+       "AUTAC (Servo-motors, North Branford)", North Branford CT 06471
+       (the P.O. Box town), same wrong SIC and founding year.
+  3. https://us.kompass.com/c/autac-inc/usm42068700/    DUPLICATE, REMOVE
+       "AUTAC INC. (Guilford)", Guilford CT 06437 (never an Autac address),
+       SIC 3999 Manufacturing NEC.
+
+STEPS
+  [ ] Claim record 1 via "Update my company information":
+      https://us.kompass.com/register?company=USM02549979
+      (creates a Kompass account - Chris or someone at Autac)
+  [ ] On record 1 set:
+      Company name:   Autac, Inc.
+      Address:        25 Thompson Rd, Branford, CT 06405
+      Phone:          (203) 481-3444   Toll-free: (800) 243-3161
+      Email:          sales@autacusa.com
+      Website:        https://autacusa.com
+      Year founded:   1947
+      Employees:      10-49
+      Activity/SIC:   3357 Drawing and Insulating of Nonferrous Wire, or the
+                      Kompass classes the UK Autac uses: "Cables, electric,
+                      spiral, plastic coated", "Electric cables, insulated",
+                      "Wires and cables for telecommunications and electronics"
+      Description:    paste from macraes-submission.txt
+      Products:       retractile cords, coiled cords, curly cords, cord sets,
+                      custom cable assemblies
+      Flags:          Manufacturer, Exporter; Woman-owned / WBENC if offered
+  [ ] Ask Kompass support to delete records 2 and 3 as duplicates of
+      USM02549979 (contact form or the chat bubble on any listing page; quote
+      all three Kompass IDs). North Branford is a mailing address only; Guilford
+      has never been an Autac location.
+  [ ] After the merge, re-run the search
+      https://us.kompass.com/searchCompanies?text=autac and confirm one US
+      record with the correct NAP.

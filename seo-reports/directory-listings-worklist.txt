@@ -148,6 +148,12 @@ https://gb.kompass.com/c/autac-products-ltd/gb81009225/
 #   "autac macclesfield", "autac products ltd" and "autac services". Google is
 #   partially conflating the two entities. A US Kompass listing plus consistent
 #   NAP everywhere above is the cheapest way to pull the entities apart.
+#   [REVIEWED 2026-09-08] us.kompass.com already has THREE stub records for
+#   Autac: Branford (USM02549979, SIC "Motors and Generators", founded 1982),
+#   North Branford (USNN0041767, same wrong data, PO Box town) and Guilford
+#   (USM42068700, never an Autac address). Plan: claim the Branford one, fix
+#   category/year/phone/https, and have Kompass delete the other two.
+#   Full punch list: kompass-punchlist.txt
 
 
 # ==== HOW TO MEASURE THIS ====
