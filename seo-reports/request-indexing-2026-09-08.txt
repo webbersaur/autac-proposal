@@ -1,0 +1,30 @@
+# AUTAC - GSC Request-Indexing log (2026-09-08)
+#
+# Property:  https://autacusa.com/   (NON-www URL-prefix property)
+
+[DONE] https://autacusa.com/telephone-cord/
+#   Retitled 2026-09-03 at "handset cords" (now the #1 query sitewide: 1,221
+#   impr / 28d, pos 13.6, zero clicks; GSC Overview itself flags it +175%).
+#   Was request-indexed 2026-09-03 but the URL Inspection API still showed
+#   lastCrawlTime 2026-08-26 on 2026-09-08, so the retitle was not in the
+#   index. Re-requested 2026-09-08 via claude-in-chrome; "URL was added to a
+#   priority crawl queue" confirmed on screen. Note: the GSC deep link
+#   /inspect?id=<url> 404s; type the URL into the top search box instead -
+#   real keystrokes through the computer tool work, form_input did not.
+
+# ==== ALSO 2026-09-08: satellite consolidation ====
+# Five restored WP posts that ranked 41-61 for the hubs' own head terms with
+# 0 clicks and 1-2 internal links each were 301'd into the hubs and removed
+# from the sitemap (141 -> 136):
+#   /coil-cables/              -> /coiled-cords/
+#   /coil-cord-wire/           -> /coiled-cords/
+#   /coiled-instrument-cable/  -> /coiled-cords/
+#   /spiral-cables/            -> /coiled-cords/   (5 legacy redirects that
+#                                 pointed at /spiral-cables/ repointed too,
+#                                 so there are no redirect chains)
+#   /curly-phone-cord/         -> /curly-cords/
+# No content was merged: /coiled-cords/ was already deepened to 2,745 words
+# on 2026-09-03 and the satellites' unique material was cable-wrapping
+# technique, guitar-cable tone, and landline history - not hub material.
+# Sitemap resubmitted via API after deploy. Redirected URLs do not need
+# Request Indexing; Google picks the 301s up on the normal crawl.

@@ -721,27 +721,27 @@
     },
     {
       "source": "/complete-best-guide-on-spiral-cable-keyboard-in-2025/",
-      "destination": "/spiral-cables/",
+      "destination": "/coiled-cords/",
       "permanent": true
     },
     {
       "source": "/spiral-lightning-cable-the-perfect-solution/",
-      "destination": "/spiral-cables/",
+      "destination": "/coiled-cords/",
       "permanent": true
     },
     {
       "source": "/spiral-cable-vs-traditional-cords/",
-      "destination": "/spiral-cables/",
+      "destination": "/coiled-cords/",
       "permanent": true
     },
     {
       "source": "/cable-with-magnetic-cord/",
-      "destination": "/spiral-cables/",
+      "destination": "/coiled-cords/",
       "permanent": true
     },
     {
       "source": "/spiral-cable/",
-      "destination": "/spiral-cables/",
+      "destination": "/coiled-cords/",
       "permanent": true
     },
     {
@@ -832,6 +832,31 @@
     {
       "source": "/retractile-cords-and-electric-cables-from-autac-inc/",
       "destination": "/retractile-cords/",
+      "permanent": true
+    },
+    {
+      "source": "/coil-cables/",
+      "destination": "/coiled-cords/",
+      "permanent": true
+    },
+    {
+      "source": "/coil-cord-wire/",
+      "destination": "/coiled-cords/",
+      "permanent": true
+    },
+    {
+      "source": "/coiled-instrument-cable/",
+      "destination": "/coiled-cords/",
+      "permanent": true
+    },
+    {
+      "source": "/spiral-cables/",
+      "destination": "/coiled-cords/",
+      "permanent": true
+    },
+    {
+      "source": "/curly-phone-cord/",
+      "destination": "/curly-cords/",
       "permanent": true
     }
   ],

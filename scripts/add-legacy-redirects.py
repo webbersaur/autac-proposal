@@ -34,6 +34,13 @@ def route(destination: str, *sources: str) -> None:
 # --- Coiled cord product terms -------------------------------------------
 route(
     "/coiled-cords/",
+    # Restored WP posts consolidated into the hub 2026-09-08. They ranked 41-61
+    # for the hub's own head terms with 0 clicks and 1-2 internal links each,
+    # splitting "coil cable" / "coiled cord" relevance four ways.
+    "/coil-cables/",
+    "/coil-cord-wire/",
+    "/coiled-instrument-cable/",
+    "/spiral-cables/",
     "/understanding-the-coiled-cord-design-working-principles-uses-and-advantages/",
     "/flexy-coiled-extension-cords-the-ultimate-guide-for-functionality-and-efficiency/",
     "/the-complete-guide-to-coiled-extension-cables-and-flexible-cord-solutions/",
@@ -74,6 +81,7 @@ route(
 # --- Curly / telephone cord terms ----------------------------------------
 route(
     "/curly-cords/",
+    "/curly-phone-cord/",  # restored WP post, consolidated 2026-09-08
     "/telephone-spiral-cables-a-comprehensive-guide-to-coiled-communication-cords/",
     "/white-telephone-coil-cord-the-sleek-upgrade-for-modern-communication/",
     "/high-quality-telephone-line-cables-coil-cords-reliable-connectivity/",
@@ -98,9 +106,9 @@ route(
     "/custom-cable-wire/",
 )
 
-# --- Spiral cable terms (live guide page) --------------------------------
+# --- Spiral cable terms (guide page folded into the hub 2026-09-08) --------
 route(
-    "/spiral-cables/",
+    "/coiled-cords/",
     "/complete-best-guide-on-spiral-cable-keyboard-in-2025/",
     "/spiral-lightning-cable-the-perfect-solution/",
     "/spiral-cable-vs-traditional-cords/",
@@ -173,11 +181,16 @@ LEAVE_404 = {
 def main() -> None:
     cfg = json.loads(CONFIG.read_text(encoding="utf-8"))
     existing = {r["source"] for r in cfg.get("redirects", [])}
+    by_source = {r["source"]: r for r in cfg.get("redirects", [])}
 
-    added, skipped = [], []
+    added, skipped, repointed = [], [], []
     for source, destination in REDIRECTS.items():
         if source in existing:
-            skipped.append(source)
+            if by_source[source]["destination"] != destination:
+                by_source[source]["destination"] = destination
+                repointed.append(source)
+            else:
+                skipped.append(source)
             continue
         cfg["redirects"].append(
             {"source": source, "destination": destination, "permanent": True}
@@ -194,7 +207,7 @@ def main() -> None:
         added.append(source)
 
     CONFIG.write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
-    print(f"added {len(added)} redirects, skipped {len(skipped)} already present")
+    print(f"added {len(added)} redirects, repointed {len(repointed)}, skipped {len(skipped)} already present")
     print(f"vercel.json now has {len(cfg['redirects'])} redirects")
     print(f"{len(LEAVE_404)} off-topic legacy URLs deliberately left to 404")
 
